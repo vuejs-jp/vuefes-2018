@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   root: true,
   env: {
@@ -18,10 +20,35 @@ module.exports = {
   plugins: [
     'vue'
   ],
+  // check if imports actually resolve
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: {
+          resolve: {
+            extensions: ['.js', '.vue'],
+            alias: {
+              // FIXME: src/pages/index.vue
+              // 26:21  error  Unable to resolve path to module '~/components/AppLogo.vue'  import/no-unresolved
+              '~': path.resolve(__dirname, 'src'),
+            }
+          }
+        },
+      }
+    }
+  },
   // add your custom rules here
   rules: {
+    'import/no-unresolved': 'off',
+    'max-len': 'off',
+
     // JavaScript Standard Style
     // http://standardjs.com/rules.html
     'semi': ['error', 'never'],
+    'space-before-function-paren': ['error', {
+      'anonymous': 'always',
+      'named': 'always',
+      'asyncArrow': 'always',
+    }],
   }
 }
