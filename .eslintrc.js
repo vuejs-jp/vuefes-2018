@@ -19,5 +19,9 @@ module.exports = {
     'vue'
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    // JavaScript Standard Style
+    // http://standardjs.com/rules.html
+    'semi': ['error', 'never'],
+  }
 }
