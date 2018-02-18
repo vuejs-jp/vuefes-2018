@@ -28,8 +28,6 @@ module.exports = {
           resolve: {
             extensions: ['.js', '.vue'],
             alias: {
-              // FIXME: src/pages/index.vue
-              // 26:21  error  Unable to resolve path to module '~/components/AppLogo.vue'  import/no-unresolved
               '~': path.resolve(__dirname, 'src'),
             }
           }
@@ -39,7 +37,6 @@ module.exports = {
   },
   // add your custom rules here
   rules: {
-    'import/no-unresolved': 'off',
     'max-len': 'off',
 
     // JavaScript Standard Style
