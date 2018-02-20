@@ -19,7 +19,6 @@
     "ajv": "^6.1.1",
     "babel-eslint": "^8.2.1",
     "eslint": "^4.15.0",
-    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-import-resolver-webpack": "^0.8.4",
