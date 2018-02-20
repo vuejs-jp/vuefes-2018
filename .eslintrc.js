@@ -1,42 +1,26 @@
-const path = require('path')
-
 module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
   extends: [
-    'airbnb-base',
+    'standard',
 
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
     // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-    'plugin:vue/essential'
+    'plugin:vue/essential',
   ],
   // required to lint *.vue files
   plugins: [
-    'vue'
+    'vue',
   ],
-  // check if imports actually resolve
-  settings: {
-    'import/resolver': {
-      webpack: {
-        config: {
-          resolve: {
-            extensions: ['.js', '.vue'],
-            alias: {
-              '~': path.resolve(__dirname, 'src'),
-            }
-          }
-        },
-      }
-    }
-  },
   // add your custom rules here
   rules: {
+    'comma-dangle': ['error', 'always-multiline'],
     'max-len': 'off',
 
     // JavaScript Standard Style
@@ -47,5 +31,5 @@ module.exports = {
       'named': 'always',
       'asyncArrow': 'always',
     }],
-  }
+  },
 }
