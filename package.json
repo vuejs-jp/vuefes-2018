@@ -5,6 +5,7 @@
   "author": "INOUE Takuya <inouetakuya5@gmail.com>",
   "private": true,
   "scripts": {
+    "test":  "echo \"We should be added test checking\" && exit 1",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
