@@ -5,15 +5,28 @@ Vue Fes Japan 2018
 
 ## Setup
 
-```bash
-# install dependencies
-$ npm install # Or yarn install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# generate static project
-$ npm run generate
+```
+npm install
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+## Development
+
+Serve with hot reload at localhost:3000
+
+```
+npm run dev
+```
+
+## Testing
+
+```
+npm test
+```
+
+## Generate
+
+Generate static project.
+
+```
+npm run generate
+```

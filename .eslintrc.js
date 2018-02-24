@@ -20,8 +20,18 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'comma-dangle': ['error', 'always-multiline'],
     'max-len': 'off',
+
+    // require trailing commas in multiline object literals
+    'comma-dangle': ['error', {
+      arrays: 'always-multiline',
+      objects: 'always-multiline',
+      imports: 'always-multiline',
+      exports: 'always-multiline',
+      functions: 'never',
+    }],
+
+    'function-paren-newline': 'off',
 
     // JavaScript Standard Style
     // http://standardjs.com/rules.html
