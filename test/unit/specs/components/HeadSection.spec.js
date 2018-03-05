@@ -1,12 +1,12 @@
 import Vue from 'vue'
-import index from '~/pages/index'
+import HeadSection from '~/components/HeadSection'
 
-describe('index', () => {
+describe('HeadSection', () => {
   let Constructor
   let vm
 
   beforeEach(() => {
-    Constructor = Vue.extend(index)
+    Constructor = Vue.extend(HeadSection)
     vm = new Constructor().$mount()
   })
 

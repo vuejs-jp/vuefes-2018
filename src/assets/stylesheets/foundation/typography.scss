@@ -1,0 +1,27 @@
+// TODO: あとで変更する
+$font-family-default: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+html {
+  font-family: $font-family-default;
+  line-height: 1.5;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$font-size-default: 16px;
+
+html {
+  font-size: $font-size-default;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: $font-size-default;
+  line-height: 1.5;
+}
+
+.readable {
+  line-height: 1.7;
+}

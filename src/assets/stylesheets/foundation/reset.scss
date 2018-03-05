@@ -1,0 +1,42 @@
+// normalize.css によってブラウザごとの差異を整えた後に、さらにリセットしたいブラウザのデフォルトのスタイル
+
+html, body {
+  background-color: transparent;
+}
+
+body {
+  padding: 0;
+}
+
+ol, ul {
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+input::-ms-clear,
+input::-ms-reveal,
+select::-ms-expand {
+  display: none;
+}
+
+div, header, main, section, footer {
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0;
+  border: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}

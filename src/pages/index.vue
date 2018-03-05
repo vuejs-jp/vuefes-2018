@@ -1,64 +1,55 @@
 <template>
-  <section class="container">
+  <div class="welcome-page">
     <div>
-      <app-logo/>
-      <h1 class="title">
-        vuefes-2018
-      </h1>
-      <h2 class="subtitle">
-        Vue Fes Japan 2018
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
+      <picture>
+        <source media="(max-width: 768px)" srcset="~/assets/images/head@2x.jpg">
+        <source media="(min-width: 769px)" srcset="~/assets/images/head.jpg">
+        <img class="head-image" src="~/assets/images/head.jpg" alt="head-image">
+      </picture>
     </div>
-  </section>
+
+    <head-section />
+
+    <speaker-section />
+
+    <sponsor-section />
+
+    <cfp-section />
+
+    <team-section />
+
+    <page-footer />
+  </div>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import CfpSection from '~/components/CfpSection'
+import ConversionButton from '~/components/ConversionButton'
+import HeadSection from '~/components/HeadSection'
+import PageFooter from '~/components/PageFooter'
+import SpeakerSection from '~/components/SpeakerSection'
+import SponsorSection from '~/components/SponsorSection'
+import TeamSection from '~/components/TeamSection'
 
 export default {
   components: {
-    AppLogo,
+    CfpSection,
+    ConversionButton,
+    HeadSection,
+    PageFooter,
+    SpeakerSection,
+    SponsorSection,
+    TeamSection,
   },
 }
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style lang="scss" scoped>
+.welcome-page {
 }
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+.head-image {
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+  max-width: 100%;
 }
 </style>

@@ -1,0 +1,10 @@
+@import "normalize.css/normalize.css";
+
+@import "./foundation/variables";
+@import "./foundation/colors";
+@import "./foundation/reset";
+@import "./foundation/typography";
+
+img {
+  max-width: 100%;
+}

@@ -32,6 +32,7 @@ module.exports = (config) => {
         extensions: ['.js', '.vue'],
         alias: {
           '~': path.resolve(__dirname, '../../src'),
+          assets: path.resolve(__dirname, '../../src/assets'), // use in template with <img src="~/assets/nuxt.png" />
         },
       },
       module: {
@@ -39,11 +40,33 @@ module.exports = (config) => {
           {
             test: /\.vue$/,
             loader: 'vue-loader',
+            options: {
+              loaders: {
+                scss: [
+                  'vue-style-loader',
+                  'css-loader',
+                  'sass-loader',
+                  {
+                    loader: 'sass-resources-loader',
+                    options: {
+                      resources: [
+                        './src/assets/stylesheets/foundation/variables.scss',
+                        './src/assets/stylesheets/foundation/colors.scss',
+                      ],
+                    },
+                  },
+                ],
+              },
+            },
           },
           {
             test: /\.js$/,
             loader: 'babel-loader',
             exclude: /node_modules/,
+          },
+          {
+            test: /\.(png|jpe?g|gif|svg)$/,
+            loader: 'url-loader',
           },
         ],
       },

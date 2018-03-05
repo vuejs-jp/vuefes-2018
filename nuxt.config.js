@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -36,4 +38,14 @@ module.exports = {
     },
   },
   srcDir: 'src/',
+  css: [
+    { src: '~/assets/stylesheets/main.scss', lang: 'scss' },
+  ],
+  modules: [
+    'nuxt-sass-resources-loader',
+  ],
+  sassResources: [
+    path.resolve(__dirname, 'src/assets/stylesheets/foundation/variables.scss'),
+    path.resolve(__dirname, 'src/assets/stylesheets/foundation/colors.scss'),
+  ],
 }
