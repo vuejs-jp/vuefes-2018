@@ -42,6 +42,14 @@ module.exports = (config) => {
             loader: 'vue-loader',
             options: {
               loaders: {
+                js: [
+                  {
+                    loader: 'babel-loader',
+                    options: {
+                      plugins: ['transform-object-rest-spread']
+                    }
+                  }
+                ],
                 scss: [
                   'vue-style-loader',
                   'css-loader',

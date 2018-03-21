@@ -56,11 +56,21 @@ module.exports = {
     { src: '~/assets/stylesheets/main.scss', lang: 'scss' },
   ],
   modules: [
+    '@nuxtjs/axios',
     '@nuxtjs/google-analytics',
     'nuxt-sass-resources-loader',
   ],
+  plugins: [
+    '~/plugins/axios'
+  ],
+  axios: {
+    baseURL: 'https://vuefes2018-functions.azurewebsites.net/api'
+  },
+  env: {
+    FUNCTION_KEY: process.env.FUNCTION_KEY
+  },
   'google-analytics': {
-    id: 'UA-6976525-4',
+    id: 'UA-6976525-4'
   },
   sassResources: [
     path.resolve(__dirname, 'src/assets/stylesheets/foundation/variables.scss'),
