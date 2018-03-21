@@ -14,11 +14,13 @@
       </p>
     </div>
 
-    <conversion-button>
-      <a href="#">
-        講演を希望する
-      </a>
-    </conversion-button>
+    <div class="button-wrapper">
+      <conversion-button>
+        <a href="#">
+          講演を希望する
+        </a>
+      </conversion-button>
+    </div>
   </page-section>
 </template>
 
@@ -41,6 +43,16 @@ export default {
 
   p + p {
     margin-top: 32px;
+  }
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .description {
+    margin: 40px 0 60px;
   }
 }
 </style>

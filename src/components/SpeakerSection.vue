@@ -4,23 +4,25 @@
       Speaker
     </template>
 
-    <div>
-      <img src="~/assets/images/speakers/evan.jpg">
-    </div>
-
-    <div>
-      <div class="label">
-        Vue.js プロジェクトリーダー
+    <div class="speaker">
+      <div class="icon">
+        <img src="~/assets/images/speakers/evan.jpg">
       </div>
 
-      <h3 class="speaker-name">
-        Evan You
-      </h3>
+      <div class="description-wrapper">
+        <div class="label">
+          Vue.js プロジェクトリーダー
+        </div>
 
-      <div class="description">
-        <p class="readable">
-          Vue Technology LLC ファウンダー。オープンソースの JavaScript フレームワークである Vue.js でフルタイムで働いています。デザイン、コーディング、そして、時々アートを作ることを夢見ています。
-        </p>
+        <h3 class="speaker-name">
+          Evan You
+        </h3>
+
+        <div class="description">
+          <p class="readable">
+            Vue Technology LLC ファウンダー。オープンソースの JavaScript フレームワークである Vue.js でフルタイムで働いています。デザイン、コーディング、そして、時々アートを作ることを夢見ています。
+          </p>
+        </div>
       </div>
     </div>
 
@@ -54,5 +56,21 @@ export default {
 
 .more {
   text-align: center;
+}
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .speaker {
+    display: flex;
+    margin: 56px 0 60px;
+  }
+
+  .icon {
+    width: 256px;
+    margin-right: 40px;
+  }
+
+  .description-wrapper {
+    width: calc(100% - (256px + 40px));
+  }
 }
 </style>

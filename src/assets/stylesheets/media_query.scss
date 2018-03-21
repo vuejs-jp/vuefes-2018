@@ -1,0 +1,53 @@
+// メディアクエリによって要素を表示させるか否かを制御できるクラス。クラス名は下記を参考にした
+// * [Sass - Materialize](http://materializecss.com/sass.html)
+
+.hide-on-small {
+  @media screen and (max-width: $layout-breakpoint--is-small) {
+    display: none !important;
+  }
+}
+
+.hide-on-medium {
+  @media screen and (min-width: $layout-breakpoint--is-small-up) and (max-width: $layout-breakpoint--is-medium) {
+    display: none !important;
+  }
+}
+
+.hide-on-large {
+  @media screen and (min-width: $layout-breakpoint--is-medium-up) {
+    display: none !important;
+  }
+}
+
+.hide-on-medium-and-up {
+  @media screen and (min-width: $layout-breakpoint--is-small-up) {
+    display: none !important;
+  }
+}
+
+.hide-on-medium-and-down {
+  @media screen and (max-width: $layout-breakpoint--is-medium) {
+    display: none !important;
+  }
+}
+
+.show-on-small {
+  @extend .hide-on-medium-and-up;
+}
+
+.show-on-medium {
+  @extend .hide-on-small;
+  @extend .hide-on-large;
+}
+
+.show-on-large {
+  @extend .hide-on-medium-and-down;
+}
+
+.show-on-medium-and-up {
+  @extend .hide-on-small;
+}
+
+.show-on-medium-and-down {
+  @extend .hide-on-large;
+}

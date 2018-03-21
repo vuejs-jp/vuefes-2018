@@ -69,9 +69,12 @@ export default {
   margin-top: 15px;
 }
 
-.staff:nth-of-type(3n-1),
-.staff:nth-of-type(3n) {
+.staff + .staff {
   margin-left: 6px;
+}
+
+.staff:nth-of-type(3n+1) {
+  margin-left: 0;
 }
 
 .icon {
@@ -85,5 +88,32 @@ export default {
   font-size: 12px;
   color: $black;
   text-decoration: none;
+}
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .description {
+    margin: 40px 0 24px;
+  }
+
+  .staffs {
+    margin-bottom: 40px;
+    padding: 0 16px;
+  }
+
+  .staff {
+    width: calc((100% - (20px * 5)) / 6);
+  }
+
+  .staff + .staff {
+    margin-left: 20px;
+  }
+
+  .staff:nth-of-type(6n+1) {
+    margin-left: 0;
+  }
+
+  .staff:nth-child(n+7) {
+    margin-top: 40px;
+  }
 }
 </style>

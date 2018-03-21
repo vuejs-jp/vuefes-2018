@@ -1,12 +1,12 @@
 <template>
   <footer class="page-footer">
-    <div>
+    <div class="logo-wrapper">
       <div class="logo">
         <img src="~/assets/images/vue-fes-japan-logo-white.svg">
       </div>
 
       <div class="link-list">
-        <a href="https://jp.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> | <a href="https://github.com/vuejs-jp/home" target="_blank">Vue.js 日本ユーザーグループ</a>
+        <a class="vuejs-link" href="https://jp.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> | <a class="user-group-link" href="https://github.com/vuejs-jp/home" target="_blank">Vue.js 日本ユーザーグループ</a>
       </div>
     </div>
 
@@ -56,6 +56,37 @@ export default {
 
   p {
     font-size: 10px;
+  }
+}
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    width: 235px;
+    margin-right: 42px;
+    margin-bottom: 4px;
+  }
+
+  .link-list {
+    margin-bottom: 12px;
+  }
+
+  .vuejs-link {
+    margin-right: 8px;
+  }
+
+  .user-group-link {
+    margin-left: 8px;
+  }
+
+  .licence {
+    display: flex;
+    justify-content: center;
   }
 }
 </style>

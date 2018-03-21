@@ -48,4 +48,10 @@ export default {
 .bg-red {
   background-color: $sangosyu;
 }
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .page-section {
+    padding: 60px 40px 80px;
+  }
+}
 </style>

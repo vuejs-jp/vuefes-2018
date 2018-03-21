@@ -10,11 +10,13 @@
       </p>
     </div>
 
-    <conversion-button>
-      <a href="#">
-        スポンサーになる
-      </a>
-    </conversion-button>
+    <div class="button-wrapper">
+      <conversion-button>
+        <a href="#">
+          スポンサーになる
+        </a>
+      </conversion-button>
+    </div>
   </page-section>
 </template>
 
@@ -34,5 +36,15 @@ export default {
 <style lang="scss" scoped>
 .description {
   margin-bottom: 48px;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .description {
+    margin: 40px 0 60px;
+  }
 }
 </style>

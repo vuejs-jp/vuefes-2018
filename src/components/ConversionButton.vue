@@ -33,4 +33,20 @@ $button-height: 60px;
     text-overflow: ellipsis;
   }
 }
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  $button-height: 82px;
+
+  .conversion-button {
+    width: 456px;
+    height: $button-height;
+    text-align: center;
+
+    a {
+      width: 100%;
+      line-height: $button-height;
+      font-size: 32px;
+    }
+  }
+}
 </style>

@@ -14,8 +14,12 @@
     </div>
 
     <div class="signature">
-      <p>
+      <p class="show-on-small">
         <span class="team">Vue Fes Japan 2018 実行委員会</span><br /><span class="label">代表</span>川口 和也（@kazupon）
+      </p>
+
+      <p class="show-on-medium-and-up">
+        <span class="team">Vue Fes Japan 2018 実行委員会</span><span class="label">代表</span>川口 和也（@kazupon）
       </p>
     </div>
 
@@ -23,7 +27,7 @@
 
     <div class="follow-us">
       <img class="twitter-icon" src="~/assets/images/twitter-icon.svg">
-      <a href="#">
+      <a href="https://twitter.com/vuefes" target="_blank" rel="noopener">
         Follow @vuefes on Twitter!
       </a>
     </div>
@@ -92,6 +96,23 @@ export default {
   a {
     font-size: 18px;
     color: $white;
+  }
+}
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .description {
+    margin: 60px 0 32px;
+  }
+
+  .follow-us {
+    .twitter-icon {
+      width: 60px;
+      margin-right: 20px;
+    }
+
+    a {
+      font-size: 24px;
+    }
   }
 }
 </style>
