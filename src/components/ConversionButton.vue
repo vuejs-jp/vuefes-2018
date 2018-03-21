@@ -1,5 +1,5 @@
 <template>
-  <button class="conversion-button">
+  <button type="button" class="conversion-button" @click="onClick" :disabled="disabled">
     <slot />
   </button>
 </template>
@@ -7,6 +7,14 @@
 <script>
 export default {
   name: 'conversion-button',
+  props: {
+    disabled: Boolean,
+  },
+  methods: {
+    onClick () {
+      this.$emit('click')
+    },
+  },
 }
 </script>
 
@@ -19,6 +27,8 @@ $button-height: 60px;
   height: $button-height;
   border-radius: 1px;
   text-align: center;
+  font-size: 18px;
+  color: $primary-text-color--is-bg-dark;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
 
   a {
@@ -35,11 +45,12 @@ $button-height: 60px;
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
-  $button-height: 82px;
+  $button-height: 80px;
 
   .conversion-button {
     width: 456px;
     height: $button-height;
+    font-size: 32px;
     text-align: center;
 
     a {

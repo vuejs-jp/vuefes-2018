@@ -4,15 +4,20 @@
       <input type="email" name="email" v-model="formData.email" placeholder="メールアドレス" required @input="validate" :readonly="status.isLoading">
     </p>
 
-    <button type="submit" :disabled="!isValid || status.isLoading">
+    <conversion-button @click="registerEmail" :disabled="!isValid || status.isLoading">
       最新情報をメールで受け取る
-    </button>
+    </conversion-button>
   </form>
 </template>
 
 <script>
+import ConversionButton from './ConversionButton'
+
 export default {
   name: 'email-registration-form',
+  components: {
+    ConversionButton,
+  },
   data () {
     return {
       formData: {
@@ -31,7 +36,7 @@ export default {
     async registerEmail () {
       this.status.isLoading = true
       try {
-        const payload = {...this.formData}
+        const payload = { ...this.formData }
         await this.$axios.$post('/emails', payload)
         alert('登録が成功しました')
       } catch (e) {
@@ -50,5 +55,50 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// TODO: Not yet implemented
+input {
+  margin-bottom: 10px;
+  width: calc(100% - 40px);
+  height: 60px;
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 18px;
+}
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .email-registration-form {
+    display: flex;
+    justify-content: center;
+
+    .conversion-button {
+      font-size: 24px;
+    }
+  }
+
+  .form-content {
+    width: 456px;
+  }
+
+  input {
+    display: block;
+    width: calc(456px - 40px);
+    height: calc(80px - 6px);
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .form-content {
+    width: 940px;
+
+    .conversion-button {
+      width: 372px;
+    }
+  }
+
+  input {
+    display: inline-block;
+    width: 512px;
+    margin-right: 12px;
+  }
+}
 </style>

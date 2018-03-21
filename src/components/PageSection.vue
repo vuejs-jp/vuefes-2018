@@ -54,4 +54,12 @@ export default {
     padding: 60px 40px 80px;
   }
 }
+
+@media screen and (min-width: $layout-breakpoint--is-medium-up) {
+  .content {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 </style>

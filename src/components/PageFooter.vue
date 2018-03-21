@@ -6,14 +6,14 @@
       </div>
 
       <div class="link-list">
-        <a class="vuejs-link" href="https://jp.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> | <a class="user-group-link" href="https://github.com/vuejs-jp/home" target="_blank">Vue.js 日本ユーザーグループ</a>
+        <a class="vuejs-link" href="https://jp.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> | <a class="user-group-link" href="https://github.com/vuejs-jp/home" target="_blank" rel="noopener">Vue.js 日本ユーザーグループ</a>
       </div>
     </div>
 
     <div class="licence">
       <p>
         © 2018 Vue Fes Japan 2018 Executive Committee<br />
-        Vue.js artworks by <a href="#" target="_blank" rel="noopener">Evan you</a> is licensed under a <a href="#" target="_blank">Creative Commons Attribution 4.0 International License</a>.
+        Vue.js artworks by <a href="https://github.com/yyx990803" target="_blank" rel="noopener">Evan you</a> is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International License</a>.
       </p>
     </div>
   </footer>

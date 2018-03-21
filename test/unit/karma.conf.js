@@ -46,9 +46,9 @@ module.exports = (config) => {
                   {
                     loader: 'babel-loader',
                     options: {
-                      plugins: ['transform-object-rest-spread']
-                    }
-                  }
+                      plugins: ['transform-object-rest-spread'],
+                    },
+                  },
                 ],
                 scss: [
                   'vue-style-loader',

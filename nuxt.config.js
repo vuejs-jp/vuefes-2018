@@ -22,11 +22,11 @@ module.exports = {
       { name: 'twitter:description', content: '日本で初めて開催する大規模Vue.jsカンファレンス。国内外の著名スピーカーによるセッションの他、ユーザー同士が気軽に話し合える場も設ける予定です。ぜひ、一緒にVue.jsを楽しみ、盛り上げていきましょう！' },
       { name: 'twitter:creator', content: '@vuefes' },
       { name: 'twitter:title', content: 'Vue Fes Japan 2018' },
-      { name: 'twitter:image', content: 'https://vuefes.jp/opengraph.png' }
+      { name: 'twitter:image', content: 'https://vuefes.jp/opengraph.png' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' }
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
     ],
   },
   /*
@@ -61,16 +61,16 @@ module.exports = {
     'nuxt-sass-resources-loader',
   ],
   plugins: [
-    '~/plugins/axios'
+    '~/plugins/axios',
   ],
   axios: {
-    baseURL: 'https://vuefes2018-functions.azurewebsites.net/api'
+    baseURL: 'https://vuefes2018-functions.azurewebsites.net/api',
   },
   env: {
-    FUNCTION_KEY: process.env.FUNCTION_KEY
+    FUNCTION_KEY: process.env.FUNCTION_KEY,
   },
   'google-analytics': {
-    id: 'UA-6976525-4'
+    id: 'UA-6976525-4',
   },
   sassResources: [
     path.resolve(__dirname, 'src/assets/stylesheets/foundation/variables.scss'),
