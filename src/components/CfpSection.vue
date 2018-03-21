@@ -16,7 +16,7 @@
 
     <div class="button-wrapper">
       <conversion-button>
-        <a href="#">
+        <a href="#" v-on:click="showComingSoon">
           講演を希望する
         </a>
       </conversion-button>
@@ -33,6 +33,12 @@ export default {
   components: {
     ConversionButton,
     PageSection,
+  },
+  methods: {
+    showComingSoon (event) {
+      event.preventDefault()
+      alert('講演を希望していただいてありがとうございます！（期待しています！）でもごめんなさい、ただいま準備中ですのでもうしばらくお待ちください！')
+    },
   },
 }
 </script>
