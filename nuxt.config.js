@@ -56,8 +56,12 @@ module.exports = {
     { src: '~/assets/stylesheets/main.scss', lang: 'scss' },
   ],
   modules: [
+    '@nuxtjs/google-analytics',
     'nuxt-sass-resources-loader',
   ],
+  'google-analytics': {
+    id: 'UA-6976525-4',
+  },
   sassResources: [
     path.resolve(__dirname, 'src/assets/stylesheets/foundation/variables.scss'),
     path.resolve(__dirname, 'src/assets/stylesheets/foundation/colors.scss'),
