@@ -1,5 +1,5 @@
 <template>
-  <button type="button" class="conversion-button" @click="onClick" :disabled="disabled">
+  <button type="button" class="conversion-button">
     <slot />
   </button>
 </template>
@@ -7,14 +7,6 @@
 <script>
 export default {
   name: 'conversion-button',
-  props: {
-    disabled: Boolean,
-  },
-  methods: {
-    onClick () {
-      this.$emit('click')
-    },
-  },
 }
 </script>
 
