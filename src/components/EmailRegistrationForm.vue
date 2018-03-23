@@ -1,11 +1,23 @@
 <template>
-  <form class="email-registration-form" @submit.prevent="registerEmail" ref="form">
-    <input type="email" name="email" v-model="formData.email" placeholder="メールアドレス" required @input="validate" :readonly="status.isLoading">
+  <form class="email-registration-form" @submit.prevent="registerEmail" ref="form" v-if="!isRegistered">
+    <p>
+      <input type="email" name="email" v-model="formData.email" placeholder="メールアドレスを入力してください" required @input="validate" :readonly="status.isLoading">
+    </p>
 
     <button class="conversion-button" type="submit" :disabled="!isValid || status.isLoading">
-      最新情報をメールで受け取る
+      <template v-if="!status.isLoading">
+        最新情報をメールで受け取る
+      </template>
+      <template v-else>
+        登録中……
+      </template>
     </button>
   </form>
+  <transition v-else>
+    <div class="email-registered">
+      登録が完了しました。
+    </div>
+  </transition>
 </template>
 
 <script>
@@ -21,6 +33,7 @@ export default {
       formData: {
         email: null,
       },
+      isRegistered: false,
       isValid: false,
       status: {
         isLoading: false,
@@ -36,7 +49,7 @@ export default {
       try {
         const payload = { ...this.formData }
         await this.$axios.$post('/emails', payload)
-        alert('登録が成功しました')
+        this.isRegistered = true
       } catch (e) {
         if (!e.response || e.response.status !== 409) {
           console.log(e)
@@ -66,6 +79,10 @@ input {
   @media screen and (max-width: $layout-breakpoint--is-small-up) {
     margin-bottom: 10px;
   }
+
+  &[readonly] {
+    color: #aaa;
+  }
 }
 
 .conversion-button {
@@ -77,6 +94,12 @@ input {
   font-size: 18px;
   color: $primary-text-color--is-bg-dark;
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.25s ease-out;
+
+  &:disabled,
+  &.is-busy {
+    background: #aaa;
+  }
 
   a {
     display: inline-block;
@@ -89,6 +112,18 @@ input {
     text-decoration: none;
     text-overflow: ellipsis;
   }
+}
+
+.email-registered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  width: 100%;
+  height: 90px;
+  font-size: 18px;
+  color: #fff;
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
