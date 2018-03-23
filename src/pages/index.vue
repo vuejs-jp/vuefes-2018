@@ -50,6 +50,6 @@ export default {
 
 .head-image {
   display: block;
-  max-width: 100%;
+  width: 100%;
 }
 </style>
