@@ -1,8 +1,6 @@
 <template>
   <form class="email-registration-form" @submit.prevent="registerEmail" ref="form">
-    <p>
-      <input type="email" name="email" v-model="formData.email" placeholder="メールアドレス" required @input="validate" :readonly="status.isLoading">
-    </p>
+    <input type="email" name="email" v-model="formData.email" placeholder="メールアドレス" required @input="validate" :readonly="status.isLoading">
 
     <button class="conversion-button" type="submit" :disabled="!isValid || status.isLoading">
       最新情報をメールで受け取る
@@ -58,12 +56,16 @@ export default {
 $button-height: 60px;
 
 input {
-  margin-bottom: 10px;
+  margin: 0;
   width: calc(100% - 40px);
   height: 60px;
   padding-left: 18px;
   padding-right: 18px;
   font-size: 18px;
+
+  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+    margin-bottom: 10px;
+  }
 }
 
 .conversion-button {

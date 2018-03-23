@@ -5,7 +5,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Vue Fes Japan 2018 | 2018年秋開催予定',
+    title: 'Vue Fes Japan 2018 | 2018年11月3日（土）',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -27,6 +27,7 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
+      { rel: 'stylesheet', href: 'https://use.typekit.net/qns1qjx.css' },
     ],
   },
   /*

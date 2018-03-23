@@ -5,8 +5,19 @@
     </template>
 
     <div class="description">
-      <p class="readable">Vue Fes Japan 2018 は、<a href="https://github.com/vuejs-jp/home" target="_blank">Vue.js 日本ユーザーグループ</a> のスタッフが中心となって結成された、Vue Fes Japan 2018 実行委員会によって企画・運営されています。同会は、代表と有志のスタッフで組織されており、その全員が無償で協力しています。人件費、交通費など、あらゆる名目での対価を受け取っていません。</p>
+      <p class="readable">Vue Fes Japan 2018は、<a href="https://github.com/vuejs-jp/home" target="_blank" rel="noopener">Vue.js日本ユーザーグループ</a>のスタッフが中心となって結成された、Vue Fes Japan 2018実行委員会によって企画・運営されています。同委員会は、全員が無償で協力しており、人件費、交通費など、あらゆる名目での対価を受け取っていません。</p>
     </div>
+
+    <ul class="leaders">
+      <li class="leader" v-for="leader in leaders" :key="leader.twitterId">
+        <a :href="`https://twitter.com/${leader.twitterId}`" target="_blank" rel="noopener">
+          <img class="icon" :src="require(`~/assets/images/staffs/${leader.icon}`)">
+        </a>
+        <a class="link-to-twitter" :href="`https://twitter.com/${leader.twitterId}`" target="_blank" rel="noopener">
+          {{ leader.twitterId }}
+        </a>
+      </li>
+    </ul>
 
     <ul class="staffs">
       <li class="staff" v-for="staff in staffs" :key="staff.twitterId">
@@ -30,10 +41,14 @@ export default {
     PageSection,
   },
   computed: {
+    leaders () {
+      return [
+        { twitterId: '@kazu_pon', icon: 'kazu_pon.png' },
+      ]
+    },
     staffs () {
       return [
         { twitterId: '@448jp', icon: '448jp.png' },
-        { twitterId: '@kazu_pon', icon: 'kazu_pon.png' },
         { twitterId: '@kawakami0717', icon: 'kawakami0717.jpg' },
         { twitterId: '@kazuyukimiyake', icon: 'kazuyukimiyake.jpg' },
         { twitterId: '@masaakikunsan', icon: 'masaakikunsan.jpg' },
@@ -59,11 +74,17 @@ export default {
   margin-bottom: 20px;
 }
 
+.leaders {
+  display: flex;
+  justify-content: center;
+}
+
 .staffs {
   display: flex;
   flex-wrap: wrap;
 }
 
+.leader,
 .staff {
   width: calc((100% - (6px * 2)) / 3);
   margin-top: 15px;
@@ -85,9 +106,14 @@ export default {
 .link-to-twitter {
   display: block;
   text-align: center;
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 1;
   color: $black;
   text-decoration: none;
+
+  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+    font-size: 3.75vw;
+  }
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
@@ -100,6 +126,7 @@ export default {
     padding: 0 16px;
   }
 
+  .leader,
   .staff {
     width: calc((100% - (20px * 5)) / 6);
   }

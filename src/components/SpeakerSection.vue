@@ -11,7 +11,7 @@
 
       <div class="description-wrapper">
         <div class="label">
-          Vue.js プロジェクトリーダー
+          Vue.jsクリエーター
         </div>
 
         <h3 class="speaker-name">
@@ -19,15 +19,14 @@
         </h3>
 
         <div class="description">
-          <p class="readable">
-            Vue Technology LLC ファウンダー。オープンソースの JavaScript フレームワークである Vue.js でフルタイムで働いています。デザイン、コーディング、そして、時々アートを作ることを夢見ています。
-          </p>
+          <p class="readable">Evanは開発者、デザイナー、そしてクリエイティブコーダーです。彼は、リアクティブなコンポーネントでモダンなWebインターフェイスを構築するためのJavaScriptフレームワーク、Vue.jsの作者です。</p>
+          <p class="readable">かつて、GitHubで最もスターを集めたフルスタックJavaScriptフレームワークであったMeteorの開発グループでも働いていました。Google Creative Labで、さまざまなGoogleプロダクト向けの実験的なUIプロトタイプに、2年間取り組んでいた経験もあります。</p>
         </div>
       </div>
     </div>
 
     <div class="more">
-      and more...
+      他スピーカーは決定次第、更新予定です。
     </div>
   </page-section>
 </template>
@@ -44,10 +43,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.speaker {
+  display: flex;
+  margin: 60px 0;
+
+  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
+.icon {
+  width: 256px;
+  margin-right: 40px;
+  line-height: 0;
+
+  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+}
+
 .speaker-name {
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   font-size: 32px;
+  line-height: 1;
 }
 
 .description {
@@ -59,16 +81,6 @@ export default {
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
-  .speaker {
-    display: flex;
-    margin: 56px 0 60px;
-  }
-
-  .icon {
-    width: 256px;
-    margin-right: 40px;
-  }
-
   .description-wrapper {
     width: calc(100% - (256px + 40px));
   }

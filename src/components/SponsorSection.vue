@@ -1,12 +1,12 @@
 <template>
   <page-section class="sponsor-section" theme="yellow">
     <template slot="heading">
-      Be a sponsor
+      Be a Sponsor
     </template>
 
     <div class="description">
       <p class="readable">
-        Vue.js に関わる人々が集まり「Vue Fes Japan 2018」をよりよいイベントにするため、ぜひ、ご協力いただきたいと考えております。次項に紹介する「協賛（4種）」メニューのいずれかで「Vue Fes Japan 2018」の活動をサポートいただければ幸いです。
+        Vue.jsに関わる人々が集まる「Vue Fes Japan 2018」をよりよいイベントにするため、ぜひご協力いただきたいと考えております。詳しい資料は、次のボタンからご覧いただけます。
       </p>
     </div>
 
@@ -35,16 +35,14 @@ export default {
 
 <style lang="scss" scoped>
 .description {
-  margin-bottom: 48px;
+  margin: 40px 0 60px;
+
+  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+    margin: 20px 0 40px;
+  }
 }
 
 .button-wrapper {
   text-align: center;
-}
-
-@media screen and (min-width: $layout-breakpoint--is-small-up) {
-  .description {
-    margin: 40px 0 60px;
-  }
 }
 </style>

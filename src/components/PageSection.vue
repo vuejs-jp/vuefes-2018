@@ -24,35 +24,35 @@ export default {
 
 <style lang="scss" scoped>
 .page-section {
-  padding: 24px 16px 56px;
+  padding: 80px 40px;
+
+  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+    padding: 60px 5%;
+  }
 }
 
 .heading {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  margin-top: 16px;
-  margin-bottom: 24px;
-  font-size: 48px;
-  line-height: 1.3;
+  margin: 0;
+  font-size: 60px;
+  line-height: 1.1;
   text-align: center;
   color: $primary-color;
+
+  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+    font-size: 14vw;
+  }
 }
 
 .bg-green {
-  background-color: $hiwamoegi;
+  background: url(/assets/images/symbol-mark.svg) left top no-repeat, $hiwamoegiGradient;
 }
 
 .bg-yellow {
-  background-color: $tohoh;
+  background: $tohohGradient;
 }
 
 .bg-red {
-  background-color: $sangosyu;
-}
-
-@media screen and (min-width: $layout-breakpoint--is-small-up) {
-  .page-section {
-    padding: 60px 40px 80px;
-  }
+  background: $sangosyuGradient;
 }
 
 @media screen and (min-width: $layout-breakpoint--is-medium-up) {

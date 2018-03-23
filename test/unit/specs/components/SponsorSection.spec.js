@@ -11,6 +11,6 @@ describe('SponsorSection', () => {
   })
 
   it('レンダリングできる', () => {
-    expect(vm.$el.textContent).to.contain('Be a sponsor')
+    expect(vm.$el.textContent).to.contain('Be a Sponsor')
   })
 })

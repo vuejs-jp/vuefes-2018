@@ -4,7 +4,7 @@
       <picture>
         <source media="(max-width: 768px)" srcset="~/assets/images/head@2x.jpg">
         <source media="(min-width: 769px)" srcset="~/assets/images/head.jpg">
-        <img class="head-image" src="~/assets/images/head.jpg" alt="head-image">
+        <img class="head-image" src="~/assets/images/head.jpg" alt="Vue Fes Japan 2018 | 2018.11.3 [Sat.]">
       </picture>
     </div>
 

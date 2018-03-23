@@ -1,38 +1,31 @@
 <template>
   <page-section class="cfp-section" theme="red">
     <template slot="heading">
-      Call for papers
+      Call for Papers
     </template>
 
     <div class="description">
       <p class="readable">
-        本カンファレンスにおいて講演を広く一般に募集いたします。講演をご希望の方は、以下の募集要項をお読みいただき、講演概要と共に必要事項を Vue Fes Japan 2018 実行委員会までご送付ください。
+        本カンファレンスにおいて、講演を広く一般に募集します。詳しい情報については後日公開予定です。
       </p>
-
-      <p class="readable">
-        皆さまのご応募をお待ちしております。
-      </p>
+      <p class="readable">メールアドレスをご登録いただくと、最新情報をお届けします。</p>
     </div>
 
-    <div class="button-wrapper">
-      <conversion-button>
-        <a href="#" v-on:click="showComingSoon">
-          講演を希望する
-        </a>
-      </conversion-button>
-    </div>
+    <email-registration-form class="email-registration-form" />
   </page-section>
 </template>
 
 <script>
 import ConversionButton from '~/components/ConversionButton'
 import PageSection from '~/components/PageSection'
+import EmailRegistrationForm from '~/components/EmailRegistrationForm'
 
 export default {
   name: 'cfp-section',
   components: {
     ConversionButton,
     PageSection,
+    EmailRegistrationForm,
   },
   methods: {
     showComingSoon (event) {
@@ -45,7 +38,11 @@ export default {
 
 <style lang="scss" scoped>
 .description {
-  margin-bottom: 48px;
+  margin: 40px 0 60px;
+
+  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+    margin: 20px 0 40px;
+  }
 
   p + p {
     margin-top: 32px;
@@ -54,11 +51,5 @@ export default {
 
 .button-wrapper {
   text-align: center;
-}
-
-@media screen and (min-width: $layout-breakpoint--is-small-up) {
-  .description {
-    margin: 40px 0 60px;
-  }
 }
 </style>

@@ -11,6 +11,6 @@ describe('CfpSection', () => {
   })
 
   it('レンダリングできる', () => {
-    expect(vm.$el.textContent).to.contain('Call for papers')
+    expect(vm.$el.textContent).to.contain('Call for Papers')
   })
 })

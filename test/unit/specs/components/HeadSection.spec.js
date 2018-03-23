@@ -11,6 +11,6 @@ describe('HeadSection', () => {
   })
 
   it('レンダリングできる', () => {
-    expect(vm.$el.textContent).to.contain('Vue.js をもっと楽しむための祭典')
+    expect(vm.$el.textContent).to.contain('日本で初めて開催するVue.jsカンファレンス')
   })
 })

@@ -1,5 +1,16 @@
-// TODO: あとで変更する
-$font-family-default: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+@font-face {
+  font-family: MyYuGothic;
+  font-weight: normal;
+  src: local(YuGothic-Medium);
+}
+
+@font-face {
+  font-family: MyYuGothic;
+  font-weight: bold;
+  src: local(YuGothic-Bold);
+}
+
+$font-family-default: 'din-2014', 'MyYuGothic', '游ゴシック Medium', sans-serif;
 
 html {
   font-family: $font-family-default;
@@ -22,8 +33,16 @@ h1, h2, h3, h4, h5, h6, p {
   line-height: 1.5;
 }
 
+a {
+  transition: 0.2s $easeOutCubic;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
 .readable {
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
