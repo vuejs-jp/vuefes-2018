@@ -12,7 +12,7 @@
 
     <div class="licence">
       <p>
-        © 2018 Vue Fes Japan 2018 Executive Committee<br />
+      © 2018 Vue Fes Japan 2018 Executive Committee. Contact <a href="mailto:info@vuefes.jp">info@vuefes.jp</a><br />
         Vue.js artworks by <a href="https://github.com/yyx990803" target="_blank" rel="noopener">Evan you</a> is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International License</a>.
       </p>
     </div>
