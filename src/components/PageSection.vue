@@ -29,6 +29,25 @@ export default {
   @media screen and (max-width: $layout-breakpoint--is-small-up) {
     padding: 60px 5%;
   }
+  position: relative;
+}
+
+.page-section::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  content: '';
+  background-size: 64px 64px;
+  background-image: url('~/assets/images/texture.png');
+}
+
+.page-section h2,
+.page-section .content {
+  position: relative;
+  z-index: 100;
 }
 
 .heading {
