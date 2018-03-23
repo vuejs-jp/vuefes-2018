@@ -5,7 +5,9 @@
     </template>
 
     <div class="description">
-      <p class="readable">Vue Fes Japan 2018は、<a href="https://github.com/vuejs-jp/home" target="_blank" rel="noopener">Vue.js日本ユーザーグループ</a>のスタッフが中心となって結成された、Vue Fes Japan 2018実行委員会によって企画・運営されています。同委員会は、全員が無償で協力しており、人件費、交通費など、あらゆる名目での対価を受け取っていません。</p>
+      <p class="readable">
+        Vue Fes Japan 2018 は、<a href="https://github.com/vuejs-jp/home" target="_blank" rel="noopener">Vue.js 日本ユーザーグループ</a>のスタッフが中心となって結成された、Vue Fes Japan 2018 実行委員会によって企画・運営されています。同委員会は、全員が無償で協力しており、人件費、交通費など、あらゆる名目での対価を受け取っていません。
+      </p>
     </div>
 
     <ul class="leaders">
@@ -106,13 +108,17 @@ export default {
 .link-to-twitter {
   display: block;
   text-align: center;
-  font-size: 16px;
+  font-size: 3.75vw;
   line-height: 1;
   color: $black;
   text-decoration: none;
 
-  @media screen and (max-width: $layout-breakpoint--is-small-up) {
-    font-size: 3.75vw;
+  @media screen and (min-width: $layout-breakpoint--is-small-up) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: $layout-breakpoint--is-medium-up) {
+    font-size: 16px;
   }
 }
 

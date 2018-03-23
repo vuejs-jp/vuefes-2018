@@ -11,6 +11,6 @@ describe('index', () => {
   })
 
   it('レンダリングできる', () => {
-    expect(vm.$el.textContent).to.contain('日本で初めて開催するVue.jsカンファレンス')
+    expect(vm.$el.textContent).to.contain('Vue.js カンファレンス')
   })
 })

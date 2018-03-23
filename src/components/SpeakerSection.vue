@@ -11,7 +11,7 @@
 
       <div class="description-wrapper">
         <div class="label">
-          Vue.jsクリエーター
+          Vue.js クリエーター
         </div>
 
         <h3 class="speaker-name">
@@ -19,8 +19,12 @@
         </h3>
 
         <div class="description">
-          <p class="readable">Evanは開発者、デザイナー、そしてクリエイティブコーダーです。彼は、リアクティブなコンポーネントでモダンなWebインターフェイスを構築するためのJavaScriptフレームワーク、Vue.jsの作者です。</p>
-          <p class="readable">かつて、GitHubで最もスターを集めたフルスタックJavaScriptフレームワークであったMeteorの開発グループでも働いていました。Google Creative Labで、さまざまなGoogleプロダクト向けの実験的なUIプロトタイプに、2年間取り組んでいた経験もあります。</p>
+          <p class="readable">
+            Evan は開発者、デザイナー、そしてクリエイティブコーダーです。彼は、リアクティブなコンポーネントでモダンな Web インターフェイスを構築するための JavaScript フレームワーク、Vue.js の作者です。
+          </p>
+          <p class="readable">
+            かつて、GitHub で最もスターを集めたフルスタック JavaScript フレームワークであった Meteor の開発グループでも働いていました。Google Creative Lab で、さまざまな Google プロダクト向けの実験的な UI プロトタイプに、2年間取り組んでいた経験もあります。
+          </p>
         </div>
       </div>
     </div>
@@ -45,9 +49,9 @@ export default {
 <style lang="scss" scoped>
 .speaker {
   display: flex;
-  margin: 60px 0;
+  margin: 60px 0 10px;
 
-  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+  @media screen and (max-width: $layout-breakpoint--is-small) {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
@@ -59,7 +63,7 @@ export default {
   margin-right: 40px;
   line-height: 0;
 
-  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+  @media screen and (max-width: $layout-breakpoint--is-small) {
     width: 100%;
     margin: 0 0 10px;
   }

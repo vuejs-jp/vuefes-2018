@@ -1,18 +1,21 @@
 <template>
   <form class="email-registration-form" @submit.prevent="registerEmail" ref="form" v-if="!isRegistered">
-    <p>
-      <input type="email" name="email" v-model="formData.email" placeholder="メールアドレスを入力してください" required @input="validate" :readonly="status.isLoading">
-    </p>
+    <div class="form-content">
+      <p>
+        <input type="email" name="email" v-model="formData.email" placeholder="メールアドレスを入力してください" required @input="validate" :readonly="status.isLoading">
+      </p>
 
-    <button class="conversion-button" type="submit" :disabled="!isValid || status.isLoading">
-      <template v-if="!status.isLoading">
-        最新情報をメールで受け取る
-      </template>
-      <template v-else>
-        登録中……
-      </template>
-    </button>
+      <button class="conversion-button" type="submit" :disabled="!isValid || status.isLoading">
+        <template v-if="!status.isLoading">
+          最新情報をメールで受け取る
+        </template>
+        <template v-else>
+          登録中……
+        </template>
+      </button>
+    </div>
   </form>
+
   <transition v-else>
     <div class="email-registered">
       登録が完了しました。
@@ -68,6 +71,12 @@ export default {
 <style lang="scss" scoped>
 $button-height: 60px;
 
+.email-registration-form {
+  p {
+    margin: 0;
+  }
+}
+
 input {
   margin: 0;
   width: calc(100% - 40px);
@@ -76,7 +85,7 @@ input {
   padding-right: 18px;
   font-size: 18px;
 
-  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+  @media screen and (max-width: $layout-breakpoint--is-small) {
     margin-bottom: 10px;
   }
 
@@ -132,11 +141,7 @@ input {
     justify-content: center;
 
     p {
-      margin: 0;
-    }
-
-    .conversion-button {
-      font-size: 24px;
+      margin-bottom: 10px;
     }
   }
 
@@ -150,19 +155,22 @@ input {
     height: calc(80px - 6px);
     font-size: 24px;
   }
+
+  .conversion-button {
+    height: 74px;
+    font-size: 24px;
+  }
 }
 
-@media screen and (min-width: $layout-breakpoint--is-small-up) {
+@media screen and (min-width: $layout-breakpoint--is-medium-up) {
   .form-content {
     width: 940px;
-
-    .conversion-button {
-      width: 372px;
+    p {
+      display: inline-block;
     }
   }
 
   input {
-    display: inline-block;
     width: 512px;
     margin-right: 12px;
   }
@@ -170,15 +178,15 @@ input {
   $button-height: 80px;
 
   .conversion-button {
-    width: 456px;
+    width: 372px;
     height: $button-height;
-    font-size: 32px;
+    font-size: 24px;
     text-align: center;
 
     a {
       width: 100%;
       line-height: $button-height;
-      font-size: 32px;
+      font-size: 24px;
     }
   }
 }

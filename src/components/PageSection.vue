@@ -26,7 +26,7 @@ export default {
 .page-section {
   padding: 80px 40px;
 
-  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+  @media screen and (max-width: $layout-breakpoint--is-small) {
     padding: 60px 5%;
   }
   position: relative;
@@ -51,13 +51,14 @@ export default {
 }
 
 .heading {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 24px;
   font-size: 60px;
-  line-height: 1.1;
+  line-height: 1.3;
   text-align: center;
   color: $primary-color;
 
-  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+  @media screen and (max-width: $layout-breakpoint--is-small) {
     font-size: 14vw;
   }
 }

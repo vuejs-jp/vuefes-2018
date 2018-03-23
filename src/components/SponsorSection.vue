@@ -6,7 +6,7 @@
 
     <div class="description">
       <p class="readable">
-        Vue.jsに関わる人々が集まる「Vue Fes Japan 2018」をよりよいイベントにするため、ぜひご協力いただきたいと考えております。詳しい資料は、次のボタンからご覧いただけます。
+        Vue.js に関わる人々が集まる「Vue Fes Japan 2018」をよりよいイベントにするため、ぜひご協力いただきたいと考えております。詳しい資料は、次のボタンからご覧いただけます。
       </p>
     </div>
 
@@ -37,7 +37,7 @@ export default {
 .description {
   margin: 40px 0 60px;
 
-  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+  @media screen and (max-width: $layout-breakpoint--is-small) {
     margin: 20px 0 40px;
   }
 }

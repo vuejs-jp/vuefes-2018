@@ -8,7 +8,9 @@
       <p class="readable">
         本カンファレンスにおいて、講演を広く一般に募集します。詳しい情報については後日公開予定です。
       </p>
-      <p class="readable">メールアドレスをご登録いただくと、最新情報をお届けします。</p>
+      <p class="readable">
+        メールアドレスをご登録いただくと、最新情報をお届けします。
+      </p>
     </div>
 
     <email-registration-form class="email-registration-form" />
@@ -40,7 +42,7 @@ export default {
 .description {
   margin: 40px 0 60px;
 
-  @media screen and (max-width: $layout-breakpoint--is-small-up) {
+  @media screen and (max-width: $layout-breakpoint--is-small) {
     margin: 20px 0 40px;
   }
 
