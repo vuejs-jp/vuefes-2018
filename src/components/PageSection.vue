@@ -24,12 +24,13 @@ export default {
 
 <style lang="scss" scoped>
 .page-section {
-  padding: 80px 40px;
-
-  @media screen and (max-width: $layout-breakpoint--is-small) {
-    padding: 60px 5%;
-  }
   position: relative;
+  padding: 60px 5%;
+
+  h2, .content {
+    position: relative;
+    z-index: 100;
+  }
 }
 
 .page-section::before {
@@ -44,27 +45,22 @@ export default {
   background-image: url('~/assets/images/texture.png');
 }
 
-.page-section h2,
-.page-section .content {
-  position: relative;
-  z-index: 100;
-}
-
 .heading {
   margin-top: 0;
   margin-bottom: 24px;
-  font-size: 60px;
+  font-size: 14vw;
   line-height: 1.3;
   text-align: center;
   color: $primary-color;
 
-  @media screen and (max-width: $layout-breakpoint--is-small) {
-    font-size: 14vw;
+  // font-size の最大値を 60px にする
+  @media screen and (min-width: 428px) {
+    font-size: 60px;
   }
 }
 
 .bg-green {
-  background: url(/assets/images/symbol-mark.svg) left top no-repeat, $hiwamoegiGradient;
+  background: url('~/assets/images/symbol-mark.svg') left top no-repeat, $hiwamoegiGradient;
 }
 
 .bg-yellow {
@@ -73,6 +69,12 @@ export default {
 
 .bg-red {
   background: $sangosyuGradient;
+}
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .page-section {
+    padding: 80px 40px;
+  }
 }
 
 @media screen and (min-width: $layout-breakpoint--is-medium-up) {

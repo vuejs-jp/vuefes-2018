@@ -47,26 +47,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.speaker {
-  display: flex;
-  margin: 60px 0 10px;
-
-  @media screen and (max-width: $layout-breakpoint--is-small) {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
-}
-
 .icon {
-  width: 256px;
-  margin-right: 40px;
-  line-height: 0;
-
-  @media screen and (max-width: $layout-breakpoint--is-small) {
-    width: 100%;
-    margin: 0 0 10px;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  max-width: 400px;
 }
 
 .speaker-name {
@@ -85,6 +70,17 @@ export default {
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .speaker {
+    display: flex;
+    margin-top: 60px;
+  }
+
+  .icon {
+    width: 256px;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+
   .description-wrapper {
     width: calc(100% - (256px + 40px));
   }

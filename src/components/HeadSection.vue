@@ -45,20 +45,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.heading {
-  font-size: 48px !important;
+.head-section {
+  .heading {
+    font-size: 8vw;
 
-  @media screen and (max-width: $layout-breakpoint--is-small) {
-    font-size: 8vw !important;
+    // font-size の最大値を 48px にする
+    @media screen and (min-width: 600px) {
+      font-size: 48px;
+    }
   }
 }
 
 .description {
-  margin: 60px 0 30px;
-
-  @media screen and (max-width: $layout-breakpoint--is-small) {
-    margin-top: 40px;
-  }
+  margin-top: 40px;
 
   p + p {
     margin-top: 32px;
@@ -67,22 +66,10 @@ export default {
 
 .signature {
   text-align: right;
-  margin-bottom: 60px;
-
-  @media screen and (max-width: $layout-breakpoint--is-small) {
-    margin-bottom: 40px;
-  }
+  margin-bottom: 40px;
 
   .team {
     margin-right: 12px;
-  }
-
-  br {
-    display: none;
-
-    @media screen and (max-width: $layout-breakpoint--is-small) {
-      display: block;
-    }
   }
 
   .label {
@@ -111,6 +98,18 @@ export default {
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .description {
+    margin: 60px 0 30px;
+  }
+
+  .signature {
+    margin-bottom: 60px;
+
+    br {
+      display: none;
+    }
+  }
+
   .follow-us {
     .twitter-icon {
       width: 60px;

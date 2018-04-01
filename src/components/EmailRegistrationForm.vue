@@ -72,22 +72,21 @@ export default {
 $button-height: 60px;
 
 .email-registration-form {
+  text-align: center;
+
   p {
     margin: 0;
   }
 }
 
 input {
-  margin: 0;
+  margin-bottom: 10px;
   width: calc(100% - 40px);
+  max-width: calc(#{$conversion-button__max-width} - 40px);
   height: 60px;
   padding-left: 18px;
   padding-right: 18px;
   font-size: 18px;
-
-  @media screen and (max-width: $layout-breakpoint--is-small) {
-    margin-bottom: 10px;
-  }
 
   &[readonly] {
     color: #aaa;
@@ -97,6 +96,7 @@ input {
 .conversion-button {
   background-color: $primary-color;
   width: 100%;
+  max-width: $conversion-button__max-width;
   height: $button-height;
   border-radius: 1px;
   text-align: center;
@@ -146,12 +146,12 @@ input {
   }
 
   .form-content {
-    width: 456px;
+    width: $conversion-button__max-width;
   }
 
   input {
     display: block;
-    width: calc(456px - 40px);
+    width: calc(#{$conversion-button__max-width} - 40px);
     height: calc(80px - 6px);
     font-size: 24px;
   }

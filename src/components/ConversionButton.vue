@@ -16,6 +16,7 @@ $button-height: 60px;
 .conversion-button {
   background-color: $primary-color;
   width: 100%;
+  max-width: $conversion-button__max-width;
   height: $button-height;
   border-radius: 1px;
   text-align: center;
@@ -40,7 +41,7 @@ $button-height: 60px;
   $button-height: 80px;
 
   .conversion-button {
-    width: 456px;
+    width: $conversion-button__max-width;
     height: $button-height;
     font-size: 32px;
     text-align: center;
