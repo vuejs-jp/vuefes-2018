@@ -6,7 +6,7 @@
       </div>
 
       <div class="link-list">
-        <a class="vuejs-link" href="https://jp.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> | <a class="user-group-link" href="https://github.com/vuejs-jp/home" target="_blank" rel="noopener">Vue.js 日本ユーザーグループ</a>
+        <a href="https://jp.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> | <a href="https://github.com/vuejs-jp/home" target="_blank" rel="noopener">Vue.js 日本ユーザーグループ</a> | <nuxt-link to="/code-of-conduct">行動規範</nuxt-link>
       </div>
     </div>
 
@@ -75,14 +75,19 @@ export default {
 
   .link-list {
     margin-bottom: 12px;
-  }
 
-  .vuejs-link {
-    margin-right: 8px;
-  }
+    a {
+      margin-left: 8px;
+      margin-right: 8px;
+    }
 
-  .user-group-link {
-    margin-left: 8px;
+    a:first-child {
+      margin-left: 0;
+    }
+
+    a:last-child {
+      margin-right: 0;
+    }
   }
 
   .licence {

@@ -1,12 +1,6 @@
 <template>
   <div class="welcome-page">
-    <div>
-      <picture>
-        <source media="(max-width: 768px)" srcset="~/assets/images/head@2x.jpg">
-        <source media="(min-width: 769px)" srcset="~/assets/images/head.jpg">
-        <img class="head-image" src="~/assets/images/head.jpg" alt="Vue Fes Japan 2018 | 2018.11.3 [Sat.]">
-      </picture>
-    </div>
+    <the-head-image />
 
     <head-section />
 
@@ -24,32 +18,30 @@
 
 <script>
 import CfpSection from '~/components/CfpSection'
-import ConversionButton from '~/components/ConversionButton'
+import AppButton from '~/components/AppButton'
 import HeadSection from '~/components/HeadSection'
 import PageFooter from '~/components/PageFooter'
 import SpeakerSection from '~/components/SpeakerSection'
 import SponsorSection from '~/components/SponsorSection'
 import TeamSection from '~/components/TeamSection'
+import TheHeadImage from '~/components/TheHeadImage'
 
 export default {
+  name: 'index',
   components: {
     CfpSection,
-    ConversionButton,
+    AppButton,
     HeadSection,
     PageFooter,
     SpeakerSection,
     SponsorSection,
     TeamSection,
+    TheHeadImage,
   },
 }
 </script>
 
 <style lang="scss" scoped>
 .welcome-page {
-}
-
-.head-image {
-  display: block;
-  width: 100%;
 }
 </style>

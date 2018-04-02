@@ -1,22 +1,22 @@
 <template>
-  <button type="button" class="conversion-button">
+  <button type="button" class="app-button">
     <slot />
   </button>
 </template>
 
 <script>
 export default {
-  name: 'conversion-button',
+  name: 'app-button',
 }
 </script>
 
 <style lang="scss" scoped>
 $button-height: 60px;
 
-.conversion-button {
+.app-button {
   background-color: $primary-color;
   width: 100%;
-  max-width: $conversion-button__max-width;
+  max-width: $app-button__max-width;
   height: $button-height;
   border-radius: 1px;
   text-align: center;
@@ -40,8 +40,8 @@ $button-height: 60px;
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
   $button-height: 80px;
 
-  .conversion-button {
-    width: $conversion-button__max-width;
+  .app-button {
+    width: $app-button__max-width;
     height: $button-height;
     font-size: 32px;
     text-align: center;

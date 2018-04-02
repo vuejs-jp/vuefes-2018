@@ -1,7 +1,7 @@
 <template>
   <page-section class="head-section" theme="green">
-    <h1 class="heading">
-      日本で初めて開催する<br>Vue.js カンファレンス
+    <h1 class="page-title">
+      日本で初めて開催する<br />Vue.js カンファレンス
     </h1>
 
     <div class="description">
@@ -45,14 +45,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.head-section {
-  .heading {
-    font-size: 8vw;
+.page-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 8vw;
+  line-height: 1.3;
+  text-align: center;
+  color: $primary-color;
 
-    // font-size の最大値を 48px にする
-    @media screen and (min-width: 600px) {
-      font-size: 48px;
-    }
+  // font-size の最大値を 48px にする
+  @media screen and (min-width: 600px) {
+    font-size: 48px;
   }
 }
 

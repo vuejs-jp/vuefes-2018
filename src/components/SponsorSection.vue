@@ -11,23 +11,23 @@
     </div>
 
     <div class="button-wrapper">
-      <conversion-button>
+      <app-button>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7-dcNzJ-hLdGEDjgaLvoMMiPX-G2vy7V9azn5DQByxtdgzg/viewform" target="_blank" rel="noopener">
           スポンサーになる
         </a>
-      </conversion-button>
+      </app-button>
     </div>
   </page-section>
 </template>
 
 <script>
-import ConversionButton from '~/components/ConversionButton'
+import AppButton from '~/components/AppButton'
 import PageSection from '~/components/PageSection'
 
 export default {
   name: 'sponsor-section',
   components: {
-    ConversionButton,
+    AppButton,
     PageSection,
   },
 }

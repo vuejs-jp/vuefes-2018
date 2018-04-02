@@ -18,14 +18,14 @@
 </template>
 
 <script>
-import ConversionButton from '~/components/ConversionButton'
+import AppButton from '~/components/AppButton'
 import PageSection from '~/components/PageSection'
 import EmailRegistrationForm from '~/components/EmailRegistrationForm'
 
 export default {
   name: 'cfp-section',
   components: {
-    ConversionButton,
+    AppButton,
     PageSection,
     EmailRegistrationForm,
   },
