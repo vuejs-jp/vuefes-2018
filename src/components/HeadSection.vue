@@ -23,7 +23,7 @@
     <email-registration-form class="email-registration-form" />
 
     <div class="follow-us">
-      <img class="twitter-icon" src="~/assets/images/twitter-icon.svg">
+      <img class="twitter-icon" src="~/assets/images/logo_twitter.svg">
       <a href="https://twitter.com/vuefes" target="_blank" rel="noopener">
         Follow @vuefes on Twitter!
       </a>
