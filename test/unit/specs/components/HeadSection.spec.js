@@ -1,16 +1,9 @@
-import Vue from 'vue'
+import { mount } from '@vue/test-utils'
 import HeadSection from '~/components/HeadSection'
 
 describe('HeadSection', () => {
-  let Constructor
-  let vm
-
-  beforeEach(() => {
-    Constructor = Vue.extend(HeadSection)
-    vm = new Constructor().$mount()
-  })
-
   it('レンダリングできる', () => {
-    expect(vm.$el.textContent).to.contain('Vue.js カンファレンス')
+    const wrapper = mount(HeadSection)
+    expect(wrapper.text()).to.contain('Vue.js カンファレンス')
   })
 })

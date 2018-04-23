@@ -1,18 +1,11 @@
-import Vue from 'vue'
+import { mount } from '@vue/test-utils'
 import PageFooter from '~/components/PageFooter'
 
 describe('PageFooter', () => {
-  let Constructor
-  let vm
-
-  beforeEach(() => {
-    Constructor = Vue.extend(PageFooter)
-    vm = new Constructor().$mount()
-  })
-
   it('レンダリングできる', () => {
+    const wrapper = mount(PageFooter)
     expect(
-      vm.$el.querySelector('.link-list').textContent
+      wrapper.find('.link-list').text()
     ).to.contain('Vue.js')
   })
 })

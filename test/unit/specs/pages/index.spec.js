@@ -1,16 +1,9 @@
-import Vue from 'vue'
+import { mount } from '@vue/test-utils'
 import index from '~/pages/index'
 
-describe('index', () => {
-  let Constructor
-  let vm
-
-  beforeEach(() => {
-    Constructor = Vue.extend(index)
-    vm = new Constructor().$mount()
-  })
-
+describe('code-of-conduct', () => {
   it('レンダリングできる', () => {
-    expect(vm.$el.textContent).to.contain('Vue.js カンファレンス')
+    const wrapper = mount(index)
+    expect(wrapper.text()).to.contain('Vue.js カンファレンス')
   })
 })

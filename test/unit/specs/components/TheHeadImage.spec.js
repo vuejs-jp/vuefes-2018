@@ -1,16 +1,9 @@
-import Vue from 'vue'
+import { mount } from '@vue/test-utils'
 import TheHeadImage from '~/components/TheHeadImage'
 
 describe('TheHeadImage', () => {
-  let Constructor
-  let vm
-
-  beforeEach(() => {
-    Constructor = Vue.extend(TheHeadImage)
-    vm = new Constructor().$mount()
-  })
-
   it('レンダリングできる', () => {
-    expect(vm.$el.className).to.equal('the-head-image')
+    const wrapper = mount(TheHeadImage)
+    expect(wrapper.classes()).to.contain('the-head-image')
   })
 })

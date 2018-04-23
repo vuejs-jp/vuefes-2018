@@ -24,6 +24,7 @@
     "vue": "^2.5.13"
   },
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.14",
     "ajv": "^6.1.1",
     "babel-eslint": "^8.2.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",

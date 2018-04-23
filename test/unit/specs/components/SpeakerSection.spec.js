@@ -1,16 +1,9 @@
-import Vue from 'vue'
+import { mount } from '@vue/test-utils'
 import SpeakerSection from '~/components/SpeakerSection'
 
 describe('SpeakerSection', () => {
-  let Constructor
-  let vm
-
-  beforeEach(() => {
-    Constructor = Vue.extend(SpeakerSection)
-    vm = new Constructor().$mount()
-  })
-
   it('レンダリングできる', () => {
-    expect(vm.$el.textContent).to.contain('Speaker')
+    const wrapper = mount(SpeakerSection)
+    expect(wrapper.text()).to.contain('Speaker')
   })
 })

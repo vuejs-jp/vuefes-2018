@@ -1,16 +1,9 @@
-import Vue from 'vue'
+import { mount } from '@vue/test-utils'
 import TeamSection from '~/components/TeamSection'
 
 describe('TeamSection', () => {
-  let Constructor
-  let vm
-
-  beforeEach(() => {
-    Constructor = Vue.extend(TeamSection)
-    vm = new Constructor().$mount()
-  })
-
   it('レンダリングできる', () => {
-    expect(vm.$el.textContent).to.contain('About us')
+    const wrapper = mount(TeamSection)
+    expect(wrapper.text()).to.contain('About us')
   })
 })

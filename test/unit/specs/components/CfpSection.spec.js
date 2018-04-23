@@ -1,16 +1,9 @@
-import Vue from 'vue'
+import { mount } from '@vue/test-utils'
 import CfpSection from '~/components/CfpSection'
 
 describe('CfpSection', () => {
-  let Constructor
-  let vm
-
-  beforeEach(() => {
-    Constructor = Vue.extend(CfpSection)
-    vm = new Constructor().$mount()
-  })
-
   it('レンダリングできる', () => {
-    expect(vm.$el.textContent).to.contain('Call for Papers')
+    const wrapper = mount(CfpSection)
+    expect(wrapper.text()).to.contain('Call for Papers')
   })
 })

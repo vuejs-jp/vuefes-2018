@@ -1,16 +1,9 @@
-import Vue from 'vue'
+import { mount } from '@vue/test-utils'
 import AppButton from '~/components/AppButton'
 
 describe('AppButton', () => {
-  let Constructor
-  let vm
-
-  beforeEach(() => {
-    Constructor = Vue.extend(AppButton)
-    vm = new Constructor().$mount()
-  })
-
   it('レンダリングできる', () => {
-    expect(vm.$el.className).to.equal('app-button')
+    const wrapper = mount(AppButton)
+    expect(wrapper.classes()).to.contain('app-button')
   })
 })
