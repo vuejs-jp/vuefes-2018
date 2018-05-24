@@ -20,7 +20,7 @@
       </div>
 
       <div class="link-list">
-        <a href="https://jp.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> | <a href="https://github.com/vuejs-jp/home" target="_blank" rel="noopener">Vue.js 日本ユーザーグループ</a> | <nuxt-link to="/code-of-conduct">行動規範</nuxt-link>
+        <a href="https://jp.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> | <a href="https://github.com/vuejs-jp/home" target="_blank" rel="noopener">Vue.js 日本ユーザーグループ</a> | <nuxt-link to="/code-of-conduct">行動規範</nuxt-link> | <nuxt-link to="/privacy">プライバシーポリシー</nuxt-link>
       </div>
 
       <div class="licence">
