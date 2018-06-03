@@ -11,23 +11,25 @@
     </div>
 
     <div class="button-wrapper">
-      <app-button>
+      <link-button>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7-dcNzJ-hLdGEDjgaLvoMMiPX-G2vy7V9azn5DQByxtdgzg/viewform" target="_blank" rel="noopener">
           スポンサーになる
         </a>
-      </app-button>
+      </link-button>
     </div>
   </page-section>
 </template>
 
 <script>
 import AppButton from '~/components/AppButton'
+import LinkButton from '~/components/LinkButton'
 import PageSection from '~/components/PageSection'
 
 export default {
   name: 'sponsor-section',
   components: {
     AppButton,
+    LinkButton,
     PageSection,
   },
 }
