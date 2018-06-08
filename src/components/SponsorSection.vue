@@ -12,7 +12,7 @@
 
     <div class="button-wrapper">
       <link-button>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe7-dcNzJ-hLdGEDjgaLvoMMiPX-G2vy7V9azn5DQByxtdgzg/viewform" target="_blank" rel="noopener">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzON2QZww1v53Unb3RZQPqZ1upIm4CjVAduCYNDyiaLbiwUA/viewform" target="_blank" rel="noopener">
           スポンサーになる
         </a>
       </link-button>
