@@ -16,7 +16,7 @@
           <img class="icon" :src="require(`~/assets/images/staffs/${leader.icon}`)">
         </a>
         <a class="link-to-twitter" :href="`https://twitter.com/${leader.twitterId}`" target="_blank" rel="noopener">
-          {{ leader.twitterId }}
+          @{{ leader.twitterId }}
         </a>
       </li>
     </ul>
@@ -27,7 +27,7 @@
           <img class="icon" :src="require(`~/assets/images/staffs/${staff.icon}`)">
         </a>
         <a class="link-to-twitter" :href="`https://twitter.com/${staff.twitterId}`" target="_blank" rel="noopener">
-          {{ staff.twitterId }}
+          @{{ staff.twitterId }}
         </a>
       </li>
     </ul>
@@ -45,22 +45,22 @@ export default {
   computed: {
     leaders () {
       return [
-        { twitterId: '@kazu_pon', icon: 'kazu_pon.png' },
+        { twitterId: 'kazu_pon', icon: 'kazu_pon.png' },
       ]
     },
     staffs () {
       return [
-        { twitterId: '@448jp', icon: '448jp.png' },
-        { twitterId: '@kawakami0717', icon: 'kawakami0717.jpg' },
-        { twitterId: '@kazuyukimiyake', icon: 'kazuyukimiyake.jpg' },
-        { twitterId: '@masaakikunsan', icon: 'masaakikunsan.jpg' },
-        { twitterId: '@inouetakuya', icon: 'inouetakuya.jpg' },
-        { twitterId: '@c5meru', icon: 'c5meru.jpg' },
-        { twitterId: '@hashedrock', icon: 'hashedrock.jpg' },
-        { twitterId: '@shika358', icon: 'shika358.jpg' },
-        { twitterId: '@potato4d', icon: 'potato4d.jpg' },
-        { twitterId: '@positiveflat', icon: 'positiveflat.png' },
-        { twitterId: '@hypermkt', icon: 'hypermkt.png' },
+        { twitterId: '448jp', icon: '448jp.png' },
+        { twitterId: 'kawakami0717', icon: 'kawakami0717.jpg' },
+        { twitterId: 'kazuyukimiyake', icon: 'kazuyukimiyake.jpg' },
+        { twitterId: 'masaakikunsan', icon: 'masaakikunsan.jpg' },
+        { twitterId: 'inouetakuya', icon: 'inouetakuya.jpg' },
+        { twitterId: 'c5meru', icon: 'c5meru.jpg' },
+        { twitterId: 'hashedrock', icon: 'hashedrock.jpg' },
+        { twitterId: 'shika358', icon: 'shika358.jpg' },
+        { twitterId: 'potato4d', icon: 'potato4d.jpg' },
+        { twitterId: 'positiveflat', icon: 'positiveflat.png' },
+        { twitterId: 'hypermkt', icon: 'hypermkt.png' },
       ]
     },
   },
