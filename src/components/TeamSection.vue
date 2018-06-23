@@ -61,6 +61,9 @@ export default {
         { twitterId: 'potato4d', icon: 'potato4d.jpg' },
         { twitterId: 'positiveflat', icon: 'positiveflat.png' },
         { twitterId: 'hypermkt', icon: 'hypermkt.png' },
+        { twitterId: 'andoshin11', icon: 'andoshin11.jpg' },
+        { twitterId: 'kotamats', icon: 'kotamats.png' },
+        { twitterId: 'yakiniku040220', icon: 'yakiniku040220.jpg' },
       ]
     },
   },
