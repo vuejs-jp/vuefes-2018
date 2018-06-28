@@ -6,19 +6,23 @@
 
     <div class="description">
       <p class="readable">
-        本カンファレンスにおいて、講演を広く一般に募集します。詳しい情報については後日公開予定です。
-      </p>
-      <p class="readable">
-        メールアドレスをご登録いただくと、最新情報をお届けします。
+        本カンファレンスにおいて、講演を広く一般に募集します。 日本最大級の Vue.js カンファレンスで登壇する絶好の機会ですので、ぜひお申し込みください。次のボタンから申し込みいただけます。
       </p>
     </div>
 
-    <email-registration-form class="email-registration-form" />
+    <div class="button-wrapper">
+      <link-button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSVbD3FZKM89UyDdH118Dv5KsMt8jnOFHrYKwr82R5Rwhn3Q/viewform" target="_blank" rel="noopener">
+          講演に応募する
+        </a>
+      </link-button>
+    </div>
   </page-section>
 </template>
 
 <script>
 import AppButton from '~/components/AppButton'
+import LinkButton from '~/components/LinkButton'
 import PageSection from '~/components/PageSection'
 import EmailRegistrationForm from '~/components/EmailRegistrationForm'
 
@@ -26,6 +30,7 @@ export default {
   name: 'cfp-section',
   components: {
     AppButton,
+    LinkButton,
     PageSection,
     EmailRegistrationForm,
   },
