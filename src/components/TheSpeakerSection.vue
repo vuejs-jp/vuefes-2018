@@ -1,5 +1,5 @@
 <template>
-  <page-section class="speaker-section">
+  <BaseSection class="the-speaker-section">
     <template slot="heading">
       Speaker
     </template>
@@ -32,16 +32,16 @@
     <div class="more">
       他スピーカーは決定次第、更新予定です。
     </div>
-  </page-section>
+  </BaseSection>
 </template>
 
 <script>
-import PageSection from '~/components/PageSection'
+import BaseSection from '~/components/BaseSection'
 
 export default {
-  name: 'speaker-section',
+  name: 'TheSpeakerSection',
   components: {
-    PageSection,
+    BaseSection,
   },
 }
 </script>

@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import CfpSection from '~/components/CfpSection'
+import TheCfpSection from '~/components/TheCfpSection'
 
-describe('CfpSection', () => {
+describe('TheCfpSection', () => {
   it('レンダリングできる', () => {
-    const wrapper = mount(CfpSection)
+    const wrapper = mount(TheCfpSection)
     expect(wrapper.text()).to.contain('Call for Papers')
   })
 })

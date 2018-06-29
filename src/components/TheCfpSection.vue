@@ -1,5 +1,5 @@
 <template>
-  <page-section class="cfp-section" theme="red">
+  <BaseSection class="the-cfp-section" theme="red">
     <template slot="heading">
       Call for Papers
     </template>
@@ -11,34 +11,24 @@
     </div>
 
     <div class="button-wrapper">
-      <link-button>
+      <LinkButton>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSVbD3FZKM89UyDdH118Dv5KsMt8jnOFHrYKwr82R5Rwhn3Q/viewform" target="_blank" rel="noopener">
           講演に応募する
         </a>
-      </link-button>
+      </LinkButton>
     </div>
-  </page-section>
+  </BaseSection>
 </template>
 
 <script>
-import AppButton from '~/components/AppButton'
+import BaseSection from '~/components/BaseSection'
 import LinkButton from '~/components/LinkButton'
-import PageSection from '~/components/PageSection'
-import EmailRegistrationForm from '~/components/EmailRegistrationForm'
 
 export default {
-  name: 'cfp-section',
+  name: 'TheCfpSection',
   components: {
-    AppButton,
+    BaseSection,
     LinkButton,
-    PageSection,
-    EmailRegistrationForm,
-  },
-  methods: {
-    showComingSoon (event) {
-      event.preventDefault()
-      alert('講演を希望していただいてありがとうございます！（期待しています！）でもごめんなさい、ただいま準備中ですのでもうしばらくお待ちください！')
-    },
   },
 }
 </script>

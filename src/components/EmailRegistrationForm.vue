@@ -5,7 +5,7 @@
         <input type="email" name="email" v-model="formData.email" placeholder="メールアドレスを入力してください" required @input="validate" :readonly="status.isLoading">
       </p>
 
-      <button class="app-button" type="submit" :disabled="!isValid || status.isLoading">
+      <button class="base-button" type="submit" :disabled="!isValid || status.isLoading">
         <template v-if="!status.isLoading">
           最新情報をメールで受け取る
         </template>
@@ -24,13 +24,8 @@
 </template>
 
 <script>
-import AppButton from '~/components/AppButton'
-
 export default {
-  name: 'email-registration-form',
-  components: {
-    AppButton,
-  },
+  name: 'EmailRegistrationForm',
   data () {
     return {
       formData: {
@@ -82,7 +77,7 @@ $button-height: 60px;
 input {
   margin-bottom: 10px;
   width: calc(100% - 40px);
-  max-width: calc(#{$app-button__max-width} - 40px);
+  max-width: calc(#{$base-button__max-width} - 40px);
   height: 60px;
   padding-left: 18px;
   padding-right: 18px;
@@ -93,10 +88,10 @@ input {
   }
 }
 
-.app-button {
+.base-button {
   background-color: $primary-color;
   width: 100%;
-  max-width: $app-button__max-width;
+  max-width: $base-button__max-width;
   height: $button-height;
   border-radius: 1px;
   text-align: center;
@@ -146,17 +141,17 @@ input {
   }
 
   .form-content {
-    width: $app-button__max-width;
+    width: $base-button__max-width;
   }
 
   input {
     display: block;
-    width: calc(#{$app-button__max-width} - 40px);
+    width: calc(#{$base-button__max-width} - 40px);
     height: calc(80px - 6px);
     font-size: 24px;
   }
 
-  .app-button {
+  .base-button {
     height: 74px;
     font-size: 24px;
   }
@@ -177,7 +172,7 @@ input {
 
   $button-height: 80px;
 
-  .app-button {
+  .base-button {
     width: 372px;
     height: $button-height;
     font-size: 24px;

@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import HeadSection from '~/components/HeadSection'
+import TheHeadSection from '~/components/TheHeadSection'
 
-describe('HeadSection', () => {
+describe('TheHeadSection', () => {
   it('レンダリングできる', () => {
-    const wrapper = mount(HeadSection)
+    const wrapper = mount(TheHeadSection)
     expect(wrapper.text()).to.contain('Vue.js カンファレンス')
   })
 })

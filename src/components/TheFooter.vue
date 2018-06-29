@@ -1,5 +1,5 @@
 <template>
-  <footer class="page-footer">
+  <footer class="the-footer">
     <div class="footer-wrapper">
       <div class="logo-wrapper">
         <div class="logo">
@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: 'page-footer',
+  name: 'TheFooter',
   computed: {
     encodedUri () {
       return encodeURIComponent(location.href)
@@ -46,13 +46,13 @@ export default {
   },
   methods: {
     /**
-     * Twitterボタンをクリックしたときに実行されます。
+     * Twitter ボタンをクリックしたときに実行されます。
      */
     openTwitterForm () {
       window.open(`https://twitter.com/share?url=${this.encodedUri}&hashtags=vuefes,vuejs&text=${encodeURIComponent('日本で初めて開催する大規模 Vue.js カンファレンス「Vue Fes Japan 2018」')}`, 'tweet', 'width=650, height=470')
     },
     /**
-     * Facebookボタンをクリックしたときに実行されます。
+     * Facebook ボタンをクリックしたときに実行されます。
      */
     openFacebookForm () {
       window.open(`https://www.facebook.com/sharer/sharer.php?u=${this.encodedUri}&src=sdkpreparse`, 'share', 'width=670, height=328')
@@ -68,7 +68,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.page-footer {
+.the-footer {
   padding: 30px;
   background-color: $primary-color;
   color: $primary-text-color--is-bg-dark;

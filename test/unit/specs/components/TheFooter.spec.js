@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import PageFooter from '~/components/PageFooter'
+import TheFooter from '~/components/TheFooter'
 
-describe('PageFooter', () => {
+describe('TheFooter', () => {
   it('レンダリングできる', () => {
-    const wrapper = mount(PageFooter)
+    const wrapper = mount(TheFooter)
     expect(
       wrapper.find('.link-list').text()
     ).to.contain('Vue.js')

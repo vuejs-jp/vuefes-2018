@@ -1,42 +1,41 @@
 <template>
   <div class="welcome-page">
-    <the-head-image />
+    <TheHeadImage />
 
-    <head-section />
+    <TheHeadSection />
 
-    <speaker-section />
+    <TheSpeakerSection />
 
-    <sponsor-section />
+    <TheSponsorSection />
 
-    <cfp-section />
+    <TheCfpSection />
 
-    <team-section />
+    <TheTeamSection />
 
-    <page-footer />
+    <TheFooter />
   </div>
 </template>
 
 <script>
-import CfpSection from '~/components/CfpSection'
-import AppButton from '~/components/AppButton'
-import HeadSection from '~/components/HeadSection'
-import PageFooter from '~/components/PageFooter'
-import SpeakerSection from '~/components/SpeakerSection'
-import SponsorSection from '~/components/SponsorSection'
-import TeamSection from '~/components/TeamSection'
+
+import TheCfpSection from '~/components/TheCfpSection'
+import TheFooter from '~/components/TheFooter'
 import TheHeadImage from '~/components/TheHeadImage'
+import TheHeadSection from '~/components/TheHeadSection'
+import TheSpeakerSection from '~/components/TheSpeakerSection'
+import TheSponsorSection from '~/components/TheSponsorSection'
+import TheTeamSection from '~/components/TheTeamSection'
 
 export default {
-  name: 'index',
+  name: 'WelcomePage',
   components: {
-    CfpSection,
-    AppButton,
-    HeadSection,
-    PageFooter,
-    SpeakerSection,
-    SponsorSection,
-    TeamSection,
+    TheCfpSection,
+    TheFooter,
     TheHeadImage,
+    TheHeadSection,
+    TheSpeakerSection,
+    TheSponsorSection,
+    TheTeamSection,
   },
 }
 </script>

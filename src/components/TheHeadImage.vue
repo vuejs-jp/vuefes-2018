@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'the-head-image',
+  name: 'TheHeadImage',
 }
 </script>
 

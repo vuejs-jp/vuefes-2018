@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import index from '~/pages/index'
+import WelcomePage from '~/pages/index'
 
-describe('code-of-conduct', () => {
+describe('WelcomePage', () => {
   it('レンダリングできる', () => {
-    const wrapper = mount(index)
+    const wrapper = mount(WelcomePage)
     expect(wrapper.text()).to.contain('Vue.js カンファレンス')
   })
 })

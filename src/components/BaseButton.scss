@@ -1,9 +1,9 @@
 $button-height: 60px;
 
-.app-button {
+.base-button {
   background-color: $primary-color;
   width: 100%;
-  max-width: $app-button__max-width;
+  max-width: $base-button__max-width;
   height: $button-height;
   border-radius: 1px;
   text-align: center;
@@ -27,8 +27,8 @@ $button-height: 60px;
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
   $button-height: 80px;
 
-  .app-button {
-    width: $app-button__max-width;
+  .base-button {
+    width: $base-button__max-width;
     height: $button-height;
     font-size: 32px;
     text-align: center;

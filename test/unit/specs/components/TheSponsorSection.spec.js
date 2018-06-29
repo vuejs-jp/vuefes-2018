@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import SponsorSection from '~/components/SponsorSection'
+import TheSponsorSection from '~/components/TheSponsorSection'
 
-describe('SponsorSection', () => {
+describe('TheSponsorSection', () => {
   it('レンダリングできる', () => {
-    const wrapper = mount(SponsorSection)
+    const wrapper = mount(TheSponsorSection)
     expect(wrapper.text()).to.contain('Be a Sponsor')
   })
 })

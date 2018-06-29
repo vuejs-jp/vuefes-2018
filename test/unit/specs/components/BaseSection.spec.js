@@ -1,10 +1,10 @@
 import { mount } from '@vue/test-utils'
-import PageSection from '~/components/PageSection'
+import BaseSection from '~/components/BaseSection'
 
-describe('PageSection', () => {
+describe('BaseSection', () => {
   context('theme が渡されているとき', () => {
     it('bg-xxx クラスが追加される', () => {
-      const wrapper = mount(PageSection, {
+      const wrapper = mount(BaseSection, {
         propsData: {
           theme: 'yellow',
         },

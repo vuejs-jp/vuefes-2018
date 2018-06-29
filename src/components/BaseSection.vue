@@ -1,5 +1,5 @@
 <template>
-  <section class="page-section" :class="`bg-${theme}`">
+  <section class="base-section" :class="`bg-${theme}`">
     <h2 v-if="$slots.heading" class="heading">
       <slot name="heading" />
     </h2>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'page-section',
+  name: 'BaseSection',
   props: {
     theme: {
       type: String,
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.page-section {
+.base-section {
   position: relative;
   padding: 60px 5%;
 
@@ -33,7 +33,7 @@ export default {
   }
 }
 
-.page-section::before {
+.base-section::before {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -72,7 +72,7 @@ export default {
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
-  .page-section {
+  .bage-section {
     padding: 80px 40px;
   }
 }

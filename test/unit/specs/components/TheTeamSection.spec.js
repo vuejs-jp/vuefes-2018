@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import TeamSection from '~/components/TeamSection'
+import TheTeamSection from '~/components/TheTeamSection'
 
-describe('TeamSection', () => {
+describe('TheTeamSection', () => {
   it('レンダリングできる', () => {
-    const wrapper = mount(TeamSection)
+    const wrapper = mount(TheTeamSection)
     expect(wrapper.text()).to.contain('About us')
   })
 })

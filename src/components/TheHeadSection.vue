@@ -1,5 +1,5 @@
 <template>
-  <page-section class="head-section" theme="green">
+  <BaseSection class="the-head-section" theme="green">
     <h1 class="page-title">
       日本で初めて開催する<br />Vue.js カンファレンス
     </h1>
@@ -20,7 +20,7 @@
       <p><span class="team">Vue Fes Japan 2018 実行委員会</span><br /><span class="label">代表</span>川口 和也（<a href="https://github.com/kazupon" target="_blank" rel="noopener">@kazupon</a>）</p>
     </div>
 
-    <email-registration-form class="email-registration-form" />
+    <EmailRegistrationForm class="email-registration-form" />
 
     <div class="follow-us">
       <img class="twitter-icon" src="~/assets/images/logo_twitter.svg">
@@ -28,18 +28,18 @@
         Follow @vuefes on Twitter!
       </a>
     </div>
-  </page-section>
+  </BaseSection>
 </template>
 
 <script>
+import BaseSection from '~/components/BaseSection'
 import EmailRegistrationForm from '~/components/EmailRegistrationForm'
-import PageSection from '~/components/PageSection'
 
 export default {
-  name: 'head-section',
+  name: 'TheHeadSection',
   components: {
+    BaseSection,
     EmailRegistrationForm,
-    PageSection,
   },
 }
 </script>

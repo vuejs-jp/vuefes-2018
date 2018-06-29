@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import codeOfConduct from '~/pages/code-of-conduct'
+import codeOfConductPage from '~/pages/code-of-conduct'
 
-describe('code-of-conduct', () => {
+describe('CodeOfConductPage', () => {
   it('レンダリングできる', () => {
-    const wrapper = mount(codeOfConduct)
+    const wrapper = mount(codeOfConductPage)
     expect(wrapper.text()).to.contain('行動規範')
   })
 })

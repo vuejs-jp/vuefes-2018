@@ -1,5 +1,5 @@
 <template>
-  <page-section class="sponsor-section" theme="yellow">
+  <BaseSection class="the-sponsor-section" theme="yellow">
     <template slot="heading">
       Be a Sponsor
     </template>
@@ -11,26 +11,24 @@
     </div>
 
     <div class="button-wrapper">
-      <link-button>
+      <LinkButton>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzON2QZww1v53Unb3RZQPqZ1upIm4CjVAduCYNDyiaLbiwUA/viewform" target="_blank" rel="noopener">
           スポンサーになる
         </a>
-      </link-button>
+      </LinkButton>
     </div>
-  </page-section>
+  </BaseSection>
 </template>
 
 <script>
-import AppButton from '~/components/AppButton'
+import BaseSection from '~/components/BaseSection'
 import LinkButton from '~/components/LinkButton'
-import PageSection from '~/components/PageSection'
 
 export default {
-  name: 'sponsor-section',
+  name: 'TheSponsorSection',
   components: {
-    AppButton,
+    BaseSection,
     LinkButton,
-    PageSection,
   },
 }
 </script>

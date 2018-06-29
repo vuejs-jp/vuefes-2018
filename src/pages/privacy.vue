@@ -1,6 +1,6 @@
 <template>
-  <div class="privacy-policy-page">
-    <the-head-image />
+  <div class="privacy-page">
+    <TheHeadImage />
 
     <div class="content">
       <h1 class="page-title">
@@ -193,28 +193,28 @@
       </ul>
 
       <div class="button-wrapper">
-        <app-button>
+        <LinkButton>
           <nuxt-link to="/">
             トップに戻る
           </nuxt-link>
-        </app-button>
+        </LinkButton>
       </div>
     </div>
 
-    <page-footer />
+    <TheFooter />
   </div>
 </template>
 
 <script>
-import AppButton from '~/components/AppButton'
-import PageFooter from '~/components/PageFooter'
+import LinkButton from '~/components/LinkButton'
+import TheFooter from '~/components/TheFooter'
 import TheHeadImage from '~/components/TheHeadImage'
 
 export default {
-  name: 'privacy',
+  name: 'PrivacyPage',
   components: {
-    AppButton,
-    PageFooter,
+    LinkButton,
+    TheFooter,
     TheHeadImage,
   },
   head () {

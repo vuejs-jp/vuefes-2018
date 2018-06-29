@@ -1,6 +1,6 @@
 <template>
   <div class="code-of-conduct-page">
-    <the-head-image />
+    <TheHeadImage />
 
     <div class="content">
       <h1 class="page-title">
@@ -60,28 +60,28 @@
       </p>
 
       <div class="button-wrapper">
-        <app-button>
+        <LinkButton>
           <nuxt-link to="/">
             トップに戻る
           </nuxt-link>
-        </app-button>
+        </LinkButton>
       </div>
     </div>
 
-    <page-footer />
+    <TheFooter />
   </div>
 </template>
 
 <script>
-import AppButton from '~/components/AppButton'
-import PageFooter from '~/components/PageFooter'
+import LinkButton from '~/components/LinkButton'
+import TheFooter from '~/components/TheFooter'
 import TheHeadImage from '~/components/TheHeadImage'
 
 export default {
-  name: 'code-of-conduct',
+  name: 'CodeOfConductPage',
   components: {
-    AppButton,
-    PageFooter,
+    LinkButton,
+    TheFooter,
     TheHeadImage,
   },
   head () {

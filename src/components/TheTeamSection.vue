@@ -1,5 +1,5 @@
 <template>
-  <page-section class="team-section">
+  <BaseSection class="the-team-section">
     <template slot="heading">
       About us
     </template>
@@ -31,16 +31,16 @@
         </a>
       </li>
     </ul>
-  </page-section>
+  </BaseSection>
 </template>
 
 <script>
-import PageSection from '~/components/PageSection'
+import BaseSection from '~/components/BaseSection'
 
 export default {
-  name: 'team',
+  name: 'TheTeamSection',
   components: {
-    PageSection,
+    BaseSection,
   },
   computed: {
     leaders () {
@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.team-section {
+.the-team-section {
   padding-bottom: 40px;
 }
 
