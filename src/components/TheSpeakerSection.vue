@@ -4,29 +4,12 @@
       Speaker
     </template>
 
-    <div class="speaker">
-      <div class="icon">
-        <img src="~/assets/images/speakers/evan.jpg">
-      </div>
-
-      <div class="description-wrapper">
-        <div class="label">
-          Vue.js クリエーター
-        </div>
-
-        <h3 class="speaker-name">
-          Evan You
-        </h3>
-
-        <div class="description">
-          <p class="readable">
-            Evan は開発者、デザイナー、そしてクリエイティブコーダーです。彼は、リアクティブなコンポーネントでモダンな Web インターフェイスを構築するための JavaScript フレームワーク、Vue.js の作者です。
-          </p>
-          <p class="readable">
-            かつて、GitHub で最もスターを集めたフルスタック JavaScript フレームワークであった Meteor の開発グループでも働いていました。Google Creative Lab で、さまざまな Google プロダクト向けの実験的な UI プロトタイプに、2年間取り組んでいた経験もあります。
-          </p>
-        </div>
-      </div>
+    <div class="speakers">
+      <Speaker
+        v-for="(speaker, index) in speakers"
+        :key="index"
+        v-bind="speaker"
+      />
     </div>
 
     <div class="more">
@@ -37,52 +20,50 @@
 
 <script>
 import BaseSection from '~/components/BaseSection'
+import Speaker from '~/components/Speaker'
+const AVATAR_EVAN = require('~/assets/images/speakers/evan.jpg')
+const AVATAR_SARAH = require('~/assets/images/speakers/sarah.jpg')
 
 export default {
   name: 'TheSpeakerSection',
   components: {
     BaseSection,
+    Speaker,
+  },
+  data () {
+    return {
+      speakers: [{
+        name: 'Evan You',
+        title: 'Vue.js クリエーター',
+        avatar: AVATAR_EVAN,
+        twitter: 'https://twitter.com/youyuxi',
+        github: 'https://github.com/yyx990803',
+        descriptions: [
+          'Evan は開発者、デザイナー、そしてクリエイティブコーダーです。彼は、リアクティブなコンポーネントでモダンな Web インターフェイスを構築するための JavaScript フレームワーク、Vue.js の作者です。',
+          'かつて、GitHub で最もスターを集めたフルスタック JavaScript フレームワークであった Meteor の開発グループでも働いていました。Google Creative Lab で、さまざまな Google プロダクト向けの実験的な UI プロトタイプに、2年間取り組んでいた経験もあります。',
+        ],
+      }, {
+        name: 'Sarah Drasner',
+        title: 'Microsoft シニアデベロッパーアドボケイト',
+        avatar: AVATAR_SARAH,
+        twitter: 'https://twitter.com/sarah_edo',
+        github: 'https://github.com/sdras',
+        descriptions: [
+          'Sarah Drasner は受賞歴を持つスピーカー、Microsoft のシニアデベロッパーアドボケイト、CSS-Tricks のスタッフライターです。Val Head と共に Web Animation Workshops を設立しました。SVG Animations（O\'Reilly）の著者で、Vue.js の Frontend Masters workshops を行っています。',
+          '以前は Trulia (Zillow) で UX デザインとエンジニアリングのマネージャーをしていました。',
+        ],
+      }],
+    }
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.icon {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  max-width: 400px;
-}
-
-.speaker-name {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 32px;
-  line-height: 1;
-}
-
-.description {
-  margin-bottom: 48px;
+.speakers {
+  margin-top: 60px;
 }
 
 .more {
   text-align: center;
-}
-
-@media screen and (min-width: $layout-breakpoint--is-small-up) {
-  .speaker {
-    display: flex;
-    margin-top: 60px;
-  }
-
-  .icon {
-    width: 256px;
-    margin-right: 40px;
-    margin-bottom: 0;
-  }
-
-  .description-wrapper {
-    width: calc(100% - (256px + 40px));
-  }
 }
 </style>
