@@ -23,6 +23,7 @@ import BaseSection from '~/components/BaseSection'
 import Speaker from '~/components/Speaker'
 const AVATAR_EVAN = require('~/assets/images/speakers/evan.jpg')
 const AVATAR_SARAH = require('~/assets/images/speakers/sarah.jpg')
+const AVATAR_CHOPIN = require('~/assets/images/speakers/chopin.jpg')
 
 export default {
   name: 'TheSpeakerSection',
@@ -51,6 +52,16 @@ export default {
         descriptions: [
           'Sarah Drasner は受賞歴を持つスピーカー、Microsoft のシニアデベロッパーアドボケイト、CSS-Tricks のスタッフライターです。Val Head と共に Web Animation Workshops を設立しました。SVG Animations（O\'Reilly）の著者で、Vue.js の Frontend Masters workshops を行っています。',
           '以前は Trulia (Zillow) で UX デザインとエンジニアリングのマネージャーをしていました。',
+        ],
+      }, {
+        name: 'Sébastien Chopin',
+        title: 'Nuxt.js 共同クリエーター',
+        avatar: AVATAR_CHOPIN,
+        twitter: 'https://twitter.com/Atinux',
+        github: 'https://github.com/Atinux',
+        descriptions: [
+          'Sébastien は、猛烈な速さで Vue.js アプリケーションを作成するための JavaScript フレームワーク、Nuxt.js の共同クリエーターです。',
+          '現在 Orion.sh に勤務しており、CMTY によるオープンソースコミュニティ、そして新しいオープンソースプロジェクトを築いています。',
         ],
       }],
     }
