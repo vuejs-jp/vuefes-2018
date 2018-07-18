@@ -6,7 +6,7 @@ Vue Fes Japan 2018
 ## Setup
 
 ```
-npm install
+yarn install
 ```
 
 ## Development
@@ -14,13 +14,13 @@ npm install
 Serve with hot reload at localhost:3000
 
 ```
-npm run dev
+yarn run dev
 ```
 
 ## Testing
 
 ```
-npm test
+yarn test
 ```
 
 ## Generate
@@ -28,5 +28,5 @@ npm test
 Generate static project.
 
 ```
-npm run generate
+yarn run generate
 ```
