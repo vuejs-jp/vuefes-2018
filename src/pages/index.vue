@@ -4,7 +4,7 @@
 
     <TheHeadSection />
 
-    <TheSpeakerSection />
+    <TheSpeakerListSection />
 
     <TheSponsorSection />
 
@@ -22,7 +22,7 @@ import TheCfpSection from '~/components/TheCfpSection'
 import TheFooter from '~/components/TheFooter'
 import TheHeadImage from '~/components/TheHeadImage'
 import TheHeadSection from '~/components/TheHeadSection'
-import TheSpeakerSection from '~/components/TheSpeakerSection'
+import TheSpeakerListSection from '~/components/TheSpeakerListSection'
 import TheSponsorSection from '~/components/TheSponsorSection'
 import TheTeamSection from '~/components/TheTeamSection'
 
@@ -33,7 +33,7 @@ export default {
     TheFooter,
     TheHeadImage,
     TheHeadSection,
-    TheSpeakerSection,
+    TheSpeakerListSection,
     TheSponsorSection,
     TheTeamSection,
   },

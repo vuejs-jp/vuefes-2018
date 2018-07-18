@@ -1,10 +1,10 @@
 <template>
-  <BaseSection class="the-speaker-section">
+  <BaseSection class="the-speaker-list-section">
     <template slot="heading">
-      Speaker
+      Speakers
     </template>
 
-    <div class="speakers">
+    <div class="speaker-list">
       <Speaker
         v-for="(speaker, index) in speakers"
         :key="index"
@@ -21,12 +21,13 @@
 <script>
 import BaseSection from '~/components/BaseSection'
 import Speaker from '~/components/Speaker'
+
 const AVATAR_EVAN = require('~/assets/images/speakers/evan.jpg')
 const AVATAR_SARAH = require('~/assets/images/speakers/sarah.jpg')
 const AVATAR_CHOPIN = require('~/assets/images/speakers/chopin.jpg')
 
 export default {
-  name: 'TheSpeakerSection',
+  name: 'TheSpeakerListSection',
   components: {
     BaseSection,
     Speaker,
@@ -70,7 +71,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.speakers {
+.speaker-list {
   margin-top: 60px;
 }
 
