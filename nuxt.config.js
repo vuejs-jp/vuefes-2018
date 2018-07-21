@@ -50,6 +50,14 @@ module.exports = {
           exclude: /(node_modules)/,
         })
       }
+      config.module.rules.push({
+        test: /\.webp$/,
+        loader: 'url-loader',
+        options: {
+          limit: 1000,
+          name: 'img/[name].[hash:7].[ext]',
+        },
+      })
     },
   },
   srcDir: 'src/',

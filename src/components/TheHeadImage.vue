@@ -3,11 +3,20 @@
     <picture>
       <source
         media="(max-width: 768px)"
+        srcset="~/assets/images/head@2x-q75.webp,
+          ~/assets/images/head@2x-q75.webp 2x,
+          ~/assets/images/head@3x-q75.webp 3x,
+          ~/assets/images/head@4x-q75.webp 4x"
+        type="image/webp"
+      >
+      <source
+        media="(max-width: 768px)"
         srcset="~/assets/images/head@2x.jpg,
           ~/assets/images/head@2x.jpg 2x,
           ~/assets/images/head@3x.jpg 3x,
           ~/assets/images/head@4x.jpg 4x"
       >
+      <source media="(min-width: 769px)" srcset="~/assets/images/head-q75.webp" type="image/webp">
       <source media="(min-width: 769px)" srcset="~/assets/images/head.jpg">
       <img class="head-image" src="~/assets/images/head.jpg" alt="Vue Fes Japan 2018 | 2018.11.3 [Sat.] | 秋葉原 UDX 4F UDX ギャラリー">
     </picture>

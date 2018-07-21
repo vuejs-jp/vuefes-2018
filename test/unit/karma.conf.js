@@ -73,7 +73,7 @@ module.exports = (config) => {
             exclude: /node_modules/,
           },
           {
-            test: /\.(png|jpe?g|gif|svg)$/,
+            test: /\.(png|jpe?g|gif|svg|webp)$/,
             loader: 'url-loader',
           },
         ],
