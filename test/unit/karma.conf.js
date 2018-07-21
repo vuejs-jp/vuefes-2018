@@ -75,6 +75,10 @@ module.exports = (config) => {
           {
             test: /\.(png|jpe?g|gif|svg|webp)$/,
             loader: 'url-loader',
+            options: {
+              limit: 1000,
+              name: 'img/[name].[hash:7].[ext]',
+            },
           },
         ],
       },

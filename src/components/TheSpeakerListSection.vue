@@ -22,9 +22,13 @@
 import BaseSection from '~/components/BaseSection'
 import Speaker from '~/components/Speaker'
 
+// TODO: ピクセル密度によって画像を出し分ける記述をイイ感じにする。何か npm 探すとか、なければ作るとか
 const AVATAR_EVAN = require('~/assets/images/speakers/evan.jpg')
+const AVATAR_EVAN_2X = require('~/assets/images/speakers/evan@2x.jpg')
 const AVATAR_SARAH = require('~/assets/images/speakers/sarah.jpg')
+const AVATAR_SARAH_2X = require('~/assets/images/speakers/sarah@2x.jpg')
 const AVATAR_CHOPIN = require('~/assets/images/speakers/chopin.jpg')
+const AVATAR_CHOPIN_2X = require('~/assets/images/speakers/chopin@2x.jpg')
 
 export default {
   name: 'TheSpeakerListSection',
@@ -38,6 +42,7 @@ export default {
         name: 'Evan You',
         title: 'Vue.js クリエーター',
         avatar: AVATAR_EVAN,
+        avatar2x: AVATAR_EVAN_2X,
         twitter: 'https://twitter.com/youyuxi',
         github: 'https://github.com/yyx990803',
         descriptions: [
@@ -48,6 +53,7 @@ export default {
         name: 'Sarah Drasner',
         title: 'Microsoft シニアデベロッパーアドボケイト',
         avatar: AVATAR_SARAH,
+        avatar2x: AVATAR_SARAH_2X,
         twitter: 'https://twitter.com/sarah_edo',
         github: 'https://github.com/sdras',
         descriptions: [
@@ -58,6 +64,7 @@ export default {
         name: 'Sébastien Chopin',
         title: 'Nuxt.js 共同クリエーター',
         avatar: AVATAR_CHOPIN,
+        avatar2x: AVATAR_CHOPIN_2X,
         twitter: 'https://twitter.com/Atinux',
         github: 'https://github.com/Atinux',
         descriptions: [

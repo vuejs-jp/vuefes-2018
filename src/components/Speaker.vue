@@ -1,7 +1,10 @@
 <template>
   <div class="speaker">
     <div class="avatar">
-      <img :src="avatar">
+      <img
+        :src="avatar"
+        :srcset="`${avatar}, ${avatar2x} 2x`"
+      >
     </div>
 
     <div class="speaker-wrapper">
@@ -50,6 +53,10 @@ export default {
       required: true,
     },
     avatar: {
+      type: String,
+      required: true,
+    },
+    avatar2x: {
       type: String,
       required: true,
     },

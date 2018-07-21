@@ -13,7 +13,7 @@
     <ul class="leaders">
       <li class="leader" v-for="leader in leaders" :key="leader.twitterId">
         <a :href="`https://twitter.com/${leader.twitterId}`" target="_blank" rel="noopener">
-          <img class="icon" :src="require(`~/assets/images/staffs/${leader.icon}`)">
+          <img class="avatar" :src="require(`~/assets/images/staffs/${leader.avatar}`)">
         </a>
         <a class="link-to-twitter" :href="`https://twitter.com/${leader.twitterId}`" target="_blank" rel="noopener">
           @{{ leader.twitterId }}
@@ -24,7 +24,7 @@
     <ul class="staffs">
       <li class="staff" v-for="staff in staffs" :key="staff.twitterId">
         <a :href="`https://twitter.com/${staff.twitterId}`" target="_blank" rel="noopener">
-          <img class="icon" :src="require(`~/assets/images/staffs/${staff.icon}`)">
+          <img class="avatar" :src="require(`~/assets/images/staffs/${staff.avatar}`)">
         </a>
         <a class="link-to-twitter" :href="`https://twitter.com/${staff.twitterId}`" target="_blank" rel="noopener">
           @{{ staff.twitterId }}
@@ -45,25 +45,25 @@ export default {
   computed: {
     leaders () {
       return [
-        { twitterId: 'kazu_pon', icon: 'kazu_pon.png' },
+        { twitterId: 'kazu_pon', avatar: 'kazu_pon@2x.jpg' },
       ]
     },
     staffs () {
       return [
-        { twitterId: '448jp', icon: '448jp.png' },
-        { twitterId: 'kawakami0717', icon: 'kawakami0717.jpg' },
-        { twitterId: 'kazuyukimiyake', icon: 'kazuyukimiyake.jpg' },
-        { twitterId: 'masaakikunsan', icon: 'masaakikunsan.jpg' },
-        { twitterId: 'inouetakuya', icon: 'inouetakuya.jpg' },
-        { twitterId: 'c5meru', icon: 'c5meru.jpg' },
-        { twitterId: 'hashedrock', icon: 'hashedrock.jpg' },
-        { twitterId: 'shika358', icon: 'shika358.jpg' },
-        { twitterId: 'potato4d', icon: 'potato4d.jpg' },
-        { twitterId: 'positiveflat', icon: 'positiveflat.png' },
-        { twitterId: 'hypermkt', icon: 'hypermkt.png' },
-        { twitterId: 'andoshin11', icon: 'andoshin11.jpg' },
-        { twitterId: 'kotamats', icon: 'kotamats.png' },
-        { twitterId: 'yakiniku040220', icon: 'yakiniku040220.jpg' },
+        { twitterId: '448jp', avatar: '448jp@2x.jpg' },
+        { twitterId: 'kawakami0717', avatar: 'kawakami0717@2x.jpg' },
+        { twitterId: 'kazuyukimiyake', avatar: 'kazuyukimiyake@2x.jpg' },
+        { twitterId: 'masaakikunsan', avatar: 'masaakikunsan@2x.jpg' },
+        { twitterId: 'inouetakuya', avatar: 'inouetakuya@2x.jpg' },
+        { twitterId: 'c5meru', avatar: 'c5meru@2x.jpg' },
+        { twitterId: 'hashedrock', avatar: 'hashedrock@2x.jpg' },
+        { twitterId: 'shika358', avatar: 'shika358@2x.jpg' },
+        { twitterId: 'potato4d', avatar: 'potato4d@2x.jpg' },
+        { twitterId: 'positiveflat', avatar: 'positiveflat@2x.jpg' },
+        { twitterId: 'hypermkt', avatar: 'hypermkt@2x.jpg' },
+        { twitterId: 'andoshin11', avatar: 'andoshin11@2x.jpg' },
+        { twitterId: 'kotamats', avatar: 'kotamats@2x.jpg' },
+        { twitterId: 'yakiniku040220', avatar: 'yakiniku040220@2x.jpg' },
       ]
     },
   },
@@ -103,7 +103,7 @@ export default {
   margin-left: 0;
 }
 
-.icon {
+.avatar {
   display: block;
   margin-bottom: 4px;
 }
