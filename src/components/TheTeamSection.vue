@@ -21,7 +21,7 @@
       </li>
     </ul>
 
-    <ul class="staffs">
+    <ul class="staff-list">
       <li class="staff" v-for="staff in staffs" :key="staff.twitterId">
         <a :href="`https://twitter.com/${staff.twitterId}`" target="_blank" rel="noopener">
           <img class="avatar" :src="require(`~/assets/images/staffs/${staff.avatar}`)">
@@ -51,20 +51,28 @@ export default {
     staffs () {
       return [
         { twitterId: '448jp', avatar: '448jp@2x.jpg' },
-        { twitterId: 'kawakami0717', avatar: 'kawakami0717@2x.jpg' },
-        { twitterId: 'kazuyukimiyake', avatar: 'kazuyukimiyake@2x.jpg' },
-        { twitterId: 'masaakikunsan', avatar: 'masaakikunsan@2x.jpg' },
-        { twitterId: 'inouetakuya', avatar: 'inouetakuya@2x.jpg' },
+        { twitterId: 'andoshin11', avatar: 'andoshin11@2x.jpg' },
         { twitterId: 'c5meru', avatar: 'c5meru@2x.jpg' },
         { twitterId: 'hashedrock', avatar: 'hashedrock@2x.jpg' },
-        { twitterId: 'shika358', avatar: 'shika358@2x.jpg' },
-        { twitterId: 'potato4d', avatar: 'potato4d@2x.jpg' },
-        { twitterId: 'positiveflat', avatar: 'positiveflat@2x.jpg' },
         { twitterId: 'hypermkt', avatar: 'hypermkt@2x.jpg' },
-        { twitterId: 'andoshin11', avatar: 'andoshin11@2x.jpg' },
+        { twitterId: 'inouetakuya', avatar: 'inouetakuya@2x.jpg' },
+        { twitterId: 'kawakami0717', avatar: 'kawakami0717@2x.jpg' },
+        { twitterId: 'kazuyukimiyake', avatar: 'kazuyukimiyake@2x.jpg' },
         { twitterId: 'kotamats', avatar: 'kotamats@2x.jpg' },
+        { twitterId: 'masaakikunsan', avatar: 'masaakikunsan@2x.jpg' },
+        { twitterId: 'positiveflat', avatar: 'positiveflat@2x.jpg' },
+        { twitterId: 'potato4d', avatar: 'potato4d@2x.jpg' },
+        { twitterId: 'shika358', avatar: 'shika358@2x.jpg' },
         { twitterId: 'yakiniku040220', avatar: 'yakiniku040220@2x.jpg' },
-      ]
+      ].sort((a, b) => {
+        if (a.twitterId < b.twitterId) {
+          return -1
+        }
+        if (a.twitterId > b.twitterId) {
+          return 1
+        }
+        return 0
+      })
     },
   },
 }
@@ -84,7 +92,7 @@ export default {
   justify-content: center;
 }
 
-.staffs {
+.staff-list {
   display: flex;
   flex-wrap: wrap;
 }
@@ -130,7 +138,7 @@ export default {
     margin: 40px 0 24px;
   }
 
-  .staffs {
+  .staff-list {
     margin-bottom: 40px;
     padding: 0 16px;
   }
