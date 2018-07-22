@@ -24,6 +24,9 @@ module.exports = {
       { name: 'twitter:title', content: 'Vue Fes Japan 2018' },
       { name: 'twitter:image', content: 'https://vuefes.jp/opengraph.jpg' },
     ],
+    script: [
+      { src: '//j.wovn.io/1', 'data-wovnio': 'key=JjtoU_', defer: 'defer', body: 'true' },
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
