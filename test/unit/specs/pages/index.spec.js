@@ -3,7 +3,9 @@ import WelcomePage from '~/pages/index'
 
 describe('WelcomePage', () => {
   it('レンダリングできる', () => {
-    const wrapper = mount(WelcomePage)
+    const wrapper = mount(WelcomePage, {
+      stubs: ['TheFooter'],
+    })
     expect(wrapper.text()).to.contain('Vue.js カンファレンス')
   })
 })
