@@ -1,10 +1,11 @@
 <template>
   <div class="speaker">
     <div class="avatar">
-      <img
-        :src="avatar"
-        :srcset="`${avatar}, ${avatar2x} 2x`"
-      >
+      <picture>
+        <source media="(max-width: 768px)" :srcset="avatar2x">
+        <source media="(min-width: 769px)" :srcset="`${avatar}, ${avatar2x} 2x`">
+        <img :src="avatar2x">
+      </picture>
     </div>
 
     <div class="speaker-wrapper">
