@@ -5,6 +5,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'ja',
+    },
     title: 'Vue Fes Japan 2018 | 2018年11月3日（土）',
     meta: [
       { charset: 'utf-8' },
