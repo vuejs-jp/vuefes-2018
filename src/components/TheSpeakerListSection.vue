@@ -29,6 +29,8 @@ const AVATAR_SARAH = require('~/assets/images/speakers/sarah.jpg')
 const AVATAR_SARAH_2X = require('~/assets/images/speakers/sarah@2x.jpg')
 const AVATAR_CHOPIN = require('~/assets/images/speakers/chopin.jpg')
 const AVATAR_CHOPIN_2X = require('~/assets/images/speakers/chopin@2x.jpg')
+const AVATAR_EDD = require('~/assets/images/speakers/edd.jpg')
+const AVATAR_EDD_2X = require('~/assets/images/speakers/edd@2x.jpg')
 
 export default {
   name: 'TheSpeakerListSection',
@@ -70,6 +72,16 @@ export default {
         descriptions: [
           'Sébastien は、猛烈な速さで Vue.js アプリケーションを作成するための JavaScript フレームワーク、Nuxt.js の共同クリエーターです。',
           '現在 Orion.sh に勤務しており、CMTY によるオープンソースコミュニティ、そして新しいオープンソースプロジェクトを築いています。',
+        ],
+      }, {
+        name: 'Edd Yerburgh',
+        title: 'Vue Test Utils メインクリエーター',
+        avatar: AVATAR_EDD,
+        avatar2x: AVATAR_EDD_2X,
+        twitter: 'https://twitter.com/EddYerburgh',
+        github: 'https://github.com/eddyerburgh',
+        descriptions: [
+          'Edd Yerburgh は Vue Test Utils のメインの作者で、Vue コアチームメンバー、BBC のソフトウェアエンジニアです。',
         ],
       }],
     }
