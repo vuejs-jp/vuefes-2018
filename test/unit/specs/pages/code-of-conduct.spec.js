@@ -1,14 +1,14 @@
-import { mount } from '@vue/test-utils'
+import { mount, RouterLinkStub } from '@vue/test-utils'
 import codeOfConductPage from '~/pages/code-of-conduct'
 
 describe('CodeOfConductPage', () => {
   it('レンダリングできる', () => {
     const wrapper = mount(codeOfConductPage, {
-      stubs: [
-        'nuxt-link',
-        'TheFooter',
-      ],
+      stubs: {
+        NuxtLink: RouterLinkStub,
+      },
     })
+
     expect(wrapper.text()).to.contain('行動規範')
   })
 })

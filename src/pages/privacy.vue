@@ -149,7 +149,7 @@
       </p>
 
       <ul>
-        <li>Google 社の<a target="_blank" href="https://policies.google.com/privacy?hl=ja">プライバシーポリシー</a></li>
+        <li>Google 社の<a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">プライバシーポリシー</a></li>
       </ul>
 
       <h2 class="heading">

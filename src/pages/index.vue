@@ -6,7 +6,9 @@
 
     <TheSpeakerListSection />
 
-    <TheSponsorSection />
+    <TheSponsorCallSection />
+
+    <TheSponsorBannerListSection />
 
     <TheCfpSection />
 
@@ -23,7 +25,8 @@ import TheFooter from '~/components/TheFooter'
 import TheHeadImage from '~/components/TheHeadImage'
 import TheHeadSection from '~/components/TheHeadSection'
 import TheSpeakerListSection from '~/components/TheSpeakerListSection'
-import TheSponsorSection from '~/components/TheSponsorSection'
+import TheSponsorBannerListSection from '~/components/TheSponsorBannerListSection'
+import TheSponsorCallSection from '~/components/TheSponsorCallSection'
 import TheTeamSection from '~/components/TheTeamSection'
 
 export default {
@@ -34,7 +37,8 @@ export default {
     TheHeadImage,
     TheHeadSection,
     TheSpeakerListSection,
-    TheSponsorSection,
+    TheSponsorBannerListSection,
+    TheSponsorCallSection,
     TheTeamSection,
   },
 }

@@ -18,6 +18,7 @@
           class="twitter"
           :href="twitter"
           target="_blank"
+          rel="noopener"
         >
           <img src="~/assets/images/icon_twitter.svg">
         </a>
@@ -25,6 +26,7 @@
           class="github"
           :href="github"
           target="_blank"
+          rel="noopener"
         >
           <img src="~/assets/images/icon_github.svg">
         </a>

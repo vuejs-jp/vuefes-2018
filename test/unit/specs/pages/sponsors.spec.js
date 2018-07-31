@@ -1,15 +1,15 @@
 import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
 import Vuex from 'vuex'
-import WelcomePage from '~/pages/index'
+import SponsorsPage from '~/pages/sponsors'
 import store from '~/store/index'
 
 const localVue = createLocalVue()
 
 localVue.use(Vuex)
 
-describe('index', () => {
+describe('sponsors', () => {
   it('レンダリングできる', () => {
-    const wrapper = mount(WelcomePage, {
+    const wrapper = mount(SponsorsPage, {
       store,
       localVue,
       stubs: {
@@ -17,6 +17,6 @@ describe('index', () => {
       },
     })
 
-    expect(wrapper.text()).to.contain('Vue.js カンファレンス')
+    expect(wrapper.text()).to.contain('Sponsors')
   })
 })

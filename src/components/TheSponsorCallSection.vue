@@ -1,5 +1,5 @@
 <template>
-  <BaseSection class="the-sponsor-section" theme="yellow">
+  <BaseSection class="the-sponsor-call-section" theme="yellow">
     <template slot="heading">
       Be a Sponsor
     </template>
@@ -25,7 +25,7 @@ import BaseSection from '~/components/BaseSection'
 import LinkButton from '~/components/LinkButton'
 
 export default {
-  name: 'TheSponsorSection',
+  name: 'TheSponsorCallSection',
   components: {
     BaseSection,
     LinkButton,

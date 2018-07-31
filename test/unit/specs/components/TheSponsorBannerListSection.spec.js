@@ -1,22 +1,21 @@
 import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
 import Vuex from 'vuex'
-import WelcomePage from '~/pages/index'
+import TheSponsorBannerListSection from '~/components/TheSponsorBannerListSection'
 import store from '~/store/index'
 
 const localVue = createLocalVue()
 
 localVue.use(Vuex)
 
-describe('index', () => {
+describe('TheSponsorBannerListSection', () => {
   it('レンダリングできる', () => {
-    const wrapper = mount(WelcomePage, {
+    const wrapper = mount(TheSponsorBannerListSection, {
       store,
       localVue,
       stubs: {
         NuxtLink: RouterLinkStub,
       },
     })
-
-    expect(wrapper.text()).to.contain('Vue.js カンファレンス')
+    expect(wrapper.text()).to.contain('Sponsors')
   })
 })
