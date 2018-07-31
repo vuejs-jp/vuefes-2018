@@ -109,7 +109,7 @@ export default {
 
   // 2列にしたいが、スポンサー数が 2つに満たないため 1列にしている
   // ただし、2列表示にしたスポンサーの横幅を超えてはならない
-  .bronze, .beer, .drink, .media {
+  .bronze, .beer, .drink {
     .banner-list {
       width: 328px;
     }

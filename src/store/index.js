@@ -199,6 +199,12 @@ const store = () => new Vuex.Store({
     drinkSponsors: [],
     mediaSponsors: [
       {
+        name: 'Best of JavaScript',
+        url: 'https://bestofjs.org/',
+        banner: 'bestofjs.png',
+        descriptions: [],
+      },
+      {
         name: '株式会社シーアンドアール研究所',
         url: 'http://www.c-r.com/',
         banner: 'c-r.png',
