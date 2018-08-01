@@ -31,6 +31,8 @@ const AVATAR_CHOPIN = require('~/assets/images/speakers/chopin.jpg')
 const AVATAR_CHOPIN_2X = require('~/assets/images/speakers/chopin@2x.jpg')
 const AVATAR_EDD = require('~/assets/images/speakers/edd.jpg')
 const AVATAR_EDD_2X = require('~/assets/images/speakers/edd@2x.jpg')
+const AVATAR_RAHUL = require('~/assets/images/speakers/rahul.jpg')
+const AVATAR_RAHUL_2X = require('~/assets/images/speakers/rahul@2x.jpg')
 
 export default {
   name: 'TheSpeakerListSection',
@@ -82,6 +84,17 @@ export default {
         github: 'https://github.com/eddyerburgh',
         descriptions: [
           'Edd Yerburgh は Vue Test Utils のメインの作者で、Vue コアチームメンバー、BBC のソフトウェアエンジニアです。',
+        ],
+      }, {
+        name: 'Rahul Kadyan',
+        title: 'オープンソース・エンスージアスト',
+        avatar: AVATAR_RAHUL,
+        avatar2x: AVATAR_RAHUL_2X,
+        twitter: 'https://twitter.com/znck0',
+        github: 'https://github.com/znck',
+        descriptions: [
+          'Rahul は開発者でオープンソース・エンスージアストです。彼は Vue エコシステム向けにツール上で動作するコンパイラユーティリティを作っています。',
+          '彼は、Myntra (Flipkart Group) でシニアエンジニアとして働いています。',
         ],
       }],
     }
