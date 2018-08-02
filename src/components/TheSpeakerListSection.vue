@@ -33,6 +33,8 @@ const AVATAR_EDD = require('~/assets/images/speakers/edd.jpg')
 const AVATAR_EDD_2X = require('~/assets/images/speakers/edd@2x.jpg')
 const AVATAR_RAHUL = require('~/assets/images/speakers/rahul.jpg')
 const AVATAR_RAHUL_2X = require('~/assets/images/speakers/rahul@2x.jpg')
+const AVATAR_GUILLAUME = require('~/assets/images/speakers/guillaume.jpg')
+const AVATAR_GUILLAUME_2X = require('~/assets/images/speakers/guillaume@2x.jpg')
 
 export default {
   name: 'TheSpeakerListSection',
@@ -95,6 +97,17 @@ export default {
         descriptions: [
           'Rahul は開発者でオープンソース・エンスージアストです。彼は Vue エコシステム向けにツール上で動作するコンパイラユーティリティを作っています。',
           '彼は、Myntra (Flipkart Group) でシニアエンジニアとして働いています。',
+        ],
+      }, {
+        name: 'Guillaume Chau',
+        title: 'Vue CLI UI クリエーター',
+        avatar: AVATAR_GUILLAUME,
+        avatar2x: AVATAR_GUILLAUME_2X,
+        twitter: 'https://twitter.com/Akryum',
+        github: 'https://github.com/Akryum',
+        descriptions: [
+          'Guillaume は、Vue CLI、Vue DevTools、そして Vue Curated を担当する Vue.js コアチームメンバーです。',
+          '彼はまた、Apollo GraphQL (vue-apollo) と Meteor (vue-meteor)のインテグレーションを作成し、開発者が、高度なインタラクティブで、リアルタイムな Vue アプリケーションを作成でき、vue-virtual-scroller や v-tooltip のようなツールによってエコシステムに貢献しています。',
         ],
       }],
     }
