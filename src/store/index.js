@@ -85,6 +85,18 @@ const store = () => new Vuex.Store({
           'STORES.jp を提供するストアーズ・ドット・ジェーピー株式会社は、2018年2月1日付で事業者向けの決済サービス Coiney を提供するコイニー社と経営統合し、持株会社として hey を設立しました。グループとして「Just for Fun」というミッションを掲げ、個人、または小さなチームが「楽しみ」によって駆動される経済発展の支援を目指しています。',
         ],
       },
+      {
+        name: '株式会社 ITプロパートナーズ',
+        url: 'https://itpropartners.jp/',
+        banner: 'itpropartners.png',
+        descriptions: [
+          '「自立した人材を増やし、新しい仕事文化をつくる」というビジョンのもとで、IT・Web 業界の起業家やフリーランスで活躍するエンジニア・クリエイターに週2日からの案件を紹介するプラットフォーム「ITプロパートナーズ」（<a href="https://itpropartners.com/" target="_blank" rel="noopener">https://itpropartners.com/</a>）を運営。',
+          '他にもマッチングサイト構築パッケージの「PIECE」、教育支援サービスの「ITプロカレッジ」、新卒採用サービスの「intee」という事業を展開しています。',
+          '現在、新規事業となる教育型転職サービスでは Nuxt.js と Laravel で開発中です。',
+          'また ProLabo（<a href="https://itpropartners.connpass.com/" target="_blank" rel="noopener">https://itpropartners.connpass.com/</a>）で勉強会やもくもく会を主催しています。',
+          '今後も Vue.js を使ってより多くのユーザーの方々に価値提供をしていくと共に、Vue.js の発展と普及に貢献できるよう努めます。',
+        ],
+      },
     ],
     silverSponsors: [
       {
@@ -120,6 +132,12 @@ const store = () => new Vuex.Store({
         ],
       },
       {
+        name: '株式会社アイスタイル',
+        url: 'http://www.istyle.co.jp/',
+        banner: 'istyle.png',
+        descriptions: [],
+      },
+      {
         name: '株式会社フォアキャスト・コミュニケーションズ',
         url: 'https://www.4cast.co.jp',
         banner: '4cast.png',
@@ -132,6 +150,15 @@ const store = () => new Vuex.Store({
         ],
       },
       {
+        name: '株式会社ディー・エヌ・エー',
+        url: 'http://dena.com/jp/',
+        banner: 'dena.png',
+        descriptions: [
+          '1999年に創業した株式会社ディー・エヌ・エー（以下 DeNA）はゲーム事業を中心に、近年では、オートモーティブ事業やヘルスケア事業、スポーツ事業などにも進出し、多種多様な事業を展開しています。インターネット技術がコモディティー化する中、次の支える柱として、AI 技術に注目し、事業を横断して活用しています。',
+          'DeNA のミッションは Delight and Impact the world です。インターネットや AI を活用し、永久ベンチャーとして世の中にデライトを届けることを長期の経営指針として、世の中に貢献し歓迎されるような新しい価値を提供すべく、挑戦を続けています。',
+        ],
+      },
+      {
         name: 'Japan Digital Design株式会社',
         url: 'https://www.japan-d2.com',
         banner: 'japan-d2.png',
@@ -139,6 +166,12 @@ const store = () => new Vuex.Store({
           'Japan Digital Design は、社会的課題に対し、具体的なプロトタイプ開発と多様なコミュニティでの実証実験を通じて模索し、次世代の新たな金融 UX を創造・提案するために、これまで銀行内の組織であったイノベーション・ラボをスピン・オフさせ、2017年10月に誕生しました。',
           '今後、急拡大していく音声やモーションセンサーなど IoT デバイスや AI を活用した新たなユーザーインターフェイスを開発し、より快適で Frictionless なユーザー体験を大企業や Startup、地域金融機関とともに創造し、これまでにない顧客価値を、MUFG のネットワークを通じて、世界中に発信していくことを目指します。',
         ],
+      },
+      {
+        name: 'GMOペパボ株式会社',
+        url: 'https://pepabo.com',
+        banner: 'pepabo.png',
+        descriptions: [],
       },
       {
         name: 'エムスリー株式会社',
@@ -152,8 +185,62 @@ const store = () => new Vuex.Store({
           'エムスリーは Kotlin、Elixir、Ruby など現場のエンジニアが必要と考えたものを導入できる環境です。なかでも Vue.js は様々なサービスのフロントエンドを支える存在になっています。',
         ],
       },
+      {
+        name: '株式会社viviane',
+        url: 'http://viviane.jp/',
+        banner: 'viviane.png',
+        descriptions: [
+          '株式会社vivianeは、映画情報メディア ciatr <a href="https://ciatr.jp/" target="_blank" rel="noopener">シアター</a> を運営しています。',
+          '「物語との出会いを通じて、人類が感動する機会を提供する」という vision のもと、映画・ドラマ・アニメを愛するメンバーで、開発・運営を進めています。',
+          'より技術的なチャレンジを重視しており、2016年 PHP フレームワーク Laravel のプロダクション導入をはじめ、フロントエンドの分野でも React や Vue.js などの導入を積極的に進めています。',
+          '私達は Vue.js などを利用し、カルチャーをより楽しくすべく、ともに開発してくれるメンバーを募集しています。',
+        ],
+      },
+      {
+        name: '株式会社カサレアル',
+        url: 'https://www.casareal.co.jp/',
+        banner: 'casareal.png',
+        descriptions: [
+          'カサレアルは、研修を通じて、効率的な最新技術導入を徹底支援します。"現場ですぐに使える技術をわかりやすく伝える" をモットーに研修コースを開発しています。Java 黎明期から研修を開始し、約20年の実績を誇ります。',
+          '変化の早いフロントエンド技術もお任せください。JavaScript（ECMAScript 2015～2017対応！）はもちろん、Vue.js、React、Angular の3大 JavaScript フレームワークのコースも提供します。その中でも 2017年から提供を開始実施した Vue.js 入門研修は、公開型の "オープン研修" や、個別企業様向けの "一社研修" にて多くのお客様にご活用頂いています。',
+        ],
+      },
+      {
+        name: 'RareJob',
+        url: 'https://www.rarejob.com/',
+        banner: 'rarejob.png',
+        descriptions: [
+          '「レアジョブ英会話」はマンツーマンの英会話レッスンを 1レッスンあたり 129円（税抜）※ からという低価格で提供しているオンライン英会話サービスです。',
+          '2018年3月に Skype から WebRTC を用いた「レッスンルーム」に以降を開始しており、社内での SPA 開発や新規プロダクトで積極的に Vue.js を利用しています。',
+          'Go を使った基盤の開発や、AWS を使ったインフラ構築、Rx での iOS/Android アプリ開発、Vue.js を使ってのフロントの刷新など最新技術にも積極的に取り組んでいます。',
+          'インフラ/基盤/フロントエンジニアを絶賛採用中です！！',
+        ],
+      },
+      {
+        name: '株式会社コラボテクノロジー',
+        url: 'https://collatech.co.jp/',
+        banner: 'collatech.png',
+        descriptions: [
+          '「インフルエンサーマーケティング」に特化した弊社では、現在 Vue.js を活用した WEB アプリケーションを開発・運用しております。',
+          '2017年に Vue.js を検証し、その使いやすさ、速度に感動した CTO は、Vue.js の処理に勝るとも劣らない速度で Vue Fes Japan 2018 のスポンサーとなりました。',
+          'これからもますます Vue.js が発展することを願い、弊社サービスもその発展についていけるよう努力します。また、Vue.js に興味のあるエンジニアの募集も行なっています。一緒に Vue.js を使い倒しましょう！',
+        ],
+      },
     ],
-    bronzeSponsors: [],
+    bronzeSponsors: [
+      {
+        name: 'RYDEN Inc.',
+        url: 'http://www.ryden.co.jp/',
+        banner: 'ryden.png',
+        descriptions: [],
+      },
+      {
+        name: '株式会社一燈',
+        url: 'http://itto-inc.net',
+        banner: 'itto.png',
+        descriptions: [],
+      },
+    ],
     lunchSponsors: [
       {
         name: 'LINE株式会社',
@@ -196,7 +283,36 @@ const store = () => new Vuex.Store({
         ],
       },
     ],
-    drinkSponsors: [],
+    drinkSponsors: [
+      {
+        name: '株式会社スマートショッピング',
+        url: 'http://smartshopping.co.jp',
+        banner: 'smartshopping.png',
+        descriptions: [],
+      },
+    ],
+    toolSponsors: [
+      {
+        name: 'Wovn Technologies 株式会社',
+        url: 'https://wovn.io/ja',
+        banner: 'wovn.png',
+        descriptions: [],
+      },
+    ],
+    videoSponsors: [
+      {
+        name: 'crash.academy',
+        url: 'https://crash.academy/',
+        banner: 'crash-academy.png',
+        descriptions: [
+          '日々、さまざまな場所で ITエンジニアによる勉強会やユーザーグループの meetup などのイベントが行われています。',
+          'そこでは今注目されている言語、技術、ツールの使用方法やメリット・デメリット、実際のプロダクトやサービスで使用した実践的な事例が共有されています。',
+          'しかし、希望するイベントにすべて参加できるわけではありません。',
+          'crash.academy は、いつでも手軽に勉強会や meetup を視聴できる動画プラットフォームです。',
+          '私たちは、すべての ITエンジニアが常に最先端の情報をキャッチアップできる世界を目指しています。',
+        ],
+      },
+    ],
     mediaSponsors: [
       {
         name: 'Best of JavaScript',

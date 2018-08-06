@@ -75,6 +75,9 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  // 2列や3列表示にしたい箇所でも、スポンサーが 2つ、3つもない場合があるため
+  width: 100%;
 }
 
 .banner {
@@ -113,7 +116,7 @@ export default {
     }
   }
 
-  .gold, .silver, .bronze, .lunch, .beer, .drink, .media {
+  .gold, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media {
     .sponsor {
       width: calc((100% - (40px * 1)) / 2);
       max-width: 360px;
@@ -131,18 +134,6 @@ export default {
       margin-top: 40px;
     }
   }
-
-  // 2列にしたいが、スポンサー数が 2つに満たないため 1列にしている
-  // ただし、2列表示にしたスポンサーの横幅を超えてはならない
-  .bronze, .beer, .drink, .media {
-    .sponsor-list {
-      width: 760px;
-    }
-
-    .sponsor {
-      max-width: calc((100% - (40px * 1)) / 2);
-    }
-  }
 }
 
 @media screen and (min-width: $layout-breakpoint--is-medium-up) {
@@ -152,7 +143,7 @@ export default {
     }
   }
 
-  .gold, .silver, .bronze, .lunch, .beer, .drink, .media {
+  .gold, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media {
     .sponsor {
       width: calc((100% - (40px * 2)) / 3);
       max-width: 360px;
@@ -168,15 +159,6 @@ export default {
 
     .sponsor:nth-child(n+4) {
       margin-top: 40px;
-    }
-  }
-
-  // 3列にしたいが、スポンサー数が 3つに満たないため 2列にしている
-  // ただし、3列表示にしたスポンサーの横幅を超えてはならない
-  .bronze, .beer, .drink, .media {
-    .sponsor {
-      width: calc((100% - (40px * 1)) / 2);
-      max-width: calc((100% - (40px * 2)) / 3);
     }
   }
 }

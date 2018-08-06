@@ -58,6 +58,9 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  // 2列や3列表示にしたい箇所でも、スポンサーが 2つ、3つもない場合があるため
+  width: 100%;
 }
 
 .banner {
@@ -73,7 +76,7 @@ export default {
     }
   }
 
-  .silver, .bronze, .lunch, .beer, .drink, .media {
+  .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media {
     .banner {
       width: calc((100% - (8px * 1)) / 2);
     }
@@ -97,7 +100,7 @@ export default {
     }
   }
 
-  .bronze, .lunch, .beer, .drink, .media {
+  .bronze, .lunch, .beer, .drink, .tool, .video, .media {
     .banner-list {
       max-width: 328px;
     }
@@ -106,22 +109,10 @@ export default {
       max-width: 160px;
     }
   }
-
-  // 2列にしたいが、スポンサー数が 2つに満たないため 1列にしている
-  // ただし、2列表示にしたスポンサーの横幅を超えてはならない
-  .bronze, .beer, .drink {
-    .banner-list {
-      width: 328px;
-    }
-
-    .banner {
-      max-width: calc((100% - (8px * 1)) / 2);
-    }
-  }
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) and (max-width: $layout-breakpoint--is-medium) {
-  .gold, .silver, .bronze, .lunch, .beer, .drink, .media {
+  .gold, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media {
     .banner {
       width: calc((100% - (40px * 1)) / 2);
     }
@@ -159,9 +150,9 @@ export default {
     }
   }
 
-  .bronze, .lunch, .beer, .drink, .media {
+  .bronze, .lunch, .beer, .drink, .tool, .video, .media {
     .banner-list {
-      width: 360px;
+      max-width: 360px;
     }
 
     .banner {
@@ -171,7 +162,7 @@ export default {
 }
 
 @media screen and (min-width: $layout-breakpoint--is-medium-up) {
-  .gold, .silver, .bronze, .lunch, .beer, .drink, .media {
+  .gold, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media {
     .banner {
       width: calc((100% - (40px * 2)) / 3);
     }
@@ -209,9 +200,9 @@ export default {
     }
   }
 
-  .bronze, .lunch, .beer, .drink, .media {
+  .bronze, .lunch, .beer, .drink, .tool, .video, .media {
     .banner-list {
-      width: 560px;
+      max-width: 560px;
     }
 
     .banner {
