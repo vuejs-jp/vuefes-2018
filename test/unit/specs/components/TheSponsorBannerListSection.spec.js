@@ -8,14 +8,23 @@ const localVue = createLocalVue()
 localVue.use(Vuex)
 
 describe('TheSponsorBannerListSection', () => {
-  it('レンダリングできる', () => {
-    const wrapper = mount(TheSponsorBannerListSection, {
+  let wrapper
+
+  beforeEach(() => {
+    wrapper = mount(TheSponsorBannerListSection, {
       store,
       localVue,
       stubs: {
         NuxtLink: RouterLinkStub,
       },
     })
+  })
+
+  it('レンダリングできる', () => {
     expect(wrapper.text()).to.contain('Sponsors')
+  })
+
+  it('リンクに Trailing Slash が入っている', () => {
+    expect(wrapper.find('.link-to-sponsors').props().to).to.equal('/sponsors/')
   })
 })

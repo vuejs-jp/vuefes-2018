@@ -19,7 +19,7 @@
 
     <div class="button-wrapper">
       <link-button>
-        <nuxt-link to="/sponsors">
+        <nuxt-link class="link-to-sponsors" to="/sponsors/">
           詳細
         </nuxt-link>
       </link-button>
