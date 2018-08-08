@@ -27,4 +27,8 @@ describe('SponsorGroup', () => {
   it('group の先頭文字が大文字で表示される', () => {
     expect(wrapper.find('.heading').text()).to.contain('Platinum')
   })
+
+  it('id が付与されている', () => {
+    expect(wrapper.find('.sponsor').attributes().id).to.equal('platinum-株式会社プレイド')
+  })
 })

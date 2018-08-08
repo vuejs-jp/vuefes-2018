@@ -6,7 +6,7 @@
 
     <div class="sponsor-list-wrapper">
       <ul class="sponsor-list">
-        <li class="sponsor" v-for="(sponsor, index) in sponsors" :key="index">
+        <li :id="`${group}-${sponsor.name}`" class="sponsor" v-for="(sponsor, index) in sponsors" :key="index">
           <a :href="sponsor.url" target="_blank" rel="noopener">
             <img class="banner" :src="require(`~/assets/images/sponsors/${group}/${sponsor.banner}`)">
           </a>

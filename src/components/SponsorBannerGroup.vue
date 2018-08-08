@@ -7,7 +7,9 @@
     <div class="banner-list-wrapper">
       <ul class="banner-list">
         <li class="banner" v-for="(sponsor, index) in sponsors" :key="index">
-          <img :src="require(`~/assets/images/sponsors/${group}/${sponsor.banner}`)">
+          <nuxt-link class="link-to-sponsor" :to="`/sponsors/#${group}-${sponsor.name}`">
+            <img :src="require(`~/assets/images/sponsors/${group}/${sponsor.banner}`)">
+          </nuxt-link>
         </li>
       </ul>
     </div>
