@@ -343,6 +343,14 @@ const store = () => new Vuex.Store({
         descriptions: [],
       },
     ],
+    stickerSponsors: [
+      {
+        name: 'stickermule',
+        url: 'https://mule.to/vuefesjp18',
+        banner: 'stickermule.png',
+        descriptions: [],
+      },
+    ],
   },
 })
 

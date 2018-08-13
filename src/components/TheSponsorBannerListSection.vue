@@ -15,6 +15,7 @@
       <SponsorBannerGroup group="tool" :sponsors="$store.state.toolSponsors" v-if="$store.state.toolSponsors.length > 0" />
       <SponsorBannerGroup group="video" :sponsors="$store.state.videoSponsors" v-if="$store.state.videoSponsors.length > 0" />
       <SponsorBannerGroup group="media" :sponsors="$store.state.mediaSponsors" v-if="$store.state.mediaSponsors.length > 0" />
+      <SponsorBannerGroup group="sticker" :sponsors="$store.state.stickerSponsors" v-if="$store.state.stickerSponsors.length > 0" />
     </div>
 
     <div class="button-wrapper">
