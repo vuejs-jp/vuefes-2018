@@ -1,15 +1,17 @@
 # dependencies
-node_modules
+node_modules/
 
 # logs
 npm-debug.log
+yarn-error.log
 
 # Nuxt build
-.nuxt
+.nuxt/
 
 # Nuxt generate
-dist
+dist/
 
-.idea
+.idea/
 *.iml
 .DS_Store
+tmp/

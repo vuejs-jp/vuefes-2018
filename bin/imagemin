@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Fail on unset variables and command errors
+set -ue -o pipefail
+
+# Prevent commands misbehaving due to locale differences
+export LC_ALL=C
+
+for file in `git diff --cached --name-status | \
+  awk '$1 ~ /[AM]/ && tolower($2) ~ /\.(jpg?g|png|gif|svg)$/ {print $2}'`
+do
+  echo $file を最適化します
+  cat $file | ./node_modules/.bin/imagemin \
+    --plugin=mozjpeg \
+    --plugin=gifsicle \
+    --plugin=pngquant \
+    --plugin=optipng \
+    --plugin=svgo > ${file}.new
+  mv -f ${file}.new $file
+  git add $file
+done

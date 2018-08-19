@@ -17,6 +17,10 @@ Serve with hot reload at localhost:3000
 yarn run dev
 ```
 
+### Image optimization
+
+If you add or edit images, the images will be optimized with imagemin on pre commit. 
+
 ## Testing
 
 ```
