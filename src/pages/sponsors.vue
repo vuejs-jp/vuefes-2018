@@ -11,9 +11,9 @@
         <div class="sponsor-group-list">
           <SponsorGroup group="platinum" :sponsors="$store.state.platinumSponsors" v-if="$store.state.platinumSponsors.length > 0" />
           <SponsorGroup group="gold" :sponsors="$store.state.goldSponsors" v-if="$store.state.goldSponsors.length > 0" />
-          <SponsorGroup group="special" :sponsors="$store.state.specialSponsors" v-if="$store.state.specialSponsors.length > 0" />
           <SponsorGroup group="silver" :sponsors="$store.state.silverSponsors" v-if="$store.state.silverSponsors.length > 0" />
           <SponsorGroup group="bronze" :sponsors="$store.state.bronzeSponsors" v-if="$store.state.bronzeSponsors.length > 0" />
+          <SponsorGroup group="special" :sponsors="$store.state.specialSponsors" v-if="$store.state.specialSponsors.length > 0" />
           <SponsorGroup group="lunch" :sponsors="$store.state.lunchSponsors" v-if="$store.state.lunchSponsors.length > 0" />
           <SponsorGroup group="beer" :sponsors="$store.state.beerSponsors" v-if="$store.state.beerSponsors.length > 0" />
           <SponsorGroup group="drink" :sponsors="$store.state.drinkSponsors" v-if="$store.state.drinkSponsors.length > 0" />
