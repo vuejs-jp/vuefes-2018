@@ -7,6 +7,7 @@
     <div class="sponsor-banner-group-list">
       <SponsorBannerGroup group="platinum" :sponsors="$store.state.platinumSponsors" v-if="$store.state.platinumSponsors.length > 0" />
       <SponsorBannerGroup group="gold" :sponsors="$store.state.goldSponsors" v-if="$store.state.goldSponsors.length > 0" />
+      <SponsorBannerGroup group="special" :sponsors="$store.state.specialSponsors" v-if="$store.state.specialSponsors.length > 0" />
       <SponsorBannerGroup group="silver" :sponsors="$store.state.silverSponsors" v-if="$store.state.silverSponsors.length > 0" />
       <SponsorBannerGroup group="bronze" :sponsors="$store.state.bronzeSponsors" v-if="$store.state.bronzeSponsors.length > 0" />
       <SponsorBannerGroup group="lunch" :sponsors="$store.state.lunchSponsors" v-if="$store.state.lunchSponsors.length > 0" />

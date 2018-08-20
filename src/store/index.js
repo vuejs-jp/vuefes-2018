@@ -98,6 +98,18 @@ const store = () => new Vuex.Store({
         ],
       },
     ],
+    specialSponsors: [
+      {
+        name: 'アシアル株式会社',
+        url: 'https://www.asial.co.jp/',
+        banner: 'asial.png',
+        descriptions: [
+          'アシアルは「エンジニアリングでインターネットの成長を牽引する」を事業コンセプトに 2002年に創業。以来、企業向けの Web アプリケーションやモバイルアプリケーションの開発に携わってまいりました。近年は Web フロント技術の研究開発に注力しており、Vue.js を採用するプロジェクトも急速に増加しております。',
+          'また、2012年に提供開始した HTML5 モバイルアプリ開発ツール「Monaca」は国内外の 20万人以上の開発者による 9万個を超えるアプリ開発にご利用いただいてきました。「Monaca」ではブラウザベースのクラウド IDE が提供され、開発者はローカルの開発環境の構築なしにクラウド上で Vue.js を使った HTML5 モバイルアプリの開発を行うことが可能です。',
+          '[https://ja.monaca.io/](https://ja.monaca.io/)',
+        ],
+      },
+    ],
     silverSponsors: [
       {
         name: '株式会社ピクセルグリッド',
@@ -219,6 +231,14 @@ const store = () => new Vuex.Store({
           'インターネットの力で、サービスの生産性の改善、より利便性の高いサービスを実現し、今後、日本そして世界の産業のトランスフォーメーションに貢献していきます。',
           'ラクスルでは、Vue.js を用いた既存サービスのフロントエンドコード刷新、また新規サービスのフロントエンド開発を進めており、今後さらに推進していきたいと考えております。',
           'Vue Fes Japan の開催、とても楽しみにしております！',
+        ],
+      },
+      {
+        name: '株式会社メルカリ',
+        url: 'https://www.merpay.com/jp/',
+        banner: 'merpay.png',
+        descriptions: [
+          'Even though Merpay will offer virtual wallets and other related services, we are not just a payment services company. Our goal is much more - weʼre aiming to create a more seamless society by reenvisioning the existing societal infrastructure. Our plan starts with providing a service that allows users to carry out payment related transactions of all kinds through a single system, streamlining the flow of money and taking the hassle out of payment.',
         ],
       },
       {

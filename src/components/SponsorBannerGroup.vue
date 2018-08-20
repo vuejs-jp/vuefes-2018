@@ -72,7 +72,7 @@ export default {
 }
 
 @media screen and (max-width: $layout-breakpoint--is-small) {
-  .gold {
+  .gold, .special {
     .banner + .banner {
       margin-top: 20px;
     }
@@ -114,7 +114,7 @@ export default {
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) and (max-width: $layout-breakpoint--is-medium) {
-  .gold, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
+  .gold, .special, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
     .banner {
       width: calc((100% - (40px * 1)) / 2);
     }
@@ -132,7 +132,7 @@ export default {
     }
   }
 
-  .gold {
+  .gold, .special {
     .banner-list {
       max-width: 760px;
     }
@@ -164,7 +164,7 @@ export default {
 }
 
 @media screen and (min-width: $layout-breakpoint--is-medium-up) {
-  .gold, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
+  .gold, .special, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
     .banner {
       width: calc((100% - (40px * 2)) / 3);
     }
@@ -182,7 +182,7 @@ export default {
     }
   }
 
-  .gold {
+  .gold, .special {
     .banner-list {
       max-width: 1160px;
     }

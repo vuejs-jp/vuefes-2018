@@ -116,7 +116,7 @@ export default {
     }
   }
 
-  .gold, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
+  .gold, .special, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
     .sponsor {
       width: calc((100% - (40px * 1)) / 2);
       max-width: 360px;
@@ -143,7 +143,7 @@ export default {
     }
   }
 
-  .gold, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
+  .gold, .special, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
     .sponsor {
       width: calc((100% - (40px * 2)) / 3);
       max-width: 360px;
