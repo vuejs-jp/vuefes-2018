@@ -33,7 +33,6 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
-      { rel: 'stylesheet', href: 'https://use.typekit.net/qns1qjx.css' },
     ],
   },
   /*
@@ -76,7 +75,8 @@ module.exports = {
     'nuxt-sass-resources-loader',
   ],
   plugins: [
-    '~/plugins/axios',
+    { src: '~/plugins/axios' },
+    { src: '~/plugins/typekit', ssr: false },
   ],
   axios: {
     baseURL: 'https://vuefes2018-functions.azurewebsites.net/api',
