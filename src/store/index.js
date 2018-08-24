@@ -234,8 +234,8 @@ const store = () => new Vuex.Store({
         ],
       },
       {
-        name: '株式会社メルカリ',
-        url: 'https://www.merpay.com/jp/',
+        name: '株式会社メルペイ（Merpay, Inc.）',
+        url: 'https://jp.merpay.com',
         banner: 'merpay.png',
         descriptions: [
           'Even though Merpay will offer virtual wallets and other related services, we are not just a payment services company. Our goal is much more - weʼre aiming to create a more seamless society by reenvisioning the existing societal infrastructure. Our plan starts with providing a service that allows users to carry out payment related transactions of all kinds through a single system, streamlining the flow of money and taking the hassle out of payment.',
