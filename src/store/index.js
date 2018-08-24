@@ -100,6 +100,14 @@ const store = () => new Vuex.Store({
     ],
     specialSponsors: [
       {
+        name: 'Microsoft',
+        url: 'https://azure.microsoft.com/ja-jp/',
+        banner: 'microsoft.png',
+        descriptions: [
+          'マイクロソフトは、「Empower every person and every organization on the planet to achieve more.」をミッションに、クラウドプラットフォーム「Microsoft Azure」、Surface などのデバイスから Office 製品まで多種多様な製品サービスの開発・提供を行っています。サティア・ナデラの CEO 就任後、自社テクノロジーに閉じず、OSS への取り組みを加速させています。OSS に対する Microsoft の考えには、「Enable」「Integrate」「Release」「Contribute」の大事な 4つのメッセージがあります。中でも「Contribute」はコミュニティへの貢献を意味しており、Vue.js コミュニティがさらに盛り上がることを願い、スポンサーに入らせていただきました。当日の開催を楽しみにしております！',
+        ],
+      },
+      {
         name: 'アシアル株式会社',
         url: 'https://www.asial.co.jp/',
         banner: 'asial.png',
