@@ -284,6 +284,12 @@ const store = () => new Vuex.Store({
         banner: 'itto.png',
         descriptions: [],
       },
+      {
+        name: '株式会社ゆめみ',
+        url: 'https://www.yumemi.co.jp/ja',
+        banner: 'yumemi.png',
+        descriptions: [],
+      },
     ],
     lunchSponsors: [
       {
