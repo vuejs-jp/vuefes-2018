@@ -50,8 +50,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.the-head-image {
+  position: relative;
+  padding-top: calc((1152 / 768) * 100%);
+
+  @media screen and (min-width: $layout-breakpoint--is-small-up) {
+    padding-top: calc((1080 / 1920) * 100%);
+  }
+}
+
 .head-image {
+  position: absolute;
   display: block;
+  top: 0;
+  left: 0;
   width: 100%;
 }
 </style>
