@@ -8,7 +8,12 @@
       <ul class="banner-list">
         <li class="banner" v-for="(sponsor, index) in sponsors" :key="index">
           <nuxt-link class="link-to-sponsor" :to="`/sponsors/#${group}-${sponsor.name}`">
-            <img :src="require(`~/assets/images/sponsors/${group}/${sponsor.banner}`)">
+            <div v-lazy-container="{ selector: 'img' }">
+              <img
+                :data-src="require(`~/assets/images/sponsors/${group}/${sponsor.banner}`)"
+                :data-loading="require('~/assets/images/sponsors/placeholder.png')"
+              >
+            </div>
           </nuxt-link>
         </li>
       </ul>

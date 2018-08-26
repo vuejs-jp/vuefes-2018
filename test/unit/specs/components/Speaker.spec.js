@@ -4,8 +4,7 @@ import Speaker from '~/components/Speaker'
 describe('Speaker', () => {
   const AVATAR_EVAN = require('~/assets/images/speakers/evan.jpg')
   const AVATAR_EVAN_2X = require('~/assets/images/speakers/evan@2x.jpg')
-
-  it('picture source の srcset 属性をセットできる', () => {
+  it('img の data-srcset 属性をセットできる', () => {
     const wrapper = mount(Speaker, {
       propsData: {
         name: 'Evan You',
@@ -21,10 +20,8 @@ describe('Speaker', () => {
       },
     })
 
-    const pictureSourceForDesktop = wrapper.findAll('.avatar picture source').at(1)
-
     expect(
-      pictureSourceForDesktop.attributes()['srcset']
+      wrapper.find('.avatar img').attributes()['data-srcset']
     ).to.equal(`${AVATAR_EVAN}, ${AVATAR_EVAN_2X} 2x`)
   })
 })

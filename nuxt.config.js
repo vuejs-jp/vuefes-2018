@@ -43,6 +43,12 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: [
+      'axios',
+      'intersection-observer',
+      'vue-lazyload',
+    ],
+
     /*
     ** Run ESLint on save
     */
@@ -82,6 +88,7 @@ module.exports = {
   plugins: [
     { src: '~/plugins/axios' },
     { src: '~/plugins/typekit', ssr: false },
+    { src: '~/plugins/vue-lazyload', ssr: false },
   ],
   axios: {
     baseURL: 'https://vuefes2018-functions.azurewebsites.net/api',

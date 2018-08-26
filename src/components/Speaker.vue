@@ -1,11 +1,13 @@
 <template>
   <div class="speaker">
     <div class="avatar">
-      <picture>
-        <source media="(max-width: 768px)" :srcset="avatar2x">
-        <source media="(min-width: 769px)" :srcset="`${avatar}, ${avatar2x} 2x`">
-        <img :src="avatar2x">
-      </picture>
+      <div v-lazy-container="{ selector: 'img' }">
+        <img
+          :data-srcset="`${avatar}, ${avatar2x} 2x`"
+          :data-src="avatar2x"
+          :data-loading="require('~/assets/images/speakers/placeholder.png')"
+        >
+      </div>
     </div>
 
     <div class="speaker-wrapper">

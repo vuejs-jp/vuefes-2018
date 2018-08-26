@@ -13,7 +13,12 @@
     <ul class="leaders">
       <li class="leader" v-for="leader in leaders" :key="leader.twitterId">
         <a :href="`https://twitter.com/${leader.twitterId}`" target="_blank" rel="noopener">
-          <img class="avatar" :src="require(`~/assets/images/staffs/${leader.avatar}`)">
+          <div v-lazy-container="{ selector: 'img' }">
+            <img class="avatar"
+              :data-src="require(`~/assets/images/staffs/${leader.avatar}`)"
+              :data-loading="require('~/assets/images/staffs/placeholder.png')"
+            >
+          </div>
         </a>
         <a class="link-to-twitter" :href="`https://twitter.com/${leader.twitterId}`" target="_blank" rel="noopener">
           @{{ leader.twitterId }}
@@ -24,7 +29,12 @@
     <ul class="staff-list">
       <li class="staff" v-for="staff in staffs" :key="staff.twitterId">
         <a :href="`https://twitter.com/${staff.twitterId}`" target="_blank" rel="noopener">
-          <img class="avatar" :src="require(`~/assets/images/staffs/${staff.avatar}`)">
+          <div v-lazy-container="{ selector: 'img' }">
+            <img class="avatar"
+              :data-src="require(`~/assets/images/staffs/${staff.avatar}`)"
+              :data-loading="require('~/assets/images/staffs/placeholder.png')"
+            >
+          </div>
         </a>
         <a class="link-to-twitter" :href="`https://twitter.com/${staff.twitterId}`" target="_blank" rel="noopener">
           @{{ staff.twitterId }}

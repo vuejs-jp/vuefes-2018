@@ -20,10 +20,12 @@
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/pwa": "^2.3.2",
     "axios": "^0.18.0",
+    "intersection-observer": "^0.5.0",
     "normalize.css": "^8.0.0",
     "nuxt": "^1.0.0",
     "nuxt-sass-resources-loader": "^1.1.1",
-    "vue": "^2.5.13"
+    "vue": "^2.5.13",
+    "vue-lazyload": "^1.2.6"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.20",
