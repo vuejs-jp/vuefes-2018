@@ -73,6 +73,11 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/google-analytics',
     'nuxt-sass-resources-loader',
+    [ '@nuxtjs/pwa', {
+      icon: {
+        iconSrc: 'src/static/apple-touch-icon.png',
+      },
+    }],
   ],
   plugins: [
     { src: '~/plugins/axios' },

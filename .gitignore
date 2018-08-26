@@ -15,3 +15,6 @@ dist/
 *.iml
 .DS_Store
 tmp/
+
+# Workbox files
+sw.*
