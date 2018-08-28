@@ -242,11 +242,11 @@ const store = () => new Vuex.Store({
         ],
       },
       {
-        name: '株式会社メルペイ（Merpay, Inc.）',
+        name: '株式会社メルペイ',
         url: 'https://jp.merpay.com',
         banner: 'merpay.png',
         descriptions: [
-          'Even though Merpay will offer virtual wallets and other related services, we are not just a payment services company. Our goal is much more - weʼre aiming to create a more seamless society by reenvisioning the existing societal infrastructure. Our plan starts with providing a service that allows users to carry out payment related transactions of all kinds through a single system, streamlining the flow of money and taking the hassle out of payment.',
+          'メルペイという名が示す通り、まずはデジタルウォレットの提供を予定していますが、私たちは決済の会社になりたいわけではありません。社会インフラを圧倒的な利便性をもってアップグレードすることで、メルペイひとつでお金に関するあらゆるサービスが簡単に完結する世界を実現したい。世の中のお金の流れを、もっと身近で簡単なモノに変えたいと考えています。',
         ],
       },
       {
