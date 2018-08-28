@@ -100,7 +100,7 @@ const store = () => new Vuex.Store({
     ],
     specialSponsors: [
       {
-        name: 'Microsoft',
+        name: '日本マイクロソフト株式会社',
         url: 'https://azure.microsoft.com/ja-jp/',
         banner: 'microsoft.png',
         descriptions: [
