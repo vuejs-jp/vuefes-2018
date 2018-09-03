@@ -338,7 +338,11 @@ const store = () => new Vuex.Store({
         name: '株式会社スマートショッピング',
         url: 'http://smartshopping.co.jp',
         banner: 'smartshopping.png',
-        descriptions: [],
+        descriptions: [
+          '世界中の消費者に使ってもらえるサービスを提供したいことをビジョンに掲げ Web 及び IoT サービスを提供しています。',
+          '常に技術的なチャレンジを最重要視しており、2017年には既存の JavaScript をすべて ES6 に対応し、2018年からは IoT サービスのお客様向け画面の開発で Vue.js を使っています。また既存サービスの改修にも Vue.js を活用し、フロントエンドの最新技術に積極的に取り組んでいます。',
+          '今後も Vue.js と共に成長し、よりサービスを発展させていきたいと考えております。私たちはそのようなチャレンジを Vue.js を使い一緒にできるエンジニアを募集しています。',
+        ],
       },
     ],
     toolSponsors: [
