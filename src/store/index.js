@@ -270,6 +270,18 @@ const store = () => new Vuex.Store({
           'これからもますます Vue.js が発展することを願い、弊社サービスもその発展についていけるよう努力します。また、Vue.js に興味のあるエンジニアの募集も行なっています。一緒に Vue.js を使い倒しましょう！',
         ],
       },
+      {
+        name: 'SATORI 株式会社',
+        url: 'https://satori.marketing/',
+        banner: 'satori.png',
+        descriptions: [
+          'SATORI 株式会社は「あなたのマーケティング活動を一歩先へ」をミッションとして掲げ、集客に強いマーケティングオートメーション（MA)ツール「SATORI」の開発をおこなっています。',
+          '国産 MA ツールとして認知度 No.1（2017年3月現在）で、これまでに300社以上の導入実績があります。',
+          'Ruby、Java、JavaScript、Go といった言語をベースに 2017年からは Vue.js にも着目し、プロダクトに採用しています。',
+          'また、必要十分な作業マシンの貸与、勤務への柔軟な対応など生産性高く働ける環境作りに取り組んでいます。',
+          '<a href="https://satori.marketing/recruit/" target="_blank" rel="noopener">SATORI では開発メンバーを絶賛募集中です！</a>',
+        ],
+      },
     ],
     bronzeSponsors: [
       {
@@ -282,6 +294,12 @@ const store = () => new Vuex.Store({
         name: '株式会社一燈',
         url: 'http://itto-inc.net',
         banner: 'itto.png',
+        descriptions: [],
+      },
+      {
+        name: '株式会社オムニス',
+        url: 'https://omnisinc.co/',
+        banner: 'omnis.png',
         descriptions: [],
       },
       {
