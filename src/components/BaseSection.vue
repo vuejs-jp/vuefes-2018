@@ -59,6 +59,10 @@ export default {
   }
 }
 
+.bg-blue {
+  background: $asagi;
+}
+
 .bg-green {
   background: url('~/assets/images/symbol-mark.svg') left top no-repeat, $hiwamoegiGradient;
 }

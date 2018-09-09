@@ -4,6 +4,8 @@
 
     <TheHeadSection />
 
+    <TheTicketSection />
+
     <TheSpeakerListSection />
 
     <TheSponsorCallSection />
@@ -28,6 +30,7 @@ import TheSpeakerListSection from '~/components/TheSpeakerListSection'
 import TheSponsorBannerListSection from '~/components/TheSponsorBannerListSection'
 import TheSponsorCallSection from '~/components/TheSponsorCallSection'
 import TheTeamSection from '~/components/TheTeamSection'
+import TheTicketSection from '~/components/TheTicketSection'
 
 export default {
   name: 'WelcomePage',
@@ -40,6 +43,7 @@ export default {
     TheSponsorBannerListSection,
     TheSponsorCallSection,
     TheTeamSection,
+    TheTicketSection,
   },
 }
 </script>
