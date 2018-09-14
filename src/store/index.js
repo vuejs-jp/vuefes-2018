@@ -308,6 +308,12 @@ const store = () => new Vuex.Store({
         banner: 'yumemi.png',
         descriptions: [],
       },
+      {
+        name: 'メドレー',
+        url: 'https://www.medley.jp/',
+        banner: 'medley.png',
+        descriptions: [],
+      },
     ],
     networkSponsors: [
       {
