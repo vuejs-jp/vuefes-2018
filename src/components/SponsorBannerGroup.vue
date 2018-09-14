@@ -83,7 +83,7 @@ export default {
     }
   }
 
-  .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
+  .silver, .bronze, .network, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
     .banner {
       width: calc((100% - (8px * 1)) / 2);
     }
@@ -107,7 +107,7 @@ export default {
     }
   }
 
-  .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
+  .bronze, .network, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
     .banner-list {
       max-width: 328px;
     }
@@ -119,7 +119,7 @@ export default {
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) and (max-width: $layout-breakpoint--is-medium) {
-  .gold, .special, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
+  .gold, .special, .silver, .bronze, .network, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
     .banner {
       width: calc((100% - (40px * 1)) / 2);
     }
@@ -157,7 +157,7 @@ export default {
     }
   }
 
-  .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
+  .bronze, .network, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
     .banner-list {
       max-width: 360px;
     }
@@ -169,7 +169,7 @@ export default {
 }
 
 @media screen and (min-width: $layout-breakpoint--is-medium-up) {
-  .gold, .special, .silver, .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
+  .gold, .special, .silver, .bronze, .network, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
     .banner {
       width: calc((100% - (40px * 2)) / 3);
     }
@@ -207,7 +207,7 @@ export default {
     }
   }
 
-  .bronze, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
+  .bronze, .network, .lunch, .beer, .drink, .tool, .video, .media, .sticker {
     .banner-list {
       max-width: 560px;
     }
