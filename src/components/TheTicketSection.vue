@@ -1,13 +1,14 @@
 <template>
   <BaseSection class="the-ticket-section" theme="blue">
     <template slot="heading">
-      Ticket
+      TICKET
     </template>
 
     <div class="description">
       <p class="readable">
         チケットはこちらで購入できます。
       </p>
+
       <p class="readable">
         販売期間: 2018/9/10（月）12:00 ～ 2018/10/19（金）10:30
       </p>
@@ -37,15 +38,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.description {
-  margin: 40px 0 60px;
-
-  @media screen and (max-width: $layout-breakpoint--is-small) {
-    margin: 20px 0 40px;
-  }
-}
-
 .button-wrapper {
+  margin-top: 36px;
   text-align: center;
 }
 </style>

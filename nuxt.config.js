@@ -75,6 +75,11 @@ module.exports = {
   css: [
     { src: '~/assets/stylesheets/main.scss', lang: 'scss' },
   ],
+  router: {
+    scrollBehavior: (to, from, savedPosition) => {
+      return { x: 0, y: 0 }
+    },
+  },
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/google-analytics',
@@ -87,6 +92,7 @@ module.exports = {
   ],
   plugins: [
     { src: '~/plugins/axios' },
+    { src: '~/plugins/global-navigation-handler', ssr: false },
     { src: '~/plugins/typekit', ssr: false },
     { src: '~/plugins/vue-lazyload', ssr: false },
   ],

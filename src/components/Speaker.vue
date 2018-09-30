@@ -1,53 +1,62 @@
 <template>
-  <div class="speaker">
+  <div
+    class="speaker"
+    :style="speakerStyle"
+  >
+    <HeadingWithBar v-if="hasHeading">
+      {{ type }}
+    </HeadingWithBar>
+
     <div class="avatar">
-      <div v-lazy-container="{ selector: 'img' }">
+      <no-ssr>
+        <div
+          class="image-placeholder"
+          slot="placeholder">
+        </div>
         <img
-          :data-srcset="`${avatar}, ${avatar2x} 2x`"
-          :data-src="avatar2x"
-          :data-loading="require('~/assets/images/speakers/placeholder.png')"
+          :srcset="`${avatar}, ${avatar2x} 2x`"
+          :src="avatar2x"
         >
-      </div>
+      </no-ssr>
     </div>
 
-    <div class="speaker-wrapper">
-      <div class="title">{{ title }}</div>
+    <div class="title">
+      {{ title }}
+    </div>
 
-      <h3 class="name">{{ name }}</h3>
+    <h3 class="name">
+      {{ name }}
+    </h3>
 
-      <div class="social">
-        <a
-          class="twitter"
-          :href="twitter"
-          target="_blank"
-          rel="noopener"
-        >
-          <img src="~/assets/images/icon_twitter.svg">
-        </a>
-        <a
-          class="github"
-          :href="github"
-          target="_blank"
-          rel="noopener"
-        >
-          <img src="~/assets/images/icon_github.svg">
-        </a>
-      </div>
-
-      <div class="description">
-        <p
-          class="readable"
-          v-for="(description, index) in descriptions"
-          :key="index"
-        >{{ description }}</p>
-      </div>
+    <div class="social">
+      <a
+        class="twitter"
+        :href="twitter"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="~/assets/images/icon_twitter.svg">
+      </a>
+      <a
+        class="github"
+        :href="github"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="~/assets/images/icon_github.svg">
+      </a>
     </div>
   </div>
 </template>
 
 <script>
+import HeadingWithBar from '~/components/HeadingWithBar'
+
 export default {
   name: 'Speaker',
+  components: {
+    HeadingWithBar,
+  },
   props: {
     name: {
       type: String,
@@ -73,9 +82,25 @@ export default {
       type: String,
       required: true,
     },
-    descriptions: {
-      type: Array,
-      required: true,
+    index: {
+      type: Number,
+      required: false,
+    },
+    type: {
+      type: String,
+      required: false,
+    },
+  },
+  computed: {
+    hasHeading () {
+      return this.index === 0
+    },
+    speakerStyle () {
+      if (this.hasHeading) {
+        return
+      }
+
+      return { 'margin-top': '25px' }
     },
   },
 }
@@ -83,17 +108,29 @@ export default {
 
 <style lang="scss" scoped>
 .avatar {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  max-width: 400px;
+  margin-bottom: 6px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    background-color: #d8d8d8;
+  }
+}
+
+.title {
+  font-size: 10px;
+  font-weight: lighter;
 }
 
 .name {
-  margin-top: 0;
-  margin-bottom: 4px;
-  font-size: 32px;
-  line-height: 1;
+  margin-top: -2px;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: lighter;
 }
 
 .social img {
@@ -105,24 +142,32 @@ export default {
   margin-left: 12px;
 }
 
-.description {
-  margin-bottom: 48px;
+@media screen and (max-width: $layout-breakpoint--is-small) {
+  .speaker {
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    margin-bottom: 10px;
+    width: 75%;
+    max-width: 256px;
+  }
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
   .speaker {
-    display: flex;
-    margin-bottom: 24px;
-  }
-
-  .avatar {
-    width: 256px;
+    width: 180px;
     margin-right: 40px;
-    margin-bottom: 0;
+    margin-bottom: 15px;
+
+    .image-placeholder {
+      width: 180px;
+      height: 180px;
+    }
   }
 
-  .speaker-wrapper {
-    width: calc(100% - (256px + 40px));
+  .speaker:last-child {
+    margin-right: 0;
   }
 }
 </style>

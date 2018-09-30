@@ -8,9 +8,14 @@ describe('BaseSection', () => {
         propsData: {
           theme: 'yellow',
         },
+        slots: {
+          heading: '<span>TICKET</span>', // 'TICKET' だと $slots.default に入ってしまう
+        },
       })
 
-      expect(wrapper.classes()).to.contain('bg-yellow')
+      expect(
+        wrapper.find('.heading-container').classes()
+      ).to.contain('bg-yellow')
     })
   })
 })

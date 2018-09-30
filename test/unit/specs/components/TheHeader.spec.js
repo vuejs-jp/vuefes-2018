@@ -1,0 +1,27 @@
+import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
+import Vuex from 'vuex'
+import TheHeader from '~/components/TheHeader'
+import createFullStore from '../utils/createFullStore'
+
+const localVue = createLocalVue()
+const store = () => createFullStore(Vuex)
+const delay = (ms) => new Promise((resolve) => setTimeout(() => resolve(), ms))
+
+localVue.use(Vuex)
+
+describe('TheHeader', () => {
+  it('レンダリングできる', () => {
+    const wrapper = mount(TheHeader, {
+      localVue,
+      store,
+      stubs: {
+        NuxtLink: RouterLinkStub,
+      },
+    })
+    expect(wrapper.vm.isGlobalNavigationShown).to.equal(false)
+    wrapper.vm.toggleGlobalNavigation()
+    delay(800).then(() => {
+      expect(wrapper.vm.isGlobalNavigationShown).to.equal(true)
+    })
+  })
+})

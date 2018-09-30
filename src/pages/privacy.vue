@@ -1,11 +1,9 @@
 <template>
   <div class="privacy-page">
-    <TheHeadImage />
-
-    <div class="content">
-      <h1 class="page-title">
+    <TheMain>
+      <template slot="page-title">
         プライバシーポリシー
-      </h1>
+      </template>
 
       <p class="readable">
         Vue Fes Japan 2018（以下、 カンファレンス）では、カンファレンスへの参加者およびスポンサー（以下、ユーザー）の個人情報保護の重要性について認識しています。
@@ -199,23 +197,21 @@
           </nuxt-link>
         </LinkButton>
       </div>
-    </div>
-
-    <TheFooter />
+    </TheMain>
   </div>
 </template>
 
 <script>
 import LinkButton from '~/components/LinkButton'
 import TheFooter from '~/components/TheFooter'
-import TheHeadImage from '~/components/TheHeadImage'
+import TheMain from '~/components/TheMain'
 
 export default {
   name: 'PrivacyPage',
   components: {
     LinkButton,
     TheFooter,
-    TheHeadImage,
+    TheMain,
   },
   head () {
     return {
@@ -226,84 +222,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content {
-  padding: 60px 5%;
-
-  ul {
-    list-style-type: disc;
-    padding-left: 40px;
-  }
-
-  ol {
-    list-style-type: decimal;
-    padding-left: 40px;
-  }
-
-  ul ul, ol ul {
-    list-style-type: circle;
-  }
-
-  ol ol, ul ol {
-    list-style-type: lower-latin;
-  }
-
-  p + p {
-    margin-top: 32px;
-  }
+ul {
+  list-style-type: disc;
+  padding-left: 40px;
 }
 
-.page-title {
-  margin-top: 0;
-  margin-bottom: 24px;
-  text-align: center;
-  font-size: 8vw;
-  line-height: 1.3;
-  color: $primary-color;
+ol {
+  list-style-type: decimal;
+  padding-left: 40px;
+}
 
-  // font-size の最大値を 48px にする
-  @media screen and (min-width: 600px) {
-    font-size: 48px;
-  }
+ul ul, ol ul {
+  list-style-type: circle;
+}
+
+ol ol, ul ol {
+  list-style-type: lower-latin;
 }
 
 .heading {
-  margin: 40px 0 20px;
-  font-size: 8vw;
-  color: $primary-color;
-
-  // font-size の最大値を 36px にする
-  @media screen and (min-width: 450px) {
-    font-size: 36px;
-  }
+  margin-top: 40px;
 }
 
 .button-wrapper {
   margin-top: 40px;
   text-align: center;
-}
-
-@media screen and (min-width: $layout-breakpoint--is-small-up) {
-  .content {
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 80px 5%;
-  }
-
-  .page-title {
-    margin-bottom: 60px;
-
-    br {
-      display: none;
-    }
-  }
-
-  .heading {
-    margin-top: 80px;
-  }
-
-  .button-wrapper {
-    margin-top: 60px;
-  }
 }
 </style>

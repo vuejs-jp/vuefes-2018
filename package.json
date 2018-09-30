@@ -21,6 +21,7 @@
     "@nuxtjs/pwa": "^2.3.2",
     "axios": "^0.18.0",
     "intersection-observer": "^0.5.0",
+    "lodash.shuffle": "^4.2.0",
     "normalize.css": "^8.0.0",
     "nuxt": "^1.0.0",
     "nuxt-sass-resources-loader": "^1.1.1",
@@ -28,7 +29,7 @@
     "vue-lazyload": "^1.2.6"
   },
   "devDependencies": {
-    "@vue/test-utils": "^1.0.0-beta.20",
+    "@vue/test-utils": "^1.0.0-beta.25",
     "ajv": "^6.1.1",
     "babel-eslint": "^8.2.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",

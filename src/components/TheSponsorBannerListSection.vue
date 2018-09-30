@@ -1,31 +1,137 @@
 <template>
-  <BaseSection class="the-sponsor-banner-list-section">
+  <BaseSection class="the-sponsor-banner-list-section" theme="green">
     <template slot="heading">
-      Sponsors
+      SPONSORS
     </template>
 
-    <div class="sponsor-banner-group-list">
-      <SponsorBannerGroup group="platinum" :sponsors="$store.state.platinumSponsors" v-if="$store.state.platinumSponsors.length > 0" />
-      <SponsorBannerGroup group="gold" :sponsors="$store.state.goldSponsors" v-if="$store.state.goldSponsors.length > 0" />
-      <SponsorBannerGroup group="silver" :sponsors="$store.state.silverSponsors" v-if="$store.state.silverSponsors.length > 0" />
-      <SponsorBannerGroup group="bronze" :sponsors="$store.state.bronzeSponsors" v-if="$store.state.bronzeSponsors.length > 0" />
-      <SponsorBannerGroup group="special" :sponsors="$store.state.specialSponsors" v-if="$store.state.specialSponsors.length > 0" />
-      <SponsorBannerGroup group="network" :sponsors="$store.state.networkSponsors" v-if="$store.state.networkSponsors.length > 0" />
-      <SponsorBannerGroup group="lunch" :sponsors="$store.state.lunchSponsors" v-if="$store.state.lunchSponsors.length > 0" />
-      <SponsorBannerGroup group="beer" :sponsors="$store.state.beerSponsors" v-if="$store.state.beerSponsors.length > 0" />
-      <SponsorBannerGroup group="drink" :sponsors="$store.state.drinkSponsors" v-if="$store.state.drinkSponsors.length > 0" />
-      <SponsorBannerGroup group="tool" :sponsors="$store.state.toolSponsors" v-if="$store.state.toolSponsors.length > 0" />
-      <SponsorBannerGroup group="video" :sponsors="$store.state.videoSponsors" v-if="$store.state.videoSponsors.length > 0" />
-      <SponsorBannerGroup group="media" :sponsors="$store.state.mediaSponsors" v-if="$store.state.mediaSponsors.length > 0" />
-      <SponsorBannerGroup group="sticker" :sponsors="$store.state.stickerSponsors" v-if="$store.state.stickerSponsors.length > 0" />
+    <div class="sponsor-banner-group">
+      <SponsorBanner
+        v-for="(sponsor, index) in platinumSponsors"
+        :key="`platinum-${index}`"
+        :index="index"
+        type="platinum"
+        :banner="sponsor.banner"
+      />
+    </div>
+
+    <div class="sponsor-banner-group">
+      <SponsorBanner
+        v-for="(sponsor, index) in goldSponsors"
+        :key="`gold-${index}`"
+        :index="index"
+        type="gold"
+        :banner="sponsor.banner"
+      />
+    </div>
+
+    <div class="sponsor-banner-group">
+      <SponsorBanner
+        v-for="(sponsor, index) in silverSponsors"
+        :key="`silver-${index}`"
+        :index="index"
+        type="silver"
+        :banner="sponsor.banner"
+      />
+    </div>
+
+    <div class="sponsor-banner-group">
+      <SponsorBanner
+        v-for="(sponsor, index) in bronzeSponsors"
+        :key="`bronze-${index}`"
+        :index="index"
+        type="bronze"
+        :banner="sponsor.banner"
+      />
+    </div>
+
+    <div class="sponsor-banner-group">
+      <SponsorBanner
+        v-for="(sponsor, index) in specialSponsors"
+        :key="`special-${index}`"
+        :index="index"
+        type="special"
+        :banner="sponsor.banner"
+      />
+    </div>
+
+    <div class="sponsor-banner-group">
+      <SponsorBanner
+        v-for="(sponsor, index) in networkSponsors"
+        :key="`network-${index}`"
+        :index="index"
+        type="network"
+        :banner="sponsor.banner"
+      />
+
+      <SponsorBanner
+        v-for="(sponsor, index) in lunchSponsors"
+        :key="`lunch-${index}`"
+        :index="index"
+        type="lunch"
+        :banner="sponsor.banner"
+      />
+
+      <SponsorBanner
+        v-for="(sponsor, index) in beerSponsors"
+        :key="`beer-${index}`"
+        :index="index"
+        type="beer"
+        :banner="sponsor.banner"
+      />
+
+      <SponsorBanner
+        v-for="(sponsor, index) in drinkSponsors"
+        :key="`drink-${index}`"
+        :index="index"
+        type="drink"
+        :banner="sponsor.banner"
+      />
+
+      <SponsorBanner
+        v-for="(sponsor, index) in toolSponsors"
+        :key="`tool-${index}`"
+        :index="index"
+        type="tool"
+        :banner="sponsor.banner"
+      />
+
+      <SponsorBanner
+        v-for="(sponsor, index) in videoSponsors"
+        :key="`video-${index}`"
+        :index="index"
+        type="video"
+        :banner="sponsor.banner"
+      />
+
+      <SponsorBanner
+        v-for="(sponsor, index) in mediaSponsors"
+        :key="`media-${index}`"
+        :index="index"
+        type="media"
+        :banner="sponsor.banner"
+      />
+
+      <SponsorBanner
+        v-for="(sponsor, index) in stickerSponsors"
+        :key="`sticker-${index}`"
+        :index="index"
+        type="sticker"
+        :banner="sponsor.banner"
+      />
     </div>
 
     <div class="button-wrapper">
       <link-button>
         <nuxt-link class="link-to-sponsors" to="/sponsors/">
-          詳細
+          詳細を見る
         </nuxt-link>
       </link-button>
+    </div>
+
+    <div class="description">
+      <p class="readable">
+        スポンサーの募集は 9/12 に締め切りました。たくさんのご応募、ありがとうございました。
+      </p>
     </div>
   </BaseSection>
 </template>
@@ -33,30 +139,61 @@
 <script>
 import BaseSection from '~/components/BaseSection'
 import LinkButton from '~/components/LinkButton'
-import SponsorBannerGroup from '~/components/SponsorBannerGroup'
+import SponsorBanner from '~/components/SponsorBanner'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'TheSponsorBannerListSection',
   components: {
     BaseSection,
     LinkButton,
-    SponsorBannerGroup,
+    SponsorBanner,
+  },
+  computed: {
+    ...mapGetters(
+      [
+        'platinumSponsors',
+        'goldSponsors',
+        'specialSponsors',
+        'silverSponsors',
+        'bronzeSponsors',
+        'networkSponsors',
+        'lunchSponsors',
+        'beerSponsors',
+        'drinkSponsors',
+        'toolSponsors',
+        'videoSponsors',
+        'mediaSponsors',
+        'stickerSponsors',
+      ]
+    ),
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.sponsor-banner-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .sponsor-banner-group + .sponsor-banner-group {
   margin-top: 40px;
 }
 
 .button-wrapper {
-  margin-top: 56px;
+  margin-top: 40px;
+  margin-bottom: 60px;
   text-align: center;
 }
-</style>
 
-<style lang="scss">
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .sponsor-banner-group {
+    justify-content: flex-start;
+  }
+}
+
 @media screen and (min-width: $layout-breakpoint--is-medium-up) {
   .the-sponsor-banner-list-section {
     .content {

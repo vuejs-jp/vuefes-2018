@@ -1,8 +1,10 @@
 <template>
-  <section class="base-section" :class="`bg-${theme}`">
-    <h2 v-if="$slots.heading" class="heading">
-      <slot name="heading" />
-    </h2>
+  <section class="base-section">
+    <div v-if="$slots.heading" class="heading-container" :class="`bg-${theme}`">
+      <h2 class="heading">
+        <slot name="heading" />
+      </h2>
+    </div>
 
     <div class="content">
       <slot />
@@ -24,68 +26,64 @@ export default {
 
 <style lang="scss" scoped>
 .base-section {
-  position: relative;
-  padding: 60px 5%;
-
-  h2, .content {
-    position: relative;
-    z-index: 100;
-  }
+  display: flex;
 }
 
-.base-section::before {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 50;
-  content: '';
-  background-size: 64px 64px;
-  background-image: url('~/assets/images/texture.png');
+.heading-container {
+  width: $side-area-width--is-small;
+  padding: 6.25vw 0 0;
+
+  &.bg-blue {
+    background-color: $asagi;
+  }
+
+  &.bg-yellow {
+    background-color: $tohoh;
+  }
+
+  &.bg-red {
+    background-color: $sangosyu;
+  }
+
+  &.bg-blue {
+    background: $asagi;
+  }
+
+  &.bg-green {
+    background-color: $hiwamoegi;
+  }
 }
 
 .heading {
-  margin-top: 0;
-  margin-bottom: 24px;
-  font-size: 14vw;
-  line-height: 1.3;
-  text-align: center;
-  color: $primary-color;
-
-  // font-size の最大値を 60px にする
-  @media screen and (min-width: 428px) {
-    font-size: 60px;
-  }
+  margin: 0;
+  font-size: 6.25vw;
+  font-weight: 300;
+  color: $primary-text-color--is-bg-dark;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transform: rotate(90deg);
 }
 
-.bg-blue {
-  background: $asagi;
-}
-
-.bg-green {
-  background: url('~/assets/images/symbol-mark.svg') left top no-repeat, $hiwamoegiGradient;
-}
-
-.bg-yellow {
-  background: $tohohGradient;
-}
-
-.bg-red {
-  background: $sangosyuGradient;
+.content {
+  width: 100%;
+  padding: 20px 12px 24px;
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
-  .bage-section {
-    padding: 80px 40px;
+  .heading-container {
+    width: $side-area-width--is-small-up;
+    min-width: $side-area-width--is-small-up;
+    padding: 12px 20px;
   }
-}
 
-@media screen and (min-width: $layout-breakpoint--is-medium-up) {
+  .heading {
+    font-size: 36px;
+    font-weight: lighter;
+    transform: rotate(0);
+  }
+
   .content {
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 30px;
   }
 }
 </style>

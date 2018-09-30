@@ -41,6 +41,18 @@ a {
   }
 }
 
+.heading {
+  margin: 0;
+  font-size: 8vw;
+  line-height: 1.3;
+  color: $primary-color;
+
+  // font-size の最大値を 36px にする
+  @media screen and (min-width: 450px) {
+    font-size: 36px;
+  }
+}
+
 .readable {
   line-height: 1.8;
 }

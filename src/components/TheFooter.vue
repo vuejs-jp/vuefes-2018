@@ -1,6 +1,6 @@
 <template>
   <footer class="the-footer">
-    <div class="footer-wrapper">
+    <div class="content">
       <div class="logo-wrapper">
         <div class="logo">
           <img src="~/assets/images/vue-fes-japan-logo-white.svg">
@@ -78,7 +78,7 @@ export default {
   }
 }
 
-.footer-wrapper {
+.content {
   @media screen and (min-width: $layout-breakpoint--is-small-up) {
     margin: 0 auto;
     width: 530px;
@@ -109,6 +109,7 @@ export default {
 
 .social-button {
   width: 13.75%;
+  max-width: 56px;
 
   @media screen and (min-width: $layout-breakpoint--is-small-up) {
     width: 44px;
