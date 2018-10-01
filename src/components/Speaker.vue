@@ -29,22 +29,26 @@
     </h3>
 
     <div class="social">
-      <a
-        class="twitter"
-        :href="twitter"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src="~/assets/images/icon_twitter.svg">
-      </a>
-      <a
-        class="github"
-        :href="github"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src="~/assets/images/icon_github.svg">
-      </a>
+      <no-ssr>
+        <a
+          class="twitter"
+          :href="twitter"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="~/assets/images/icon_twitter.svg">
+        </a>
+      </no-ssr>
+      <no-ssr>
+        <a
+          class="github"
+          :href="github"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src="~/assets/images/icon_github.svg">
+        </a>
+      </no-ssr>
     </div>
   </div>
 </template>
