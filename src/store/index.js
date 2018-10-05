@@ -421,6 +421,12 @@ export const state = () => ({
       banner: 'c-r.png',
       description: [],
     },
+    {
+      name: '技術評論社',
+      url: 'https://gihyo.jp/',
+      banner: 'gihyo.png',
+      description: [],
+    },
   ],
   stickerSponsors: [
     {
