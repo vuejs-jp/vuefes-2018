@@ -11,56 +11,66 @@
           </div>
 
           <div class="modal-content">
-            <div class="avatar">
-              <img
-                :srcset="`${avatar}, ${avatar2x} 2x`"
-                :src="avatar2x"
-              >
-            </div>
-
-            <div class="title">{{ title }}</div>
-
-            <h3 class="name">{{ name }}</h3>
-
-            <div class="social">
-              <a
-                class="twitter"
-                :href="twitter"
-                target="_blank"
-                rel="noopener"
-              >
-                <img src="~/assets/images/icon_twitter.svg">
-              </a>
-              <a
-                class="github"
-                :href="github"
-                target="_blank"
-                rel="noopener"
-              >
-                <img src="~/assets/images/icon_github.svg">
-              </a>
-            </div>
-
-            <p
-              class="description"
-              v-for="(paragraph, index) in description"
-              :key="index"
-            >{{ paragraph }}</p>
-
             <HeadingWithBar>
-              SESSION
+              SPEAKER
             </HeadingWithBar>
 
-            <h3 class="session-title">
-              {{ sessionTitle }}
-            </h3>
+            <div class="speaker-container">
+              <div class="avatar">
+                <img
+                  :srcset="`${avatar}, ${avatar2x} 2x`"
+                  :src="avatar2x"
+                >
+              </div>
 
-            <p
-              class="session-overview"
-              v-for="(paragraph, index) in sessionOverview"
-              :key="index"
-              v-html="paragraph"
-            ></p>
+              <div class="speaker-content">
+                <div class="title">{{ title }}</div>
+
+                <h3 class="name">{{ name }}</h3>
+
+                <div class="social">
+                  <a
+                    class="twitter"
+                    :href="twitter"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <img src="~/assets/images/icon_twitter.svg">
+                  </a>
+                  <a
+                    class="github"
+                    :href="github"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <img src="~/assets/images/icon_github.svg">
+                  </a>
+                </div>
+
+                <p
+                  class="description"
+                  v-for="(paragraph, index) in description"
+                  :key="index"
+                >{{ paragraph }}</p>
+              </div>
+            </div>
+
+            <div class="session-container">
+              <HeadingWithBar>
+                SESSION
+              </HeadingWithBar>
+
+              <h3 class="session-title">
+                {{ sessionTitle }}
+              </h3>
+
+              <p
+                class="session-overview"
+                v-for="(paragraph, index) in sessionOverview"
+                :key="index"
+                v-html="paragraph"
+              ></p>
+            </div>
           </div>
         </div>
       </div>
@@ -191,7 +201,7 @@ export default {
 }
 
 .avatar img {
-  width: 256px;
+  width: 180px;
 }
 
 .title {
@@ -207,7 +217,7 @@ export default {
   line-height: 1.5;
 }
 
-.heading-with-bar {
+.session-container {
   margin-top: 32px;
 }
 
@@ -249,5 +259,20 @@ export default {
 .modal-leave-active .modal-container {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .speaker-container {
+    display: flex;
+  }
+
+  .avatar {
+    width: 180px;
+    min-width: 180px;
+  }
+
+  .speaker-content {
+    margin-left: 30px;
+  }
 }
 </style>
