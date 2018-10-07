@@ -37,23 +37,44 @@
         </nuxt-link>
       </li>
     </ul>
+
+    <TranslationSwitch class="translation-switch" />
   </nav>
 </template>
 
 <script>
+import TranslationSwitch from '~/components/TranslationSwitch'
+
 export default {
   name: 'GlobalNavigationContent',
+  components: {
+    TranslationSwitch,
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .global-navigation-content {
+  height: calc(100vh - 50px);
   color: $primary-text-color--is-bg-dark;
   background-color: $primary-color;
+  box-sizing: border-box;
 
   a {
     color: $primary-text-color--is-bg-dark;
     text-decoration: none;
+  }
+
+  .translation-switch {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .global-navigation-content {
+    height: auto;
   }
 }
 

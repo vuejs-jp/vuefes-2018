@@ -21,6 +21,7 @@ export default {
 
 <style lang="scss" scoped>
 .the-global-navigation {
+  position: relative;
   padding: 20px;
   background-color: $primary-color;
 }
