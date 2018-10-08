@@ -38,7 +38,7 @@
       </li>
     </ul>
 
-    <TranslationSwitch class="translation-switch" v-if="mode !== 'header'" />
+    <TranslationSwitch class="translation-switch" />
   </nav>
 </template>
 
