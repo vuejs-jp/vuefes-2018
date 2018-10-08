@@ -1,5 +1,5 @@
 <template>
-  <div id="wovn-languages">
+  <div class="wovn-wrapper">
     <ul>
       <li class="wovn-switch" data-value="ja">
         <span>JA</span>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#wovn-languages {
+.wovn-wrapper {
   ul {
     position: relative;
     display: flex;

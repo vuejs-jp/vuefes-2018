@@ -1,5 +1,5 @@
 <template>
-  <div class="the-head-section">
+  <div class="the-head-section" id="wovn-languages">
     <div class="hide-on-medium-and-up">
       <TheHeader />
       <img class="head-image" src="~/assets/images/head@2x.jpg" alt="Vue Fes Japan 2018 | 2018.11.3 [Sat.] | 秋葉原 UDX 4F UDX ギャラリー">
