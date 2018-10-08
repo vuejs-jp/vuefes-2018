@@ -38,7 +38,7 @@
       </li>
     </ul>
 
-    <TranslationSwitch class="translation-switch" />
+    <TranslationSwitch class="translation-switch" v-if="mode !== 'header'" />
   </nav>
 </template>
 
@@ -47,6 +47,9 @@ import TranslationSwitch from '~/components/TranslationSwitch'
 
 export default {
   name: 'GlobalNavigationContent',
+  props: {
+    mode: String,
+  },
   components: {
     TranslationSwitch,
   },

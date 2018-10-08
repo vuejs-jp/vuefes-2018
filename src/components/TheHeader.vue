@@ -18,7 +18,7 @@
 
     <div class="global-navigation-contentainer">
       <transition name="slide">
-        <GlobalNavigationContent v-show="isGlobalNavigationShown" />
+        <GlobalNavigationContent v-show="isGlobalNavigationShown" mode="header" />
       </transition>
     </div>
   </header>

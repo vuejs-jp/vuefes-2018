@@ -1,7 +1,7 @@
 <template>
   <div id="wovn-languages">
     <ul>
-      <li class="wovn-switch selected" data-value="ja">
+      <li class="wovn-switch" data-value="ja">
         <span>JA</span>
       </li>
       <li class="wovn-switch" data-value="en">
