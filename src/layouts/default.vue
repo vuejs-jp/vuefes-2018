@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <div id="js-layout-wrapper">
-      <div class="container">
+      <div class="container" id="wovn-languages">
         <TheHeader class="hide-on-medium-and-up" />
         <TheGlobalNavigation class="the-global-navigation hide-on-small" />
 
