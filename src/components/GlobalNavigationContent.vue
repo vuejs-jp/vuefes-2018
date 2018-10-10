@@ -58,7 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 .global-navigation-content {
-  height: auto;
+  height: calc(100vh - 50px);
   color: $primary-text-color--is-bg-dark;
   background-color: $primary-color;
   box-sizing: border-box;
