@@ -18,7 +18,7 @@
 
     <div class="global-navigation-contentainer">
       <transition name="slide">
-        <GlobalNavigationContent v-show="isGlobalNavigationShown" mode="header" />
+        <GlobalNavigationContent v-show="isGlobalNavigationShown" />
       </transition>
     </div>
   </header>
@@ -139,10 +139,10 @@ export default {
 .global-navigation-content {
   position: fixed;
   top: $header-height;
+  bottom : 0;
   z-index: 100;
   width: $side-area-width--is-small-up;
   min-width: $side-area-width--is-small-up;
-  height: 480px;
   padding: 20px;
   transition: all 0.4s;
 }
