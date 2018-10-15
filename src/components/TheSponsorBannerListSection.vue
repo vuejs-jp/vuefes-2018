@@ -10,6 +10,7 @@
         :key="`platinum-${index}`"
         :index="index"
         type="platinum"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
     </div>
@@ -20,6 +21,7 @@
         :key="`gold-${index}`"
         :index="index"
         type="gold"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
     </div>
@@ -30,6 +32,7 @@
         :key="`silver-${index}`"
         :index="index"
         type="silver"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
     </div>
@@ -40,6 +43,7 @@
         :key="`bronze-${index}`"
         :index="index"
         type="bronze"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
     </div>
@@ -50,6 +54,7 @@
         :key="`special-${index}`"
         :index="index"
         type="special"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
     </div>
@@ -60,6 +65,7 @@
         :key="`network-${index}`"
         :index="index"
         type="network"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
 
@@ -68,6 +74,7 @@
         :key="`lunch-${index}`"
         :index="index"
         type="lunch"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
 
@@ -76,6 +83,7 @@
         :key="`beer-${index}`"
         :index="index"
         type="beer"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
 
@@ -84,6 +92,7 @@
         :key="`drink-${index}`"
         :index="index"
         type="drink"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
 
@@ -92,6 +101,7 @@
         :key="`tool-${index}`"
         :index="index"
         type="tool"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
 
@@ -100,6 +110,7 @@
         :key="`video-${index}`"
         :index="index"
         type="video"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
 
@@ -108,6 +119,7 @@
         :key="`media-${index}`"
         :index="index"
         type="media"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
 
@@ -116,6 +128,7 @@
         :key="`sticker-${index}`"
         :index="index"
         type="sticker"
+        :name="sponsor.name"
         :banner="sponsor.banner"
       />
     </div>

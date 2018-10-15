@@ -15,6 +15,7 @@ describe('SponsorBanner', () => {
       propsData: {
         index: 0,
         type: 'platinum',
+        name: '株式会社プレイド',
         banner: 'plaid.png',
       },
       stubs: {

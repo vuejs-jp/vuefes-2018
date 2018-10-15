@@ -314,6 +314,12 @@ export const state = () => ({
       banner: 'medley.png',
       description: [],
     },
+    {
+      name: '（株）リンクアンドモチベーション',
+      url: 'https://www.motivation-cloud.com/',
+      banner: 'link-and-motivation.png',
+      description: [],
+    },
   ],
   networkSponsors: [
     {
