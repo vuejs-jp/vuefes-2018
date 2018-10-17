@@ -98,7 +98,7 @@ export default {
 
 <style lang="scss" scoped>
 .access-page {
-  max-width: 1120px;
+  max-width: $page-content-max-width;
   width: 100%;
 }
 

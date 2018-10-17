@@ -10,6 +10,8 @@ $global-navigation-height: 630px;
 $side-area-width--is-small: 12.5%;
 $side-area-width--is-small-up: 320px;
 
+$page-content-max-width: $layout-max-width - $side-area-width--is-small-up;
+
 $base-button__max-width: 456px;
 
 // イージング

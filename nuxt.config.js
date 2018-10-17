@@ -1,3 +1,6 @@
+// SyntaxError: Unexpected token import
+// import * as speakers from 'src/store/speakers'
+
 const path = require('path')
 
 module.exports = {
@@ -79,6 +82,23 @@ module.exports = {
     scrollBehavior: (to, from, savedPosition) => {
       return { x: 0, y: 0 }
     },
+  },
+  generate: {
+    // TODO: speakers.getters.speakerIds を使うやり方に書き換えたい
+    // routes: speakers.getters.speakerIds(speakers.state()).map(speakerId => `/speakers/${speakerId}`),
+    routes: [
+      'yyx990803',
+      'sdras',
+      'Atinux',
+      'eddyerburgh',
+      'znck',
+      'Akryum',
+      'ktsn',
+      'fukuiretu',
+      'takanorip',
+      'ts020',
+      'tsuchikazu',
+    ].map(speakerId => `/speakers/${speakerId}`),
   },
   modules: [
     '@nuxtjs/axios',

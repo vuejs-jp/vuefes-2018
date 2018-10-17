@@ -11,7 +11,7 @@
         </HeadingWithBar>
 
         <div class="speaker-list">
-          <SpeakerWithModal
+          <SpeakerWithLink
             v-for="(speaker, index) in keynoteSpeakers"
             :key="index"
             v-bind="speaker"
@@ -25,7 +25,7 @@
         </HeadingWithBar>
 
         <div class="speaker-list">
-          <SpeakerWithModal
+          <SpeakerWithLink
             v-for="(speaker, index) in sessionSpeakers"
             :key="index"
             v-bind="speaker"
@@ -47,7 +47,7 @@
 <script>
 import HeadingWithBar from '~/components/HeadingWithBar'
 import LinkButton from '~/components/LinkButton'
-import SpeakerWithModal from '~/components/SpeakerWithModal'
+import SpeakerWithLink from '~/components/SpeakerWithLink'
 import TheMain from '~/components/TheMain'
 import { mapGetters } from 'vuex'
 
@@ -56,7 +56,7 @@ export default {
   components: {
     HeadingWithBar,
     LinkButton,
-    SpeakerWithModal,
+    SpeakerWithLink,
     TheMain,
   },
   head () {
@@ -75,7 +75,7 @@ export default {
 
 <style lang="scss" scoped>
 .speaker-group + .speaker-group {
-  margin-top: 48px;
+  margin-top: 30px;
 }
 
 .heading-with-bar {
@@ -88,6 +88,10 @@ export default {
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
+  .speaker-group + .speaker-group {
+    margin-top: 20px;
+  }
+
   .speaker-list {
     display: flex;
     flex-wrap: wrap;

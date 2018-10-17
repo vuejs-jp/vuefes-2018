@@ -1,13 +1,14 @@
-import { mount } from '@vue/test-utils'
-import SpeakerWithModal from '~/components/SpeakerWithModal'
+import { mount, RouterLinkStub } from '@vue/test-utils'
+import SpeakerWithLink from '~/components/SpeakerWithLink'
 
-describe('SpeakerWithModal', () => {
+describe('SpeakerWithLink', () => {
   const AVATAR_EVAN = require('~/assets/images/speakers/evan.jpg')
   const AVATAR_EVAN_2X = require('~/assets/images/speakers/evan@2x.jpg')
 
   it('img の srcset 属性をセットできる', () => {
-    const wrapper = mount(SpeakerWithModal, {
+    const wrapper = mount(SpeakerWithLink, {
       propsData: {
+        id: 'yyx990803',
         name: 'Evan You',
         title: 'Vue.js クリエーター',
         avatar: AVATAR_EVAN,
@@ -22,6 +23,9 @@ describe('SpeakerWithModal', () => {
         sessionOverview: [
           'TBD',
         ],
+      },
+      stubs: {
+        NuxtLink: RouterLinkStub,
       },
     })
 

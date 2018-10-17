@@ -17,20 +17,22 @@
         </tr>
 
         <tr>
-          <th class="time">10:30 - 11:45</th>
+          <th class="time">10:30 - 11:20</th>
           <td class="event">
-            <img src="~/assets/images/speakers/evan.jpg" alt="">
-            キーノート
+            <nuxt-link to="/speakers/yyx990803/">
+              <img src="~/assets/images/speakers/evan.jpg" alt="">
+              キーノート
+            </nuxt-link>
           </td>
         </tr>
 
         <tr>
-          <th class="time">11:45 - 11:55</th>
+          <th class="time">11:20 - 11:30</th>
           <td class="event">Platinum スポンサーセッション</td>
         </tr>
 
         <tr>
-          <th class="time">11:55 - 13:00</th>
+          <th class="time">11:30 - 13:00</th>
           <td class="event">
             ランチブレーク
             <p class="notice">
@@ -43,9 +45,9 @@
           <th class="time time--has-tag">13:00 - 13:40</th>
           <td class="event-ab event-ab--has-tag">
             <div class="tag tag--a">会場A</div>
-            <div class="event event--a">セッション</div>
+            <SpeakerSession class="event--a" v-bind="sessionSpeakerById('sdras')" theme="blue" />
             <div class="tag tag--b">会場B</div>
-            <div class="event event--b">セッション</div>
+            <SpeakerSession v-bind="sessionSpeakerById('takanorip')" theme="red" />
           </td>
         </tr>
 
@@ -53,9 +55,9 @@
           <th class="time">13:50 - 14:30</th>
           <td class="event-ab">
             <div class="tag tag--a tag--sp">会場A</div>
-            <div class="event event--a">セッション</div>
+            <SpeakerSession class="event--a" v-bind="sessionSpeakerById('ktsn')" theme="blue" />
             <div class="tag tag--b tag--sp">会場B</div>
-            <div class="event event--b">セッション</div>
+            <SpeakerSession v-bind="sessionSpeakerById('eddyerburgh')" theme="red" />
           </td>
         </tr>
 
@@ -63,9 +65,9 @@
           <th class="time">14:40 - 15:20</th>
           <td class="event-ab">
             <div class="tag tag--a tag--sp">会場A</div>
-            <div class="event event--a">セッション</div>
+            <SpeakerSession class="event--a" v-bind="sessionSpeakerById('ts020')" theme="blue" />
             <div class="tag tag--b tag--sp">会場B</div>
-            <div class="event event--b">セッション</div>
+            <SpeakerSession v-bind="sessionSpeakerById('Atinux')" theme="red" />
           </td>
         </tr>
 
@@ -73,30 +75,24 @@
           <th class="time">15:30 - 16:10</th>
           <td class="event-ab">
             <div class="tag tag--a tag--sp">会場A</div>
-            <div class="event event--a">セッション</div>
+            <SpeakerSession class="event--a" v-bind="sessionSpeakerById('znck')" theme="blue" />
             <div class="tag tag--b tag--sp">会場B</div>
-            <div class="event event--b">セッション</div>
+            <SpeakerSession v-bind="sessionSpeakerById('fukuiretu')" theme="red" />
           </td>
         </tr>
 
         <tr>
-          <th class="time time--has-notice">16:20 - 17:00</th>
-          <td class="event-ab event-ab--has-notice">
+          <th class="time">16:20 - 17:00</th>
+          <td class="event-ab">
             <div class="tag tag--a tag--sp">会場A</div>
-            <div class="event event--a">セッション</div>
+            <SpeakerSession class="event--a" v-bind="sessionSpeakerById('Akryum')" theme="blue" />
             <div class="tag tag--b tag--sp">会場B</div>
-            <div class="event event--b">セッション</div>
-            <p class="notice">※セッション順と会場の割り振りは、決定次第更新します。</p>
+            <SpeakerSession v-bind="sessionSpeakerById('tsuchikazu')" theme="red" />
           </td>
         </tr>
 
         <tr>
-          <th class="time">17:00 - 17:10</th>
-          <td class="event">クロージング</td>
-        </tr>
-
-        <tr>
-          <th class="time">17:10 - 18:00</th>
+          <th class="time">17:00 - 18:00</th>
           <td class="event">会場転換のため一時閉場</td>
         </tr>
 
@@ -119,12 +115,15 @@
 
 <script>
 import LinkButton from '~/components/LinkButton'
+import SpeakerSession from '~/components/SpeakerSession'
 import TheMain from '~/components/TheMain'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'TimeTablePage',
   components: {
     LinkButton,
+    SpeakerSession,
     TheMain,
   },
   head () {
@@ -135,47 +134,32 @@ export default {
       ],
     }
   },
+  computed: {
+    ...mapGetters('speakers', ['keynoteSpeakerById', 'sessionSpeakerById']),
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 .time-table-page {
-  max-width: 1120px;
+  max-width: $page-content-max-width;
   width: 100%;
 }
 
 .table {
-  margin-top: -30px;
+  margin-top: -20px;
   border-collapse: separate;
-  border-spacing: 0 30px;
+  border-spacing: 0 20px;
   width: 100%;
 }
-
-$has-tag-padding: 27px;
-$has-notice-padding: 22px;
 
 .time {
   display: block;
-  padding-left: 3.75%;
   width: 100%;
   color: $primary-color;
-  font-size: 6.25vw;
+  font-size: 5vw; // 幅 320px のウィンドウで 16px になるように指定
   font-weight: bold;
   text-align: left;
-}
-
-.event-ab {
-  position: relative;
-  display: block;
-  width: 100%;
-
-  .event {
-    width: 100%;
-  }
-
-  .notice {
-    margin-top: 10px;
-  }
 }
 
 .event {
@@ -185,22 +169,29 @@ $has-notice-padding: 22px;
   padding: 3.75%;
   width: 100%;
   color: $primary-color;
-  font-size: 6.25vw;
-
-  &--a {
-    background-color: $asagi;
-    margin-bottom: 10px;
-    color: $white;
-  }
-
-  &--b {
-    background-color: $sangosyu;
-    color: $white;
-  }
+  font-size: 5.625vw; // 幅 320px のウィンドウで 18px になるように指定
 
   img {
-    width: 60px;
+    width: 15.625vw; // 幅 320px のウィンドウで 50px になるように指定
     vertical-align: middle;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.event-ab {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  .event--a {
+    margin-bottom: 10px;
+  }
+
+  .notice {
+    margin-top: 10px;
   }
 }
 
@@ -223,7 +214,7 @@ $has-notice-padding: 22px;
 
 .notice {
   margin: 0;
-  font-size: 3.75vw;
+  font-size: 3.75vw; // 幅 320px のウィンドウで 12px になるように指定
 }
 
 .button-wrapper {
@@ -233,58 +224,31 @@ $has-notice-padding: 22px;
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
   .time {
-    display: table-cell;
-    padding: 0 20px 0 0;
-    width: 134px;
     font-size: 24px;
-    text-align: right;
-    word-wrap: normal;
-
-    &--has-tag {
-      padding-top: $has-tag-padding;
-    }
-
-    &--has-notice {
-      padding-bottom: $has-notice-padding;
-    }
-  }
-
-  .event-ab {
-    display: flex;
-    margin-left: -1px; // border の位置を合わせる
-
-    &--has-tag {
-      padding-top: $has-tag-padding;
-    }
-
-    &--has-notice {
-      padding-bottom: $has-notice-padding;
-    }
-
-    .event {
-      margin: 0;
-
-      &:last-of-type {
-        margin-left: 20px;
-      }
-    }
-
-    .notice {
-      position: absolute;
-      bottom: 0;
-      margin-top: 0;
-    }
   }
 
   .event {
-    display: table-cell;
-    padding: 25px 20px;
+    padding: 15px 20px;
     width: auto;
     font-size: 24px;
 
     img {
-      width: 80px;
+      width: 60px;
     }
+  }
+
+  .notice {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: $layout-breakpoint--is-medium-up) {
+  .time {
+    display: table-cell;
+    padding: 0 20px 0 0;
+    width: 134px;
+    text-align: right;
+    word-wrap: normal;
   }
 
   .tag {
@@ -304,8 +268,25 @@ $has-notice-padding: 22px;
     }
   }
 
-  .notice {
-    font-size: 12px;
+  .event-ab {
+    display: flex;
+    margin-left: -1px; // border の位置を合わせる
+
+    &--has-tag {
+      padding-top: 27px;
+    }
+
+    .speaker-session {
+      width: calc((100% - 20px) / 2);
+
+      &:last-of-type {
+        margin-left: 20px;
+      }
+    }
+
+    .event--a {
+      margin-bottom: 0;
+    }
   }
 }
 </style>

@@ -1,7 +1,7 @@
 import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
 import Vuex from 'vuex'
-import SpeakersPage from '~/pages/speakers'
-import createFullStore from '../utils/createFullStore'
+import SpeakersPage from '~/pages/speakers/index'
+import createFullStore from '../../utils/createFullStore'
 
 const localVue = createLocalVue()
 const store = () => createFullStore(Vuex)

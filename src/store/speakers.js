@@ -12,19 +12,20 @@ const AVATAR_RAHUL_2X = require('~/assets/images/speakers/rahul@2x.jpg')
 const AVATAR_GUILLAUME = require('~/assets/images/speakers/guillaume.jpg')
 const AVATAR_GUILLAUME_2X = require('~/assets/images/speakers/guillaume@2x.jpg')
 const AVATAR_KATASHIN = require('~/assets/images/speakers/katashin.jpg')
-const AVATAR_KATASHIN_2X = require('~/assets/images/speakers/katashin.jpg')
+const AVATAR_KATASHIN_2X = require('~/assets/images/speakers/katashin@2x.jpg')
 const AVATAR_KAZUYOSHI_TSUCHIYA = require('~/assets/images/speakers/kazuyoshi-tsuchiya.jpg')
-const AVATAR_KAZUYOSHI_TSUCHIYA_2X = require('~/assets/images/speakers/kazuyoshi-tsuchiya.jpg')
+const AVATAR_KAZUYOSHI_TSUCHIYA_2X = require('~/assets/images/speakers/kazuyoshi-tsuchiya@2x.jpg')
 const AVATAR_TAKANORI_OKI = require('~/assets/images/speakers/takanori-oki.jpg')
-const AVATAR_TAKANORI_OKI_2X = require('~/assets/images/speakers/takanori-oki.jpg')
+const AVATAR_TAKANORI_OKI_2X = require('~/assets/images/speakers/takanori-oki@2x.jpg')
 const AVATAR_RETSU_FUKUI = require('~/assets/images/speakers/retsu-fukui.jpg')
-const AVATAR_RETSU_FUKUI_2X = require('~/assets/images/speakers/retsu-fukui.jpg')
+const AVATAR_RETSU_FUKUI_2X = require('~/assets/images/speakers/retsu-fukui@2x.jpg')
 const AVATAR_TAKANORI_SUGAWARA = require('~/assets/images/speakers/takanori-sugawara.jpg')
-const AVATAR_TAKANORI_SUGAWARA_2X = require('~/assets/images/speakers/takanori-sugawara.jpg')
+const AVATAR_TAKANORI_SUGAWARA_2X = require('~/assets/images/speakers/takanori-sugawara@2x.jpg')
 
 export const state = () => ({
   keynoteSpeakers: [
     {
+      id: 'yyx990803',
       name: 'Evan You',
       title: 'Vue.js クリエーター',
       avatar: AVATAR_EVAN,
@@ -35,6 +36,8 @@ export const state = () => ({
         'Evan は開発者、デザイナー、そしてクリエイティブコーダーです。彼は、リアクティブなコンポーネントでモダンな Web インターフェイスを構築するための JavaScript フレームワーク、Vue.js の作者です。',
         'かつて、GitHub で最もスターを集めたフルスタック JavaScript フレームワークであった Meteor の開発グループでも働いていました。Google Creative Lab で、さまざまな Google プロダクト向けの実験的な UI プロトタイプに、2年間取り組んでいた経験もあります。',
       ],
+      sessionType: 'keynote',
+      venue: null,
       sessionTitle: 'TBD',
       sessionOverview: [
       ],
@@ -42,6 +45,7 @@ export const state = () => ({
   ],
   sessionSpeakers: [
     {
+      id: 'sdras',
       name: 'Sarah Drasner',
       title: 'Microsoft シニアデベロッパーアドボケイト',
       avatar: AVATAR_SARAH,
@@ -52,12 +56,15 @@ export const state = () => ({
         'Sarah Drasner は受賞歴を持つスピーカー、Microsoft のシニアデベロッパーアドボケイト、CSS-Tricks のスタッフライターです。Val Head と共に Web Animation Workshops を設立しました。SVG Animations（O\'Reilly）の著者で、Vue.js の Frontend Masters workshops を行っています。',
         '以前は Trulia (Zillow) で UX デザインとエンジニアリングのマネージャーをしていました。',
       ],
+      sessionType: 'session',
+      venue: '会場A',
       sessionTitle: 'Next-level Vue Animations',
       sessionOverview: [
         'As superfluous as something like animation may initially seem, you can tell a lot about framework by the way that it handles the concept of time. Idiosyncrasies and race conditions in rendering reveal themselves, pauses in DOM and virtual DOM diffing can be exposed. This is one of the ways Vue shows itself to be uniquely capable and elegant. In this session, we\'ll cover the basics of working with Vue, how to use the <transition> component and some of its offerings to create fluid effects in the browser. We\'ll move on to watchers, the reactivity system, and transitioning state. Finally, we\'ll talk about lifecycle methods, SVG, and pushing our animations to the next level.',
       ],
     },
     {
+      id: 'Atinux',
       name: 'Sébastien Chopin',
       title: 'Nuxt.js 共同クリエーター',
       avatar: AVATAR_CHOPIN,
@@ -68,12 +75,15 @@ export const state = () => ({
         'Sébastien は、猛烈な速さで Vue.js アプリケーションを作成するための JavaScript フレームワーク、Nuxt.js の共同クリエーターです。',
         '現在 Orion.sh に勤務しており、CMTY によるオープンソースコミュニティ、そして新しいオープンソースプロジェクトを築いています。',
       ],
+      sessionType: 'session',
+      venue: '会場B',
       sessionTitle: 'Nuxt.js 2.0',
       sessionOverview: [
         'Webpack 4, hooks, modules, ESM, we will look at how Nuxt.js has improved and see how fast we can create Vue.js application (Universal, SPA, PWA...). We will also look at server-side rendering caveats and the best practice to keep in mind.',
       ],
     },
     {
+      id: 'eddyerburgh',
       name: 'Edd Yerburgh',
       title: 'Vue Test Utils メインクリエーター',
       avatar: AVATAR_EDD,
@@ -83,12 +93,15 @@ export const state = () => ({
       description: [
         'Edd Yerburgh は Vue Test Utils のメインの作者で、Vue コアチームメンバー、BBC のソフトウェアエンジニアです。',
       ],
+      sessionType: 'session',
+      venue: '会場B',
       sessionTitle: 'Unit testing a Vuex store',
       sessionOverview: [
         'How to unit test a Vuex store. Two different approaches',
       ],
     },
     {
+      id: 'znck',
       name: 'Rahul Kadyan',
       title: 'オープンソース・エンスージアスト',
       avatar: AVATAR_RAHUL,
@@ -99,12 +112,15 @@ export const state = () => ({
         'Rahul は開発者でオープンソース・エンスージアストです。彼は Vue エコシステム向けにツール上で動作するコンパイラユーティリティを作っています。',
         '彼は、Myntra (Flipkart Group) でシニアエンジニアとして働いています。',
       ],
+      sessionType: 'session',
+      venue: '会場A',
       sessionTitle: 'A deep dive in SFC compilation',
       sessionOverview: [
         'Vue single file components empowers developers with ability to write declarative render functions using plain HTML-like syntax. The so called SFCs also provide features like collocation and scoped styles. We tend to use these SFCs effortlessly as any other JavaScript file but to reach that level of ease, Vue does the heavy lifting of transpilation. This talk takes a deep dive in the compilation process of Vue components and explains how to write a custom block processor. It also discovers some less known facts about SFCs.',
       ],
     },
     {
+      id: 'Akryum',
       name: 'Guillaume Chau',
       title: 'Vue CLI UI クリエーター',
       avatar: AVATAR_GUILLAUME,
@@ -115,12 +131,15 @@ export const state = () => ({
         'Guillaume は、Vue CLI、Vue DevTools、そして Vue Curated を担当する Vue.js コアチームメンバーです。',
         '彼はまた、Apollo GraphQL (vue-apollo) と Meteor (vue-meteor)のインテグレーションを作成し、開発者が、高度なインタラクティブで、リアルタイムな Vue アプリケーションを作成でき、vue-virtual-scroller や v-tooltip のようなツールによってエコシステムに貢献しています。',
       ],
+      sessionType: 'session',
+      venue: '会場A',
       sessionTitle: 'Vue CLI 3 and its Graphical User Interface',
       sessionOverview: [
         'The Vue community has a new official and standard build tool to create Vue apps with ease! It much more powerful and also feature an entire Graphical User Interface to create or manage projects!',
       ],
     },
     {
+      id: 'ktsn',
       name: 'katashin',
       title: 'ClassDo Inc.',
       avatar: AVATAR_KATASHIN,
@@ -130,6 +149,8 @@ export const state = () => ({
       description: [
         'katashin は Vue.js コアチームメンバー、フロントエンドテックリードです。静的型付き言語を好み、Vue.js 本体と周辺ライブラリの TypeScript サポートに貢献しています。最近は開発体験（DX）の向上に興味を持っており、Vue Designer を始めとした各種 OSS ツールを作成、メンテナンスしています。フロントエンドの開発をリードした経験を持ち、大小様々に存在するプロジェクトの HTML や CSS を含むフロントエンド全般の技術選定、設計を行い、破綻しない土台作りに取り組んでいました。',
       ],
+      sessionType: 'session',
+      venue: '会場A',
       sessionTitle: ' Vue Designer: デザインと実装の統合',
       sessionOverview: [
         '従来の Web サイト制作ではデザイナーがデザインから HTML、CSS の実装までを行っていました。しかし、現在 Web の UI は複雑になり、ロジックを持つアプリケーションも作られるようになっています。デザイナーがすべてを制作するのは難しくなり、デザイナーと開発者の分業が一般的になっています。',
@@ -138,6 +159,7 @@ export const state = () => ({
       ],
     },
     {
+      id: 'fukuiretu',
       name: '福井 烈',
       title: '株式会社ピースオブケイク / エンジニア',
       avatar: AVATAR_RETSU_FUKUI,
@@ -151,6 +173,8 @@ export const state = () => ({
         '最近は PWA や WebAssembly に高い関心をもっている。',
         'また、業務の傍ら、妻が開業したアイシングクッキー専門店 en の Web/経理を担当している。',
       ],
+      sessionType: 'session',
+      venue: '会場B',
       sessionTitle: 'note のフロントエンドを Nuxt.js で再構築した話',
       sessionOverview: [
         '弊社サービス note（<a href="https://note.mu/" target="_blank" rel="noopener">https://note.mu/</a>）は、Ruby on Rails と Angular.js 1系で構築された CSR のみで動作している SPA ですが、特に低スペックなスマートフォンや PC での初期表示が遅いことが大きな課題点の 1つでした。',
@@ -166,6 +190,7 @@ export const state = () => ({
       ],
     },
     {
+      id: 'takanorip',
       name: 'Takanori Oki',
       title: 'フロントエンドエンジニア',
       avatar: AVATAR_TAKANORI_OKI,
@@ -175,6 +200,8 @@ export const state = () => ({
       description: [
         'フロントエンドエンジニア。Vue.js、Polymer、React などを用いたウェブアプリケーション・ウェブサイト開発に従事している。ウェブフォントが好き。Polymer Japan Translation チーム所属。「誰でもわかるウェブフォント実践マニュアル」著。',
       ],
+      sessionType: 'session',
+      venue: '会場B',
       sessionTitle: 'Vue.js と Web Components のこれから',
       sessionOverview: [
         'この発表のテーマは、Vue.js と Web Components の関係を整理し、両者がこれからどのように関わっていくべきなのかを考えることです。',
@@ -184,6 +211,7 @@ export const state = () => ({
       ],
     },
     {
+      id: 'ts020',
       name: '菅原 孝則',
       title: '株式会社ファームノート',
       avatar: AVATAR_TAKANORI_SUGAWARA,
@@ -196,7 +224,9 @@ export const state = () => ({
         'Vue.js は0系から使ってます。',
         'https://oligin020.studio.design/',
       ],
-      sessionTitle: 'AtomicDesign のデザインと実装の狭間',
+      sessionType: 'session',
+      venue: '会場A',
+      sessionTitle: 'Atomic Design のデザインと実装の狭間',
       sessionOverview: [
         '昨今 AtomicDesign ばやりの今日この頃ですがみなさん如何開発ライフをエンジョイされているでしょうか？',
         '僕が知っている現場では、AtomicDesign の定義がふんわりしているが故に様々な解釈が飛び交っていて大いに議論が進んでいるようです。',
@@ -206,6 +236,7 @@ export const state = () => ({
       ],
     },
     {
+      id: 'tsuchikazu',
       name: '土屋 和良',
       title: 'GMOペパボ',
       avatar: AVATAR_KAZUYOSHI_TSUCHIYA,
@@ -216,7 +247,9 @@ export const state = () => ({
         'SIer でのプログラマーを経て、2012年から GMOペパボに入社。サーバサイド開発を経て、フロントエンドへ注力。',
         '昨年リリースした「カラーミーリピート」という新サービスの立ち上げに携わり、フロントエンドエンジニアとしてサービスを支えています。「カラーミーリピート」には Vue.js を採用し、Vue Test Utils を beta の頃から使い始め、毎日テストも書いています。',
       ],
-      sessionTitle: '1年間単体テストを書き続けた現場から送る Vue Componentのテスト',
+      sessionType: 'session',
+      venue: '会場B',
+      sessionTitle: '1年間単体テストを書き続けた現場から送る Vue Component のテスト',
       sessionOverview: [
         'Vue Test Utils により Vue Component の単体テスト導入の敷居は非常に低くなりました。しかし、それを活用したテスト方針は自分たちで選定しなければいけません。',
         '本発表では、まずは前提知識として Vue Component の様々なテスト方法を整理し、実プロジェクトで採用していたテスト方針、その中で良かった点や失敗した点、それを経て行き着いた最終的なテスト方針を紹介をします。',
@@ -240,4 +273,14 @@ export const state = () => ({
 export const getters = {
   keynoteSpeakers: (state) => state.keynoteSpeakers || [],
   sessionSpeakers: (state) => state.sessionSpeakers || [],
+  keynoteSpeakerById: (state) => (id) => {
+    return state.keynoteSpeakers.find(speaker => speaker.id === id)
+  },
+  sessionSpeakerById: (state) => (id) => {
+    return state.sessionSpeakers.find(speaker => speaker.id === id)
+  },
+  speakerIds: (state) => {
+    const ids = state.keynoteSpeakers.map(speaker => speaker.id)
+    return ids.concat(state.sessionSpeakers.map(speaker => speaker.id))
+  },
 }

@@ -53,8 +53,8 @@ export default {
   }
 
   .head-image {
-    width: 1120px;
-    min-width: 1120px;
+    width: $page-content-max-width;
+    min-width: $page-content-max-width;
     height: $global-navigation-height;
   }
 }

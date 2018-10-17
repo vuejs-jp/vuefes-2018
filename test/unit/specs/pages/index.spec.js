@@ -17,6 +17,7 @@ describe('index', () => {
       store,
       stubs: {
         NuxtLink: RouterLinkStub,
+        'no-ssr': '<div></div>',
       },
     })
 

@@ -1,9 +1,6 @@
 <template>
-  <div class="speaker-with-modal">
-    <div
-      class="wrapper"
-      @click="openModal"
-    >
+  <div class="speaker-with-link">
+    <nuxt-link class="wrapper" :to="`/speakers/${id}/`">
       <div class="avatar">
         <img
           :srcset="`${avatar}, ${avatar2x} 2x`"
@@ -18,7 +15,7 @@
       <h3 class="name">
         {{ name }}
       </h3>
-    </div>
+    </nuxt-link>
 
     <div class="social">
       <a
@@ -38,32 +35,17 @@
         <img src="~/assets/images/icon_github.svg">
       </a>
     </div>
-
-    <SpeakerModal
-      v-if="isModalOpened"
-      @closeModal="closeModal"
-      :name="name"
-      :title="title"
-      :avatar="avatar"
-      :avatar2x="avatar2x"
-      :twitter="twitter"
-      :github="github"
-      :description="description"
-      :sessionTitle="sessionTitle"
-      :sessionOverview="sessionOverview"
-    />
   </div>
 </template>
 
 <script>
-import SpeakerModal from '~/components/SpeakerModal'
-
 export default {
-  name: 'SpeakerWithModal',
-  components: {
-    SpeakerModal,
-  },
+  name: 'SpeakerWithLink',
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     name: {
       type: String,
       required: true,
@@ -101,32 +83,14 @@ export default {
       required: true,
     },
   },
-  data () {
-    return {
-      isModalOpened: false,
-      currentScrollY: 0,
-    }
-  },
-  methods: {
-    openModal () {
-      this.currentScrollY = window.scrollY
-      this.isModalOpened = true
-      const layout = document.getElementById('js-layout-wrapper')
-      layout.style.top = `${-1 * this.currentScrollY}px`
-      layout.style.position = 'fixed'
-    },
-    closeModal () {
-      const layout = document.getElementById('js-layout-wrapper')
-      layout.style.position = null
-      layout.style.top = null
-      window.scroll(0, this.currentScrollY)
-      this.isModalOpened = false
-    },
-  },
 }
 </script>
 
 <style lang="scss" scoped>
+.wrapper {
+  text-decoration: none;
+}
+
 .avatar {
   margin-bottom: 6px;
 
@@ -158,8 +122,8 @@ export default {
 }
 
 @media screen and (max-width: $layout-breakpoint--is-small) {
-  .speaker-with-modal {
-    margin-bottom: 20px;
+  .speaker-with-link {
+    margin-bottom: 24px;
   }
 
   .avatar {
@@ -174,13 +138,13 @@ export default {
     cursor: pointer;
   }
 
-  .speaker-with-modal {
+  .speaker-with-link {
     width: 180px;
-    margin-right: 40px;
-    margin-bottom: 15px;
+    margin-right: 30px;
+    margin-bottom: 20px;
   }
 
-  .speaker-with-modal:last-child {
+  .speaker-with-link:last-child {
     margin-right: 0;
   }
 }
