@@ -20,7 +20,7 @@
       </div>
 
       <div class="link-list">
-        <a href="https://jp.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> | <a href="https://github.com/vuejs-jp/home" target="_blank" rel="noopener">Vue.js 日本ユーザーグループ</a> | <nuxt-link to="/code-of-conduct/">行動規範</nuxt-link> | <nuxt-link to="/privacy/">プライバシーポリシー</nuxt-link>
+        <a href="https://jp.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> | <a href="https://github.com/vuejs-jp/home" target="_blank" rel="noopener">Vue.js 日本ユーザーグループ</a> | <nuxt-link to="/code-of-conduct/">行動規範</nuxt-link> | <nuxt-link to="/privacy/">プライバシーポリシー</nuxt-link> | <translation-switch class="translation-switch"></translation-switch>
       </div>
 
       <div class="licence">
@@ -34,8 +34,10 @@
 </template>
 
 <script>
+import TranslationSwitch from './TranslationSwitch'
 export default {
   name: 'TheFooter',
+  components: {TranslationSwitch},
   computed: {
     encodedUri () {
       return encodeURIComponent(location.href)
@@ -63,6 +65,9 @@ export default {
     openHatenaBookmarkForm () {
       window.open(`http://b.hatena.ne.jp/entry/s/${this.hostAndPath}`, 'bookmark')
     },
+  },
+  component: {
+    TranslationSwitch,
   },
 }
 </script>
@@ -131,9 +136,14 @@ export default {
 }
 
 .link-list {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   font-size: 12px;
+  line-height: 20px;
   text-align: center;
+}
+
+.translation-switch {
+  display: inline-block;
 }
 
 .licence {
@@ -160,8 +170,9 @@ export default {
   }
 
   .link-list {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     text-align: left;
+    line-height: 25px;
 
     a {
       margin-left: 8px;

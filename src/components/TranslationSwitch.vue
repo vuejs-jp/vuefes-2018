@@ -2,10 +2,10 @@
   <div class="wovn-wrapper">
     <ul>
       <li class="wovn-switch" data-value="ja">
-        <span>JA</span>
+        <span>日本語</span>
       </li>
       <li class="wovn-switch" data-value="en">
-        <span>EN</span>
+        <span>English</span>
       </li>
     </ul>
   </div>
@@ -26,15 +26,16 @@ export default {
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    width: 58px;
+    width: 90px;
     color: $primary-text-color--is-bg-dark;
   }
 
   li {
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 12px;
     list-style: none;
     cursor: pointer;
+    text-decoration: underline;
     transition: opacity 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
@@ -43,9 +44,9 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    content: "/";
-    font-size: 17px;
-    line-height: 17px;
+    content: " | ";
+    font-size: 12px;
+    line-height: 12px;
   }
 
   li + li {
