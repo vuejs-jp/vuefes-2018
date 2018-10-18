@@ -1,5 +1,5 @@
 <template>
-  <div class="wovn-wrapper">
+  <div class="wovn-wrapper" id="wovn-languages">
     <ul>
       <li class="wovn-switch" data-value="ja">
         <span>日本語</span>
