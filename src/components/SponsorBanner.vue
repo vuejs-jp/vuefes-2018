@@ -1,5 +1,5 @@
 <template>
-  <div class="sponsor-banner" :class="[type, `index-${index}`, { 'has-heading': hasHeading }, { 'has-special-margin': name === '技術評論社' }]">
+  <div class="sponsor-banner" :class="[type, `index-${index}`, { 'has-heading': hasHeading }]">
   <HeadingWithBar v-if="hasHeading">
       {{ type | toUpperCase }}
     </HeadingWithBar>
@@ -76,11 +76,6 @@ export default {
       }
 
       &:nth-of-type(even).index-1 {
-        margin-top: 33px;
-      }
-
-      &.has-special-margin {
-        // ちょっと規則性をうまく見つけられなかったのでとりあえず手動で設定（例: 技術評論社）
         margin-top: 33px;
       }
     }

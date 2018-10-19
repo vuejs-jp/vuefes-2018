@@ -433,6 +433,12 @@ export const state = () => ({
       banner: 'gihyo.png',
       description: [],
     },
+    {
+      name: 'Think IT',
+      url: 'https://thinkit.co.jp/',
+      banner: 'thinkit.png',
+      description: [],
+    },
   ],
   stickerSponsors: [
     {
