@@ -2,7 +2,7 @@
   <div class="wovn-wrapper" id="wovn-languages">
     <ul>
       <li class="wovn-switch" data-value="ja">
-        <span>日本語</span>
+        <span>JA</span>
       </li>
       <li class="wovn-switch" data-value="en">
         <span>English</span>
@@ -35,7 +35,6 @@ export default {
     line-height: 12px;
     list-style: none;
     cursor: pointer;
-    text-decoration: underline;
     transition: opacity 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 

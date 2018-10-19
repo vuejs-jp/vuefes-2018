@@ -143,7 +143,7 @@ export default {
 }
 
 .translation-switch {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 .licence {
