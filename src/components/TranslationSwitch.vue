@@ -2,7 +2,7 @@
   <div class="wovn-wrapper" id="wovn-languages">
     <ul>
       <li class="wovn-switch" data-value="ja">
-        <span>JA</span>
+        <span>日本語</span>
       </li>
       <li class="wovn-switch" data-value="en">
         <span>English</span>
