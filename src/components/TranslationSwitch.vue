@@ -34,6 +34,7 @@ export default {
     font-size: 12px;
     line-height: 12px;
     list-style: none;
+    text-decoration: underline;
     cursor: pointer;
     transition: opacity 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
