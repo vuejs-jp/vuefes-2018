@@ -25,6 +25,26 @@ export default {
     TheGlobalNavigation,
     TheHeader,
   },
+  head () {
+    return {
+      meta: [
+        { hid: 'description', name: 'description', content: '日本で初めて開催する大規模 Vue.js カンファレンス。国内外の著名スピーカーによるセッションの他、ユーザー同士が気軽に話し合える場も設ける予定です。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！' },
+        { name: 'og:locale', content: 'ja_JP' },
+        { name: 'og:type', content: 'website' },
+        { name: 'og:title', content: 'Vue Fes Japan 2018' },
+        { name: 'og:description', content: '日本で初めて開催する大規模 Vue.js カンファレンス。国内外の著名スピーカーによるセッションの他、ユーザー同士が気軽に話し合える場も設ける予定です。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！' },
+        { name: 'og:url', content: 'https://vuefes.jp' },
+        { name: 'og:site_name', content: 'Vue Fes Japan 2018' },
+        { name: 'og:image', content: 'https://vuefes.jp/opengraph.jpg' },
+        { name: 'og:image:secure_url', content: 'https://vuefes.jp/opengraph.jpg' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:description', content: '日本で初めて開催する大規模 Vue.js カンファレンス。国内外の著名スピーカーによるセッションの他、ユーザー同士が気軽に話し合える場も設ける予定です。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！' },
+        { name: 'twitter:creator', content: '@vuefes' },
+        { name: 'twitter:title', content: 'Vue Fes Japan 2018' },
+        { name: 'twitter:image', content: 'https://vuefes.jp/opengraph.jpg' },
+      ],
+    }
+  },
 }
 </script>
 

@@ -98,10 +98,19 @@ export default {
     LinkButton,
   },
   head () {
+    const title = `${this.speaker.sessionTitle}（${this.speaker.name}）- Vue Fes Japan 2018`
+    const description = `Vue Fes Japan 2018 のセッション情報です。登壇者は ${this.speaker.name} で、${this.speaker.sessionTitle} というテーマで発表します。`
     return {
-      title: `${this.speaker.sessionTitle}（${this.speaker.name}）- Vue Fes Japan 2018`,
+      title,
       meta: [
-        { hid: 'description', name: 'description', content: `Vue Fes Japan 2018 のセッション情報です。登壇者は ${this.speaker.name} で、${this.speaker.sessionTitle} というテーマで発表します。` },
+        { hid: 'description', name: 'description', content: description },
+        { name: 'og:image', content: `https://vuefes.jp/speaker-opengraph/${this.speaker.card}` },
+        { name: 'og:image:secure_url', content: `https://vuefes.jp/speaker-opengraph/${this.speaker.card}` },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:creator', content: '@vuefes' },
+        { name: 'twitter:title', content: title },
+        { name: 'twitter:image', content: `https://vuefes.jp/speaker-opengraph/${this.speaker.card}` },
       ],
     }
   },
