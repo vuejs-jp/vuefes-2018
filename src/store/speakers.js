@@ -169,7 +169,7 @@ export const state = () => ({
       id: 'fukuiretu',
       name: '福井 烈',
       title: '株式会社ピースオブケイク / エンジニア',
-      card: 'takashi.png',
+      card: 'takeshi.png',
       avatar: AVATAR_RETSU_FUKUI,
       avatar2x: AVATAR_RETSU_FUKUI_2X,
       twitter: 'https://twitter.com/fukuiretu',
