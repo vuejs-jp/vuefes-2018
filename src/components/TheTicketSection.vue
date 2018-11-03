@@ -1,24 +1,20 @@
 <template>
   <BaseSection class="the-ticket-section" theme="blue">
     <template slot="heading">
-      TICKET
+      TIME TABLE
     </template>
 
     <div class="description">
       <p class="readable">
-        チケットはこちらで購入できます。
-      </p>
-
-      <p class="readable">
-        販売期間: 2018/9/10（月）12:00 ～ 2018/10/19（金）10:30
+        タイムテーブルは以下から閲覧可能です。
       </p>
     </div>
 
     <div class="button-wrapper">
       <LinkButton>
-        <a href="https://passmarket.yahoo.co.jp/event/show/detail/01m3r3zshw89.html" target="_blank" rel="noopener">
-          チケット購入ページ
-        </a>
+        <nuxt-link to="/time-table">
+          タイムテーブルへ
+        </nuxt-link>
       </LinkButton>
     </div>
   </BaseSection>
