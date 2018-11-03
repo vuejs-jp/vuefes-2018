@@ -7,6 +7,11 @@
 
     <ul class="nav-list">
       <li class="nav-item">
+        <nuxt-link to="/">
+          HOME
+        </nuxt-link>
+      </li>
+      <li class="nav-item">
         <nuxt-link to="/time-table/">
           TIME TABLE
         </nuxt-link>
