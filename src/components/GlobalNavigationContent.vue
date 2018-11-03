@@ -7,18 +7,13 @@
 
     <ul class="nav-list">
       <li class="nav-item">
-        <nuxt-link to="/">
-          TICKET
+        <nuxt-link to="/time-table/">
+          TIME TABLE
         </nuxt-link>
       </li>
       <li class="nav-item">
         <nuxt-link to="/about/">
           ABOUT
-        </nuxt-link>
-      </li>
-      <li class="nav-item">
-        <nuxt-link to="/time-table/">
-          TIME TABLE
         </nuxt-link>
       </li>
       <li class="nav-item">
