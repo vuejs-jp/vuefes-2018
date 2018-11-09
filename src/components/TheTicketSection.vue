@@ -1,20 +1,26 @@
 <template>
   <BaseSection class="the-ticket-section" theme="blue">
     <template slot="heading">
-      TIME TABLE
+      THANK YOU!
     </template>
 
     <div class="description">
       <p class="readable">
-        タイムテーブルは以下から閲覧可能です。
+        Vue Fes Japan 2018にご参加いただいたみなさん、ありがとうございました。
+      </p>
+      <p class="readable">
+        当日撮影された写真を CC0 ライセンスにて公開しますので、ブログや SNS などにご自由にお使いください。
+      </p>
+      <p class="readable">
+        各セッションで使われたスライドや動画などは追って更新予定です。
       </p>
     </div>
 
     <div class="button-wrapper">
       <LinkButton>
-        <nuxt-link to="/time-table">
-          タイムテーブルへ
-        </nuxt-link>
+        <a href="https://photos.app.goo.gl/B8VgBuBcgwxaCC45A" rel="noopener" target="_blank">
+          Google Photo
+        </a>
       </LinkButton>
     </div>
   </BaseSection>

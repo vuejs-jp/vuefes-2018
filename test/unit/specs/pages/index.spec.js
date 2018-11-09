@@ -21,6 +21,6 @@ describe('index', () => {
       },
     })
 
-    expect(wrapper.text()).to.contain('タイムテーブルは以下から閲覧可能です。')
+    expect(wrapper.text()).to.contain('SPEAKERS')
   })
 })
