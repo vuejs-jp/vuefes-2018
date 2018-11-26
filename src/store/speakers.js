@@ -39,9 +39,11 @@ export const state = () => ({
       ],
       sessionType: 'keynote',
       venue: null,
-      sessionTitle: 'TBD',
+      sessionTitle: 'Vue 3.0 Updates',
       sessionOverview: [
       ],
+      youtubeVideoId: 'zBOlIvrYWHY',
+      slideUrl: 'https://docs.google.com/presentation/d/1pbNnBhkc-CwfzSw4sW9Ai7A7uAxLuNwOd4Gd5PMjrSQ/edit#slide=id.p',
     },
   ],
   sessionSpeakers: [
@@ -64,6 +66,8 @@ export const state = () => ({
       sessionOverview: [
         'As superfluous as something like animation may initially seem, you can tell a lot about framework by the way that it handles the concept of time. Idiosyncrasies and race conditions in rendering reveal themselves, pauses in DOM and virtual DOM diffing can be exposed. This is one of the ways Vue shows itself to be uniquely capable and elegant. In this session, we\'ll cover the basics of working with Vue, how to use the <transition> component and some of its offerings to create fluid effects in the browser. We\'ll move on to watchers, the reactivity system, and transitioning state. Finally, we\'ll talk about lifecycle methods, SVG, and pushing our animations to the next level.',
       ],
+      youtubeVideoId: 'd83Pyi_J1b0',
+      slideUrl: 'https://slides.com/sdrasner/vuefes-japan#/',
     },
     {
       id: 'Atinux',
@@ -84,6 +88,8 @@ export const state = () => ({
       sessionOverview: [
         'Webpack 4, hooks, modules, ESM, we will look at how Nuxt.js has improved and see how fast we can create Vue.js application (Universal, SPA, PWA...). We will also look at server-side rendering caveats and the best practice to keep in mind.',
       ],
+      youtubeVideoId: '3dFFy8waxcg',
+      slideUrl: '',
     },
     {
       id: 'eddyerburgh',
@@ -103,6 +109,8 @@ export const state = () => ({
       sessionOverview: [
         'How to unit test a Vuex store. Two different approaches',
       ],
+      youtubeVideoId: 'kUFZBNiK_Zc',
+      slideUrl: 'http://slides.com/eddyerburgh/testing-a-vuex-store#/',
     },
     {
       id: 'znck',
@@ -123,6 +131,8 @@ export const state = () => ({
       sessionOverview: [
         'Vue single file components empowers developers with ability to write declarative render functions using plain HTML-like syntax. The so called SFCs also provide features like collocation and scoped styles. We tend to use these SFCs effortlessly as any other JavaScript file but to reach that level of ease, Vue does the heavy lifting of transpilation. This talk takes a deep dive in the compilation process of Vue components and explains how to write a custom block processor. It also discovers some less known facts about SFCs.',
       ],
+      youtubeVideoId: 'nFFZBVb5vbA',
+      slideUrl: 'https://github.com/znck/talks/tree/master/2018-11-03-deep-dive-into-sfc-compilation',
     },
     {
       id: 'Akryum',
@@ -143,6 +153,8 @@ export const state = () => ({
       sessionOverview: [
         'The Vue community has a new official and standard build tool to create Vue apps with ease! It much more powerful and also feature an entire Graphical User Interface to create or manage projects!',
       ],
+      youtubeVideoId: 'GMdCf-2kmQE',
+      slideUrl: 'https://slides.com/akryum/vue-cli-18-3-jp#/',
     },
     {
       id: 'ktsn',
@@ -164,6 +176,8 @@ export const state = () => ({
         'デザイナーと開発者のコミュニケーションが課題です。デザインは静的なモックアップで作られ、それをコードで再現することは二度手間です。デザインが静的なので、ウィンドウ幅や入力データの変化などの動的な要因をデザイン段階で十分に考慮することが困難です。運用を続けているうちにデザインデータと実装との乖離が発生することもあります。',
         '本セッションではこの課題を解決するため開発中の Vue Designer をご紹介します。Vue Designer はコンポーネントのコードからグラフィカルなプレビューを表示し、デザイナーはそれを直接編集できます。デザインは即座に実装に反映され、実装の変更もデザインに反映されます。ビューポートのサイズやコンポーネントの入力などの動的な値を変更してプレビューもできます。',
       ],
+      youtubeVideoId: 'A9NgtJpCyh4',
+      slideUrl: 'https://slides.com/ktsn/vue-fes-vue-designer#/',
     },
     {
       id: 'fukuiretu',
@@ -196,6 +210,8 @@ export const state = () => ({
         '・今後の課題',
         'を中心にお話したいと思っています。',
       ],
+      youtubeVideoId: 'yDaZFK5jbo8',
+      slideUrl: 'https://speakerdeck.com/fukuiretu/notewonuxt-dot-jsdezai-gou-zhu-sitahua',
     },
     {
       id: 'takanorip',
@@ -218,6 +234,8 @@ export const state = () => ({
         'そうなったとき、Vue.js の役割は何か、どうやって責任を分担していくのか、などについて考えることがより重要になってくると考えます。',
         'Polymer Japan の運営メンバーとして日本での Web Components 普及活動に携わりながら Vue.js と Web Components の両方でアプリケーションの開発に取り組んだ経験から、Web Components との共存方法や今後の展開などについて話します。',
       ],
+      youtubeVideoId: 'WttpESl58L4',
+      slideUrl: 'https://speakerdeck.com/takanorip/vue-fes-japan',
     },
     {
       id: 'ts020',
@@ -244,6 +262,8 @@ export const state = () => ({
         'それぞれが、なぜこのような設計をするのかと言うのを整理してみたいなと思います。',
         '結論は特に用意するつもりはありません、みなさんと議論を深めていければ良いなと思っています。',
       ],
+      youtubeVideoId: 'YPGZ70SsfLk',
+      slideUrl: 'https://speakerdeck.com/ts020/vuefes',
     },
     {
       id: 'tsuchikazu',
@@ -277,6 +297,8 @@ export const state = () => ({
         '- テストを書いてみた結果、どのテストがメンテナンスのコストが低く、効果が高かったか考察<br>' +
         '- テスト方針の見直し結果とその効果',
       ],
+      youtubeVideoId: 'oE8z3otI-Hg',
+      slideUrl: 'https://speakerdeck.com/tsuchikazu/vue-component-test',
     },
   ],
 })

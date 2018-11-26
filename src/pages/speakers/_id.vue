@@ -64,6 +64,29 @@
           :key="index"
           v-html="paragraph"
         ></p>
+
+        <div class="session-youtube">
+          <iframe
+            width="100%"
+            :src="`https://www.youtube.com/embed/${speaker.youtubeVideoId}`"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div
+        v-if="speaker.slideUrl"
+        class="button-wrapper"
+      >
+        <LinkButton>
+          <a
+            :href="speaker.slideUrl"
+            target="_blank"
+            rel="noopener">
+            スライド（外部リンク）
+          </a>
+        </LinkButton>
       </div>
 
       <div class="button-wrapper">
@@ -192,6 +215,19 @@ export default {
   font-size: 24px;
   font-weight: lighter;
   line-height: 1.2;
+}
+
+.session-youtube {
+  position: relative;
+  padding-top: 56.25%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .social img {

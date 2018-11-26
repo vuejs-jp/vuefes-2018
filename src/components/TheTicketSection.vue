@@ -11,9 +11,6 @@
       <p class="readable">
         当日撮影された写真を CC0 ライセンスにて公開しますので、ブログや SNS などにご自由にお使いください。
       </p>
-      <p class="readable">
-        各セッションで使われたスライドや動画などは追って更新予定です。
-      </p>
     </div>
 
     <div class="button-wrapper">
@@ -21,6 +18,20 @@
         <a href="https://photos.app.goo.gl/B8VgBuBcgwxaCC45A" rel="noopener" target="_blank">
           Google Photo
         </a>
+      </LinkButton>
+    </div>
+
+    <div class="description">
+      <p class="readable">
+        各セッションで使われたスライドや動画は、各スピーカーの詳細ページにアップしました。
+      </p>
+    </div>
+
+    <div class="button-wrapper">
+      <LinkButton>
+        <nuxt-link to="/speakers/">
+          スピーカー一覧
+        </nuxt-link>
       </LinkButton>
     </div>
   </BaseSection>
@@ -41,7 +52,7 @@ export default {
 
 <style lang="scss" scoped>
 .button-wrapper {
-  margin-top: 36px;
+  margin: 36px auto;
   text-align: center;
 }
 </style>
