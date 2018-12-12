@@ -22,7 +22,7 @@
       }
       </script>
 
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoeD24pTKuLyfY2Q01MHW4qz8Vo00_yfk&callback=initMap" async defer></script>
+      <script :src="`https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&callback=initMap`" async defer></script>
 
       <p class="notice">
         <a href="http://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E5%A4%96%E7%A5%9E%E7%94%B04-14-1" target="_blank" rel="noopener">
@@ -84,6 +84,11 @@ export default {
   components: {
     LinkButton,
     TheMain,
+  },
+  data () {
+    return {
+      googleMapsApiKey: process.env.googleMapsApiKey,
+    }
   },
   head () {
     return {

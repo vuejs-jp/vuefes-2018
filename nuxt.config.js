@@ -1,7 +1,19 @@
 // SyntaxError: Unexpected token import
 // import * as speakers from 'src/store/speakers'
 
+const fs = require('fs')
 const path = require('path')
+
+try {
+  fs.statSync('.env')
+  require('dotenv').config()
+} catch (error) {
+  if (error.code === 'ENOENT') {
+    console.log('.env file NOT FOUND')
+  } else {
+    throw error
+  }
+}
 
 module.exports = {
   /*
@@ -90,11 +102,14 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/google-analytics',
     'nuxt-sass-resources-loader',
-    [ '@nuxtjs/pwa', {
-      icon: {
-        iconSrc: 'src/static/apple-touch-icon.png',
+    [
+      '@nuxtjs/pwa',
+      {
+        icon: {
+          iconSrc: 'src/static/apple-touch-icon.png',
+        },
       },
-    }],
+    ],
   ],
   plugins: [
     { src: '~/plugins/axios' },
@@ -106,10 +121,11 @@ module.exports = {
     baseURL: 'https://vuefes2018-functions.azurewebsites.net/api',
   },
   env: {
-    FUNCTION_KEY: process.env.FUNCTION_KEY,
+    functionKey: process.env.FUNCTION_KEY || 'PLEASE_SET_ME',
+    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY || 'PLEASE_SET_ME',
   },
   'google-analytics': {
-    id: 'UA-6976525-4',
+    id: process.env.GA_TRACKING_ID || 'UA-XXXXXXX-X',
   },
   sassResources: [
     path.resolve(__dirname, 'src/assets/stylesheets/foundation/variables.scss'),
