@@ -2,7 +2,7 @@
   <div class="welcome-page">
     <TheHeadSection />
 
-    <TheTicketSection />
+    <TheAnnouncementAfterEventSection />
 
     <TheSpeakerListSection />
 
@@ -16,22 +16,22 @@
 
 <script>
 import TheAccessSection from '~/components/TheAccessSection'
+import TheAnnouncementAfterEventSection from '~/components/TheAnnouncementAfterEventSection'
 import TheFooter from '~/components/TheFooter'
 import TheHeadSection from '~/components/TheHeadSection'
 import TheSpeakerListSection from '~/components/TheSpeakerListSection'
 import TheSponsorBannerListSection from '~/components/TheSponsorBannerListSection'
-import TheTicketSection from '~/components/TheTicketSection'
 
 export default {
   name: 'WelcomePage',
   layout: 'simple',
   components: {
     TheAccessSection,
+    TheAnnouncementAfterEventSection,
     TheFooter,
     TheHeadSection,
     TheSpeakerListSection,
     TheSponsorBannerListSection,
-    TheTicketSection,
   },
 }
 </script>

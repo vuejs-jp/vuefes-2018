@@ -1,5 +1,5 @@
 <template>
-  <BaseSection class="the-ticket-section" theme="blue">
+  <BaseSection class="the-announcement-after-event-section" theme="blue">
     <template slot="heading">
       THANK YOU!
     </template>
@@ -42,7 +42,7 @@ import BaseSection from '~/components/BaseSection'
 import LinkButton from '~/components/LinkButton'
 
 export default {
-  name: 'TheTicketSection',
+  name: 'TheAnnouncementAfterEventSection',
   components: {
     BaseSection,
     LinkButton,
