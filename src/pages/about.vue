@@ -99,6 +99,28 @@ export default {
     LinkButton,
     TheMain,
   },
+  head () {
+    const url = `https://vuefes.jp${this.path}`
+    const title = 'Vue Fes Japan 2018 について'
+    const description = 'Vue Fes Japan 2018 についての概要です。'
+
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        { hid: 'og:url', name: 'og:url', content: url },
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'og:description', name: 'og:description', content: description },
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        { hid: 'twitter:description', name: 'twitter:description', content: description },
+      ],
+    }
+  },
+  asyncData ({ route }) {
+    return {
+      path: route.path,
+    }
+  },
   computed: {
     leaders () {
       return [
@@ -131,14 +153,6 @@ export default {
         return 0
       })
     },
-  },
-  head () {
-    return {
-      title: 'ABOUT - Vue Fes Japan 2018',
-      meta: [
-        { hid: 'description', name: 'description', content: 'Vue Fes Japan 2018 についての概要です。' },
-      ],
-    }
   },
 }
 </script>

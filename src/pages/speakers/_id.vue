@@ -121,25 +121,31 @@ export default {
     LinkButton,
   },
   head () {
+    const url = `https://vuefes.jp${this.path}`
     const title = `${this.speaker.sessionTitle}（${this.speaker.name}）- Vue Fes Japan 2018`
     const description = `Vue Fes Japan 2018 のセッション情報です。登壇者は ${this.speaker.name} で、${this.speaker.sessionTitle} というテーマで発表します。`
+    const ogImageUrl = `https://vuefes.jp/speaker-opengraph/${this.speaker.card}`
+
     return {
       title,
       meta: [
         { hid: 'description', name: 'description', content: description },
-        { name: 'og:image', content: `https://vuefes.jp/speaker-opengraph/${this.speaker.card}` },
-        { name: 'og:image:secure_url', content: `https://vuefes.jp/speaker-opengraph/${this.speaker.card}` },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:description', content: description },
-        { name: 'twitter:creator', content: '@vuefes' },
-        { name: 'twitter:title', content: title },
-        { name: 'twitter:image', content: `https://vuefes.jp/speaker-opengraph/${this.speaker.card}` },
+        { hid: 'og:url', name: 'og:title', content: url },
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'og:description', name: 'og:title', content: title },
+        { hid: 'og:image', name: 'og:image', content: ogImageUrl },
+        { hid: 'og:image:secure_url', name: 'og:image:secure_url', content: ogImageUrl },
+        { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+        { hid: 'twitter:description', name: 'twitter:description', content: description },
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        { hid: 'twitter:image', name: 'twitter:image', content: ogImageUrl },
       ],
     }
   },
-  asyncData ({ params }) {
+  asyncData ({ params, route }) {
     return {
       id: params.id,
+      path: route.path,
     }
   },
   computed: {

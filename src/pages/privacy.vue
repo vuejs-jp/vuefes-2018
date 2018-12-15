@@ -214,8 +214,25 @@ export default {
     TheMain,
   },
   head () {
+    const url = `https://vuefes.jp${this.path}`
+    const title = 'プライバシーポリシー - Vue Fes Japan 2018'
+    const description = 'Vue Fes Japan 2018 のプライバシーポリシー情報です。'
+
     return {
-      title: 'Vue Fes Japan 2018 のプライバシーポリシー',
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        { hid: 'og:url', name: 'og:url', content: url },
+        { hid: 'og:title', name: 'og:title', content: title },
+        { hid: 'og:description', name: 'og:description', content: description },
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        { hid: 'twitter:description', name: 'twitter:description', content: description },
+      ],
+    }
+  },
+  asyncData ({ route }) {
+    return {
+      path: route.path,
     }
   },
 }
