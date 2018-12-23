@@ -64,7 +64,6 @@ module.exports = {
   */
   build: {
     vendor: [
-      'axios',
       'intersection-observer',
       'vue-lazyload',
     ],
@@ -118,7 +117,6 @@ module.exports = {
     ].map(speakerId => `/speakers/${speakerId}`),
   },
   modules: [
-    '@nuxtjs/axios',
     '@nuxtjs/google-analytics',
     'nuxt-sass-resources-loader',
     [
@@ -131,16 +129,11 @@ module.exports = {
     ],
   ],
   plugins: [
-    { src: '~/plugins/axios' },
     { src: '~/plugins/global-navigation-handler', ssr: false },
     { src: '~/plugins/typekit', ssr: false },
     { src: '~/plugins/vue-lazyload', ssr: false },
   ],
-  axios: {
-    baseURL: 'https://vuefes2018-functions.azurewebsites.net/api',
-  },
   env: {
-    functionKey: process.env.FUNCTION_KEY || 'PLEASE_SET_ME',
     googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY || 'PLEASE_SET_ME',
   },
   'google-analytics': {
