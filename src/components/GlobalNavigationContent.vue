@@ -57,12 +57,6 @@ export default {
     color: $primary-text-color--is-bg-dark;
     text-decoration: none;
   }
-
-  .translation-switch {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-  }
 }
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
