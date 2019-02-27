@@ -1,8 +1,10 @@
 // SyntaxError: Unexpected token import
 // import * as speakers from 'src/store/speakers'
 
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs'
+
+// ERROR  (node:79384) DeprecationWarning: Tapable.plugin is deprecated. Use new API on .hooks instead の詳細を確認するため
+process.traceDeprecation = true
 
 try {
   fs.statSync('.env')
@@ -20,7 +22,10 @@ const defaultTitle = 'Vue Fes Japan 2018 | 2018年11月3日（土）'
 const defaultDescription = '日本で初めて開催する大規模 Vue.js カンファレンス。国内外の著名スピーカーによるセッションの他、ユーザー同士が気軽に話し合える場も設ける予定です。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！'
 const defaultOgImageUrl = 'https://vuefes.jp/opengraph.jpg'
 
-module.exports = {
+export default {
+  mode: 'universal',
+  srcDir: 'src/',
+
   /*
   ** Headers of the page
   */
@@ -60,11 +65,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: [
-      'intersection-observer',
-      'vue-lazyload',
-    ],
-
     /*
     ** Run ESLint on save
     */
@@ -87,7 +87,6 @@ module.exports = {
       })
     },
   },
-  srcDir: 'src/',
   css: [
     { src: '~/assets/stylesheets/main.scss', lang: 'scss' },
   ],
@@ -115,7 +114,7 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/google-analytics',
-    'nuxt-sass-resources-loader',
+    '@nuxtjs/style-resources',
     [
       '@nuxtjs/pwa',
       {
@@ -136,8 +135,10 @@ module.exports = {
   'google-analytics': {
     id: process.env.GA_TRACKING_ID || 'UA-XXXXXXX-X',
   },
-  sassResources: [
-    path.resolve(__dirname, 'src/assets/stylesheets/foundation/variables.scss'),
-    path.resolve(__dirname, 'src/assets/stylesheets/foundation/colors.scss'),
-  ],
+  styleResources: {
+    scss: [
+      '~/assets/stylesheets/foundation/variables.scss',
+      '~/assets/stylesheets/foundation/colors.scss',
+    ],
+  },
 }

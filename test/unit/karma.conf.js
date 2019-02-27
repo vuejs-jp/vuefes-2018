@@ -1,4 +1,5 @@
 const path = require('path')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 // Karma configuration
 // Generated on Mon Feb 19 2018 00:24:28 GMT+0900 (JST)
@@ -28,6 +29,9 @@ module.exports = (config) => {
     },
 
     webpack: {
+      plugins: [
+        new VueLoaderPlugin(),
+      ],
       resolve: {
         extensions: ['.js', '.vue'],
         alias: {
@@ -39,38 +43,40 @@ module.exports = (config) => {
         rules: [
           {
             test: /\.vue$/,
-            loader: 'vue-loader',
-            options: {
-              loaders: {
-                js: [
-                  {
-                    loader: 'babel-loader',
-                    options: {
-                      plugins: ['transform-object-rest-spread'],
-                    },
-                  },
-                ],
-                scss: [
-                  'vue-style-loader',
-                  'css-loader',
-                  'sass-loader',
-                  {
-                    loader: 'sass-resources-loader',
-                    options: {
-                      resources: [
-                        './src/assets/stylesheets/foundation/variables.scss',
-                        './src/assets/stylesheets/foundation/colors.scss',
-                      ],
-                    },
-                  },
-                ],
+            use: 'vue-loader',
+          },
+          {
+            test: /\.css$/,
+            use: [
+              { loader: 'vue-style-loader' },
+              { loader: 'css-loader', options: { sourceMap: true } },
+            ],
+          },
+          {
+            test: /\.scss$/,
+            use: [
+              { loader: 'vue-style-loader' },
+              { loader: 'css-loader', options: { sourceMap: true } },
+              { loader: 'sass-loader', options: { sourceMap: true } },
+              {
+                loader: 'sass-resources-loader',
+                options: {
+                  sourceMap: true,
+                  resources: [
+                    './src/assets/stylesheets/foundation/variables.scss',
+                    './src/assets/stylesheets/foundation/colors.scss',
+                  ],
+                },
               },
-            },
+            ],
           },
           {
             test: /\.js$/,
             loader: 'babel-loader',
-            exclude: /node_modules/,
+            exclude: file => (
+              /node_modules/.test(file) &&
+              !/\.vue\.js/.test(file)
+            ),
           },
           {
             test: /\.(png|jpe?g|gif|svg|webp)$/,

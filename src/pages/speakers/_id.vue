@@ -157,6 +157,8 @@ export default {
         return 'blue'
       } else if (this.speaker.venue === '会場B') {
         return 'red'
+      } else {
+        throw new Error('speaker.venue is invalid')
       }
     },
     ...mapGetters('speakers', ['keynoteSpeakerById', 'sessionSpeakerById']),

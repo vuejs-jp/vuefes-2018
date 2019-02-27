@@ -203,14 +203,12 @@
 
 <script>
 import LinkButton from '~/components/LinkButton'
-import TheFooter from '~/components/TheFooter'
 import TheMain from '~/components/TheMain'
 
 export default {
   name: 'PrivacyPage',
   components: {
     LinkButton,
-    TheFooter,
     TheMain,
   },
   head () {
