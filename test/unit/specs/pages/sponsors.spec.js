@@ -12,7 +12,7 @@ localVue.use(VueRouter)
 localVue.use(Vuex)
 
 describe('SponsorsPage', () => {
-  it('レンダリングできる', () => {
+  test('レンダリングできる', () => {
     const wrapper = mount(SponsorsPage, {
       localVue,
       router,
@@ -22,6 +22,6 @@ describe('SponsorsPage', () => {
       },
     })
 
-    expect(wrapper.text()).to.contain('SPONSORS')
+    expect(wrapper.text()).toContain('SPONSORS')
   })
 })

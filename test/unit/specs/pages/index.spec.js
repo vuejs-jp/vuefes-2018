@@ -11,7 +11,7 @@ localVue.use(Vuex)
 localVue.use(VueLazyload)
 
 describe('index', () => {
-  it('レンダリングできる', () => {
+  test('レンダリングできる', () => {
     const wrapper = mount(WelcomePage, {
       localVue,
       store,
@@ -21,6 +21,6 @@ describe('index', () => {
       },
     })
 
-    expect(wrapper.text()).to.contain('SPEAKERS')
+    expect(wrapper.text()).toContain('SPEAKERS')
   })
 })

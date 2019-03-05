@@ -10,7 +10,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(() => resolve(), ms))
 localVue.use(Vuex)
 
 describe('TheHeader', () => {
-  it('レンダリングできる', () => {
+  test('レンダリングできる', () => {
     const wrapper = mount(TheHeader, {
       localVue,
       store,
@@ -18,10 +18,10 @@ describe('TheHeader', () => {
         NuxtLink: RouterLinkStub,
       },
     })
-    expect(wrapper.vm.isGlobalNavigationShown).to.equal(false)
+    expect(wrapper.vm.isGlobalNavigationShown).toEqual(false)
     wrapper.vm.toggleGlobalNavigation()
     delay(800).then(() => {
-      expect(wrapper.vm.isGlobalNavigationShown).to.equal(true)
+      expect(wrapper.vm.isGlobalNavigationShown).toEqual(true)
     })
   })
 })

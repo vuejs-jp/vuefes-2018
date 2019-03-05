@@ -24,15 +24,15 @@ describe('SponsorBanner', () => {
     })
   })
 
-  it('type クラスが追加される', () => {
-    expect(wrapper.classes()).to.contain('platinum')
+  test('type クラスが追加される', () => {
+    expect(wrapper.classes()).toContain('platinum')
   })
 
-  it('type が大文字で表示される', () => {
-    expect(wrapper.find('.heading-with-bar').text()).to.contain('PLATINUM')
+  test('type が大文字で表示される', () => {
+    expect(wrapper.find('.heading-with-bar').text()).toContain('PLATINUM')
   })
 
-  it('スポンサーの ID へのリンクが設置されている', () => {
-    expect(wrapper.find('.link-to-sponsor').props().to).to.equal('/sponsors/#platinum-0')
+  test('スポンサーの ID へのリンクが設置されている', () => {
+    expect(wrapper.find('.link-to-sponsor').props().to).toEqual('/sponsors/#platinum-0')
   })
 })

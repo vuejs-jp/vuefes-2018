@@ -23,17 +23,17 @@ describe('TheSpeakerListSection', () => {
     })
   })
 
-  it('レンダリングできる', () => {
-    expect(wrapper.text()).to.contain('SPEAKERS')
+  test('レンダリングできる', () => {
+    expect(wrapper.text()).toContain('SPEAKERS')
   })
 
   describe('randomizedSessionSpeakers', () => {
-    it('ランダムで 4名のセッションスピーカーを取得できる', () => {
+    test('ランダムで 4名のセッションスピーカーを取得できる', () => {
       // console.log(wrapper.vm.randomizedSessionSpeakers)
-      expect(wrapper.vm.randomizedSessionSpeakers).to.have.lengthOf(4)
+      expect(wrapper.vm.randomizedSessionSpeakers).toHaveLength(4)
     })
 
-    it('データを受け取ったときに、ランダムで並び替えられる', () => {
+    test('データを受け取ったときに、ランダムで並び替えられる', () => {
       const AVATAR_SARAH = require('~/assets/images/speakers/sarah.jpg')
       const AVATAR_SARAH_2X = require('~/assets/images/speakers/sarah@2x.jpg')
       const AVATAR_CHOPIN = require('~/assets/images/speakers/chopin.jpg')
@@ -100,9 +100,9 @@ describe('TheSpeakerListSection', () => {
         },
       })
 
-      expect(_wrapper.vm.randomizedSessionSpeakers).to.have.lengthOf(2)
-      expect(_wrapper.vm.randomizedSessionSpeakers).to.contain(sarah)
-      expect(_wrapper.vm.randomizedSessionSpeakers).to.contain(chopin)
+      expect(_wrapper.vm.randomizedSessionSpeakers).toHaveLength(2)
+      expect(_wrapper.vm.randomizedSessionSpeakers).toContain(sarah)
+      expect(_wrapper.vm.randomizedSessionSpeakers).toContain(chopin)
     })
   })
 })

@@ -9,7 +9,7 @@ const store = () => createFullStore(Vuex)
 localVue.use(Vuex)
 
 describe('TheHeadSection', () => {
-  it('レンダリングできる', () => {
+  test('レンダリングできる', () => {
     const wrapper = mount(TheHeadSection, {
       localVue,
       store,
@@ -18,6 +18,6 @@ describe('TheHeadSection', () => {
       },
     })
 
-    expect(wrapper.text()).to.contain('秋葉原 UDX 4F')
+    expect(wrapper.text()).toContain('秋葉原 UDX 4F')
   })
 })

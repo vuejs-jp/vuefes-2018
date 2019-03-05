@@ -9,7 +9,7 @@ const store = () => createFullStore(Vuex)
 localVue.use(Vuex)
 
 describe('TimeTablePage', () => {
-  it('レンダリングできる', () => {
+  test('レンダリングできる', () => {
     const wrapper = mount(TimeTablePage, {
       localVue,
       store,
@@ -18,6 +18,6 @@ describe('TimeTablePage', () => {
       },
     })
 
-    expect(wrapper.text()).to.contain('開場・受付')
+    expect(wrapper.text()).toContain('開場・受付')
   })
 })

@@ -9,7 +9,7 @@ const store = () => createFullStore(Vuex)
 localVue.use(Vuex)
 
 describe('SpeakersPage', () => {
-  it('レンダリングできる', () => {
+  test('レンダリングできる', () => {
     const wrapper = mount(SpeakersPage, {
       localVue,
       store,
@@ -18,6 +18,6 @@ describe('SpeakersPage', () => {
       },
     })
 
-    expect(wrapper.text()).to.contain('SPEAKERS')
+    expect(wrapper.text()).toContain('SPEAKERS')
   })
 })

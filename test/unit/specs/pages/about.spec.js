@@ -11,7 +11,7 @@ localVue.use(Vuex)
 localVue.use(VueLazyload)
 
 describe('AboutPage', () => {
-  it('レンダリングできる', () => {
+  test('レンダリングできる', () => {
     const wrapper = mount(AboutPage, {
       localVue,
       store,
@@ -20,6 +20,6 @@ describe('AboutPage', () => {
       },
     })
 
-    expect(wrapper.text()).to.contain('日本で初めて開催する Vue.js カンファレンス')
+    expect(wrapper.text()).toContain('日本で初めて開催する Vue.js カンファレンス')
   })
 })

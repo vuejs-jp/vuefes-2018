@@ -23,11 +23,11 @@ describe('TheSponsorBannerListSection', () => {
     })
   })
 
-  it('レンダリングできる', () => {
-    expect(wrapper.text()).to.contain('SPONSORS')
+  test('レンダリングできる', () => {
+    expect(wrapper.text()).toContain('SPONSORS')
   })
 
-  it('リンクに Trailing Slash が入っている', () => {
-    expect(wrapper.find('.link-to-sponsors').props().to).to.equal('/sponsors/')
+  test('リンクに Trailing Slash が入っている', () => {
+    expect(wrapper.find('.link-to-sponsors').props().to).toEqual('/sponsors/')
   })
 })

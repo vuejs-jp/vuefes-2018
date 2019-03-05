@@ -9,7 +9,7 @@ const store = () => createFullStore(Vuex)
 localVue.use(Vuex)
 
 describe('CodeOfConductPage', () => {
-  it('レンダリングできる', () => {
+  test('レンダリングできる', () => {
     const wrapper = mount(codeOfConductPage, {
       localVue,
       store,
@@ -18,6 +18,6 @@ describe('CodeOfConductPage', () => {
       },
     })
 
-    expect(wrapper.text()).to.contain('行動規範')
+    expect(wrapper.text()).toContain('行動規範')
   })
 })

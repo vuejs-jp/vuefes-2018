@@ -5,7 +5,7 @@ describe('SpeakerWithLink', () => {
   const AVATAR_EVAN = require('~/assets/images/speakers/evan.jpg')
   const AVATAR_EVAN_2X = require('~/assets/images/speakers/evan@2x.jpg')
 
-  it('img の srcset 属性をセットできる', () => {
+  test('img の srcset 属性をセットできる', () => {
     const wrapper = mount(SpeakerWithLink, {
       propsData: {
         id: 'yyx990803',
@@ -31,6 +31,6 @@ describe('SpeakerWithLink', () => {
 
     expect(
       wrapper.find('.avatar img').attributes()['srcset']
-    ).to.equal(`${AVATAR_EVAN}, ${AVATAR_EVAN_2X} 2x`)
+    ).toEqual(`${AVATAR_EVAN}, ${AVATAR_EVAN_2X} 2x`)
   })
 })

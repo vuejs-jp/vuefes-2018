@@ -2,8 +2,8 @@ import { mount } from '@vue/test-utils'
 import BaseSection from '~/components/BaseSection'
 
 describe('BaseSection', () => {
-  context('theme が渡されているとき', () => {
-    it('bg-xxx クラスが追加される', () => {
+  describe('theme が渡されているとき', () => {
+    test('bg-xxx クラスが追加される', () => {
       const wrapper = mount(BaseSection, {
         propsData: {
           theme: 'yellow',
@@ -15,7 +15,7 @@ describe('BaseSection', () => {
 
       expect(
         wrapper.find('.heading-container').classes()
-      ).to.contain('bg-yellow')
+      ).toContain('bg-yellow')
     })
   })
 })

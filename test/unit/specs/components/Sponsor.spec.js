@@ -19,15 +19,15 @@ describe('SponsorGroup', () => {
     })
   })
 
-  it('type クラスが追加される', () => {
-    expect(wrapper.classes()).to.contain('platinum')
+  test('type クラスが追加される', () => {
+    expect(wrapper.classes()).toContain('platinum')
   })
 
-  it('type の文字が全大文字で表示される', () => {
-    expect(wrapper.find('.heading').text()).to.contain('PLATINUM')
+  test('type の文字が全大文字で表示される', () => {
+    expect(wrapper.find('.heading').text()).toContain('PLATINUM')
   })
 
-  it('id が付与されている', () => {
-    expect(wrapper.find('.sponsor').attributes().id).to.equal('platinum-0')
+  test('id が付与されている', () => {
+    expect(wrapper.find('.sponsor').attributes().id).toEqual('platinum-0')
   })
 })
