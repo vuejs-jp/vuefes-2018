@@ -1,7 +1,7 @@
 {
-  "name": "vuefes-2018",
+  "name": "vuefes",
   "version": "1.0.0",
-  "description": "Vue Fes Japan 2018",
+  "description": "Vue Fes Japan",
   "author": "INOUE Takuya <inouetakuya5@gmail.com>",
   "private": true,
   "scripts": {
