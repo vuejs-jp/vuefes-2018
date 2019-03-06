@@ -1,11 +1,18 @@
 <template>
-  <div :id="`${type}-${index}`" class="sponsor" :class="[type, `index-${index}`, { 'has-heading': hasHeading }]">
+  <div
+    :id="`${type}-${index}`"
+    class="sponsor"
+    :class="[type, `index-${index}`, { 'has-heading': hasHeading }]"
+  >
     <HeadingWithBar v-if="hasHeading">
       {{ type | toUpperCase }}
     </HeadingWithBar>
 
     <a :href="url" target="_blank" rel="noopener">
-      <img class="banner" :src="require(`~/assets/images/sponsors/${type}/${banner}`)">
+      <img
+        class="banner"
+        :src="require(`~/assets/images/sponsors/${type}/${banner}`)"
+      />
     </a>
 
     <h4 class="name">
@@ -16,12 +23,14 @@
       {{ url }}
     </a>
 
+    <!-- eslint-disable vue/no-v-html -->
     <p
+      v-for="(paragraph, i) in description"
+      :key="i"
       class="description"
-      v-for="(paragraph, index) in description"
-      :key="index"
       v-html="paragraph"
-    ></p>
+    />
+    <!-- eslint-enable vue/no-v-html -->
   </div>
 </template>
 
@@ -31,44 +40,44 @@ import HeadingWithBar from '~/components/HeadingWithBar'
 export default {
   name: 'Sponsor',
   components: {
-    HeadingWithBar,
+    HeadingWithBar
+  },
+  filters: {
+    toUpperCase(value) {
+      return value.toUpperCase()
+    }
   },
   props: {
     index: {
       type: Number,
-      required: true,
+      required: true
     },
     type: {
       type: String,
-      required: true,
+      required: true
     },
     name: {
       type: String,
-      required: true,
+      required: true
     },
     url: {
       type: String,
-      required: true,
+      required: true
     },
     banner: {
       type: String,
-      required: true,
+      required: true
     },
     description: {
       type: Array,
-      required: true,
-    },
-  },
-  filters: {
-    toUpperCase (value) {
-      return value.toUpperCase()
-    },
+      required: true
+    }
   },
   computed: {
-    hasHeading () {
+    hasHeading() {
       return this.index === 0
-    },
-  },
+    }
+  }
 }
 </script>
 

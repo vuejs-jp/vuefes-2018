@@ -1,7 +1,7 @@
 <template>
   <nav class="global-navigation-content">
     <p class="date-and-place">
-      2018.11.3 (Sat.)<br>
+      2018.11.3 (Sat.)<br />
       秋葉原 UDX 4F / UDX ギャラリー
     </p>
 
@@ -42,7 +42,7 @@
 
 <script>
 export default {
-  name: 'GlobalNavigationContent',
+  name: 'GlobalNavigationContent'
 }
 </script>
 

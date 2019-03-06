@@ -1,22 +1,13 @@
 <template>
-  <div
-    class="speaker"
-    :style="speakerStyle"
-  >
+  <div class="speaker" :style="speakerStyle">
     <HeadingWithBar v-if="hasHeading">
       {{ type }}
     </HeadingWithBar>
 
     <div class="avatar">
       <no-ssr>
-        <div
-          class="image-placeholder"
-          slot="placeholder">
-        </div>
-        <img
-          :srcset="`${avatar}, ${avatar2x} 2x`"
-          :src="avatar2x"
-        >
+        <div slot="placeholder" class="image-placeholder" />
+        <img :srcset="`${avatar}, ${avatar2x} 2x`" :src="avatar2x" />
       </no-ssr>
     </div>
 
@@ -30,85 +21,77 @@
 
     <div class="social">
       <no-ssr>
-        <a
-          class="twitter"
-          :href="twitter"
-          target="_blank"
-          rel="noopener"
-        >
-          <img src="~/assets/images/icon_twitter.svg">
+        <a class="twitter" :href="twitter" target="_blank" rel="noopener">
+          <img src="~/assets/images/icon_twitter.svg" />
         </a>
       </no-ssr>
       <no-ssr>
-        <a
-          class="github"
-          :href="github"
-          target="_blank"
-          rel="noopener"
-        >
-          <img src="~/assets/images/icon_github.svg">
+        <a class="github" :href="github" target="_blank" rel="noopener">
+          <img src="~/assets/images/icon_github.svg" />
         </a>
       </no-ssr>
     </div>
   </div>
 </template>
 
+<!-- eslint-disable vue/require-default-prop -->
 <script>
 import HeadingWithBar from '~/components/HeadingWithBar'
 
 export default {
   name: 'Speaker',
   components: {
-    HeadingWithBar,
+    HeadingWithBar
   },
   props: {
     name: {
       type: String,
-      required: true,
+      required: true
     },
     title: {
       type: String,
-      required: true,
+      required: true
     },
     avatar: {
       type: String,
-      required: true,
+      required: true
     },
     avatar2x: {
       type: String,
-      required: true,
+      required: true
     },
     twitter: {
       type: String,
-      required: true,
+      required: true
     },
     github: {
       type: String,
-      required: true,
+      required: true
     },
     index: {
       type: Number,
-      required: false,
+      required: false
     },
     type: {
       type: String,
-      required: false,
-    },
+      required: false
+    }
   },
   computed: {
-    hasHeading () {
+    hasHeading() {
       return this.index === 0
     },
-    speakerStyle () {
+    speakerStyle() {
       if (this.hasHeading) {
         return
       }
 
       return { 'margin-top': '25px' }
-    },
-  },
+    }
+  }
 }
 </script>
+<!-- eslint-enable vue/require-default-prop -->
 
 <style lang="scss" scoped>
 .avatar {

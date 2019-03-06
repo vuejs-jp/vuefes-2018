@@ -2,10 +2,7 @@
   <div class="speaker-with-link">
     <nuxt-link class="wrapper" :to="`/speakers/${id}/`">
       <div class="avatar">
-        <img
-          :srcset="`${avatar}, ${avatar2x} 2x`"
-          :src="avatar2x"
-        >
+        <img :srcset="`${avatar}, ${avatar2x} 2x`" :src="avatar2x" />
       </div>
 
       <div class="title">
@@ -18,21 +15,11 @@
     </nuxt-link>
 
     <div class="social">
-      <a
-        class="twitter"
-        :href="twitter"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src="~/assets/images/icon_twitter.svg">
+      <a class="twitter" :href="twitter" target="_blank" rel="noopener">
+        <img src="~/assets/images/icon_twitter.svg" />
       </a>
-      <a
-        class="github"
-        :href="github"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src="~/assets/images/icon_github.svg">
+      <a class="github" :href="github" target="_blank" rel="noopener">
+        <img src="~/assets/images/icon_github.svg" />
       </a>
     </div>
   </div>
@@ -44,45 +31,45 @@ export default {
   props: {
     id: {
       type: String,
-      required: true,
+      required: true
     },
     name: {
       type: String,
-      required: true,
+      required: true
     },
     title: {
       type: String,
-      required: true,
+      required: true
     },
     avatar: {
       type: String,
-      required: true,
+      required: true
     },
     avatar2x: {
       type: String,
-      required: true,
+      required: true
     },
     twitter: {
       type: String,
-      required: true,
+      required: true
     },
     github: {
       type: String,
-      required: true,
+      required: true
     },
     description: {
       type: Array,
-      required: true,
+      required: true
     },
     sessionTitle: {
       type: String,
-      required: true,
+      required: true
     },
     sessionOverview: {
       type: Array,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 }
 </script>
 

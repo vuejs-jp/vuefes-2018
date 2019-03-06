@@ -6,9 +6,8 @@
 
 <script>
 export default {
-  name: 'BaseButton',
+  name: 'BaseButton'
 }
 </script>
 
-<style lang="scss" scoped src="./BaseButton.scss">
-</style>
+<style lang="scss" scoped src="./BaseButton.scss"></style>

@@ -6,16 +6,16 @@ describe('BaseSection', () => {
     test('bg-xxx クラスが追加される', () => {
       const wrapper = mount(BaseSection, {
         propsData: {
-          theme: 'yellow',
+          theme: 'yellow'
         },
         slots: {
-          heading: '<span>TICKET</span>', // 'TICKET' だと $slots.default に入ってしまう
-        },
+          heading: '<span>TICKET</span>' // 'TICKET' だと $slots.default に入ってしまう
+        }
       })
 
-      expect(
-        wrapper.find('.heading-container').classes()
-      ).toContain('bg-yellow')
+      expect(wrapper.find('.heading-container').classes()).toContain(
+        'bg-yellow'
+      )
     })
   })
 })

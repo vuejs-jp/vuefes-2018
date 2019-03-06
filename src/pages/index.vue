@@ -31,8 +31,8 @@ export default {
     TheFooter,
     TheHeadSection,
     TheSpeakerListSection,
-    TheSponsorBannerListSection,
-  },
+    TheSponsorBannerListSection
+  }
 }
 </script>
 

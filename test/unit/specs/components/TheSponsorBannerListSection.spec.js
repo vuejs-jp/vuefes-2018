@@ -18,8 +18,8 @@ describe('TheSponsorBannerListSection', () => {
       localVue,
       store,
       stubs: {
-        NuxtLink: RouterLinkStub,
-      },
+        NuxtLink: RouterLinkStub
+      }
     })
   })
 

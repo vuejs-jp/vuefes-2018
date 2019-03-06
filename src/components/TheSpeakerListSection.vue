@@ -46,17 +46,17 @@ export default {
   components: {
     BaseSection,
     LinkButton,
-    Speaker,
+    Speaker
   },
   computed: {
-    randomizedKeynoteSpeakers () {
+    randomizedKeynoteSpeakers() {
       return shuffle(this.keynoteSpeakers)
     },
-    randomizedSessionSpeakers () {
+    randomizedSessionSpeakers() {
       return shuffle(this.sessionSpeakers).slice(0, 4)
     },
-    ...mapGetters('speakers', ['keynoteSpeakers', 'sessionSpeakers']),
-  },
+    ...mapGetters('speakers', ['keynoteSpeakers', 'sessionSpeakers'])
+  }
 }
 </script>
 

@@ -1,14 +1,8 @@
 <template>
-  <div
-    class="speaker-session"
-    :class="`bg-${theme}`"
-  >
+  <div class="speaker-session" :class="`bg-${theme}`">
     <nuxt-link class="wrapper" :to="`/speakers/${id}/`">
       <div class="avatar">
-        <img
-          :srcset="`${avatar}, ${avatar2x} 2x`"
-          :src="avatar2x"
-        >
+        <img :srcset="`${avatar}, ${avatar2x} 2x`" :src="avatar2x" />
       </div>
 
       <div class="container">
@@ -32,29 +26,29 @@ export default {
   props: {
     id: {
       type: String,
-      required: true,
+      required: true
     },
     avatar: {
       type: String,
-      required: true,
+      required: true
     },
     avatar2x: {
       type: String,
-      required: true,
+      required: true
     },
     name: {
       type: String,
-      required: true,
+      required: true
     },
     sessionTitle: {
       type: String,
-      required: true,
+      required: true
     },
     theme: {
       type: String,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 }
 </script>
 

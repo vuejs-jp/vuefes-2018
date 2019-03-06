@@ -14,8 +14,8 @@ describe('TheHeadSection', () => {
       localVue,
       store,
       stubs: {
-        NuxtLink: RouterLinkStub,
-      },
+        NuxtLink: RouterLinkStub
+      }
     })
 
     expect(wrapper.text()).toContain('秋葉原 UDX 4F')

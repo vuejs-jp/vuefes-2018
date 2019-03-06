@@ -12,17 +12,19 @@
   </section>
 </template>
 
+<!-- eslint-disable vue/require-default-prop -->
 <script>
 export default {
   name: 'BaseSection',
   props: {
     theme: {
       type: String,
-      required: false,
-    },
-  },
+      required: false
+    }
+  }
 }
 </script>
+<!-- eslint-enable vue/require-default-prop -->
 
 <style lang="scss" scoped>
 .base-section {

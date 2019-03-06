@@ -14,8 +14,8 @@ describe('CodeOfConductPage', () => {
       localVue,
       store,
       stubs: {
-        NuxtLink: RouterLinkStub,
-      },
+        NuxtLink: RouterLinkStub
+      }
     })
 
     expect(wrapper.text()).toContain('行動規範')

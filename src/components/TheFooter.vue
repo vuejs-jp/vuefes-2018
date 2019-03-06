@@ -3,30 +3,64 @@
     <div class="content">
       <div class="logo-wrapper">
         <div class="logo">
-          <img src="~/assets/images/vue-fes-japan-logo-white.svg">
+          <img src="~/assets/images/vue-fes-japan-logo-white.svg" />
         </div>
 
         <div class="social-wrapper">
           <div class="social-button" @click="openTwitterForm">
-            <img src="~/assets/images/logo_twitter.svg" alt="Twitter">
+            <img src="~/assets/images/logo_twitter.svg" alt="Twitter" />
           </div>
           <div class="social-button" @click="openFacebookForm">
-            <img src="~/assets/images/logo_facebook.svg" alt="Facebook">
+            <img src="~/assets/images/logo_facebook.svg" alt="Facebook" />
           </div>
           <div class="social-button" @click="openHatenaBookmarkForm">
-            <img src="~/assets/images/logo_hatena-bookmark.svg" alt="はてなブックマーク">
+            <img
+              src="~/assets/images/logo_hatena-bookmark.svg"
+              alt="はてなブックマーク"
+            />
           </div>
         </div>
       </div>
 
       <div class="link-list">
-        <a href="https://jp.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> | <a href="https://github.com/vuejs-jp/home" target="_blank" rel="noopener">Vue.js 日本ユーザーグループ</a> | <nuxt-link to="/code-of-conduct/">行動規範</nuxt-link> | <nuxt-link to="/privacy/">プライバシーポリシー</nuxt-link>
+        <a href="https://jp.vuejs.org/" target="_blank" rel="noopener">
+          Vue.js
+        </a>
+        |
+        <a
+          href="https://github.com/vuejs-jp/home"
+          target="_blank"
+          rel="noopener"
+        >
+          Vue.js 日本ユーザーグループ
+        </a>
+        |
+        <nuxt-link to="/code-of-conduct/">
+          行動規範
+        </nuxt-link>
+        |
+        <nuxt-link to="/privacy/">
+          プライバシーポリシー
+        </nuxt-link>
       </div>
 
       <div class="licence">
         <p>
-          © 2018 Vue Fes Japan 2018 Executive Committee. Contact <a href="mailto:info@vuefes.jp">info@vuefes.jp</a><br />
-          Vue.js artworks by <a href="https://github.com/yyx990803" target="_blank" rel="noopener">Evan you</a> is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International License</a>.
+          © 2018 Vue Fes Japan 2018 Executive Committee. Contact
+          <a href="mailto:info@vuefes.jp">info@vuefes.jp</a><br />
+          Vue.js artworks by
+          <a href="https://github.com/yyx990803" target="_blank" rel="noopener">
+            Evan you
+          </a>
+          is licensed under a
+          <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja"
+            target="_blank"
+            rel="noopener"
+          >
+            Creative Commons Attribution 4.0 International License
+          </a>
+          .
         </p>
       </div>
     </div>
@@ -37,33 +71,50 @@
 export default {
   name: 'TheFooter',
   computed: {
-    encodedUri () {
+    encodedUri() {
       return encodeURIComponent(location.href)
     },
-    hostAndPath () {
+    hostAndPath() {
       return location.host + location.pathname
-    },
+    }
   },
   methods: {
     /**
      * Twitter ボタンをクリックしたときに実行されます。
      */
-    openTwitterForm () {
-      window.open(`https://twitter.com/share?url=${this.encodedUri}&hashtags=vuefes,vuejs&text=${encodeURIComponent('日本で初めて開催する大規模 Vue.js カンファレンス「Vue Fes Japan 2018」')}`, 'tweet', 'width=650, height=470')
+    openTwitterForm() {
+      window.open(
+        `https://twitter.com/share?url=${
+          this.encodedUri
+        }&hashtags=vuefes,vuejs&text=${encodeURIComponent(
+          '日本で初めて開催する大規模 Vue.js カンファレンス「Vue Fes Japan 2018」'
+        )}`,
+        'tweet',
+        'width=650, height=470'
+      )
     },
     /**
      * Facebook ボタンをクリックしたときに実行されます。
      */
-    openFacebookForm () {
-      window.open(`https://www.facebook.com/sharer/sharer.php?u=${this.encodedUri}&src=sdkpreparse`, 'share', 'width=670, height=328')
+    openFacebookForm() {
+      window.open(
+        `https://www.facebook.com/sharer/sharer.php?u=${
+          this.encodedUri
+        }&src=sdkpreparse`,
+        'share',
+        'width=670, height=328'
+      )
     },
     /**
      * はてなブックマークボタンをクリックしたときに実行されます。
      */
-    openHatenaBookmarkForm () {
-      window.open(`http://b.hatena.ne.jp/entry/s/${this.hostAndPath}`, 'bookmark')
-    },
-  },
+    openHatenaBookmarkForm() {
+      window.open(
+        `http://b.hatena.ne.jp/entry/s/${this.hostAndPath}`,
+        'bookmark'
+      )
+    }
+  }
 }
 </script>
 

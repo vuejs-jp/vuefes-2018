@@ -143,12 +143,13 @@ export default {
   components: {
     LinkButton,
     Sponsor,
-    TheMain,
+    TheMain
   },
-  head () {
+  head() {
     const url = `https://vuefes.jp${this.path}`
     const title = 'スポンサー一覧 - Vue Fes Japan 2018'
-    const description = 'Vue Fes Japan 2018 にご協賛いただいているスポンサーの一覧です。'
+    const description =
+      'Vue Fes Japan 2018 にご協賛いただいているスポンサーの一覧です。'
 
     return {
       title,
@@ -158,16 +159,37 @@ export default {
         { hid: 'og:title', name: 'og:title', content: title },
         { hid: 'og:description', name: 'og:description', content: description },
         { hid: 'twitter:title', name: 'twitter:title', content: title },
-        { hid: 'twitter:description', name: 'twitter:description', content: description },
-      ],
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        }
+      ]
     }
   },
-  asyncData ({ route }) {
+  computed: {
+    ...mapGetters([
+      'platinumSponsors',
+      'goldSponsors',
+      'specialSponsors',
+      'silverSponsors',
+      'bronzeSponsors',
+      'networkSponsors',
+      'lunchSponsors',
+      'beerSponsors',
+      'drinkSponsors',
+      'toolSponsors',
+      'videoSponsors',
+      'mediaSponsors',
+      'stickerSponsors'
+    ])
+  },
+  asyncData({ route }) {
     return {
-      path: route.path,
+      path: route.path
     }
   },
-  mounted () {
+  mounted() {
     // TODO: layout をまたいでもアンカーリンクが効くようになったら、VueRouter の scrollBehavior を使うようにする
     if (this.$router.currentRoute.hash) {
       const element = document.querySelector(this.$router.currentRoute.hash)
@@ -177,26 +199,7 @@ export default {
         window.scrollTo({ top: rect.top - 30 })
       }
     }
-  },
-  computed: {
-    ...mapGetters(
-      [
-        'platinumSponsors',
-        'goldSponsors',
-        'specialSponsors',
-        'silverSponsors',
-        'bronzeSponsors',
-        'networkSponsors',
-        'lunchSponsors',
-        'beerSponsors',
-        'drinkSponsors',
-        'toolSponsors',
-        'videoSponsors',
-        'mediaSponsors',
-        'stickerSponsors',
-      ]
-    ),
-  },
+  }
 }
 </script>
 

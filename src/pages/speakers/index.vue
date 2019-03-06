@@ -57,9 +57,9 @@ export default {
     HeadingWithBar,
     LinkButton,
     SpeakerWithLink,
-    TheMain,
+    TheMain
   },
-  head () {
+  head() {
     const url = `https://vuefes.jp${this.path}`
     const title = 'スピーカー一覧 - Vue Fes Japan 2018'
     const description = 'Vue Fes Japan 2018 についてのスピーカー情報です。'
@@ -72,18 +72,22 @@ export default {
         { hid: 'og:title', name: 'og:title', content: title },
         { hid: 'og:description', name: 'og:description', content: description },
         { hid: 'twitter:title', name: 'twitter:title', content: title },
-        { hid: 'twitter:description', name: 'twitter:description', content: description },
-      ],
-    }
-  },
-  asyncData ({ route }) {
-    return {
-      path: route.path,
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        }
+      ]
     }
   },
   computed: {
-    ...mapGetters('speakers', ['keynoteSpeakers', 'sessionSpeakers']),
+    ...mapGetters('speakers', ['keynoteSpeakers', 'sessionSpeakers'])
   },
+  asyncData({ route }) {
+    return {
+      path: route.path
+    }
+  }
 }
 </script>
 

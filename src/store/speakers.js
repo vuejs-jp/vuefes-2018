@@ -35,16 +35,16 @@ export const state = () => ({
       github: 'https://github.com/yyx990803',
       description: [
         'Evan は開発者、デザイナー、そしてクリエイティブコーダーです。彼は、リアクティブなコンポーネントでモダンな Web インターフェイスを構築するための JavaScript フレームワーク、Vue.js の作者です。',
-        'かつて、GitHub で最もスターを集めたフルスタック JavaScript フレームワークであった Meteor の開発グループでも働いていました。Google Creative Lab で、さまざまな Google プロダクト向けの実験的な UI プロトタイプに、2年間取り組んでいた経験もあります。',
+        'かつて、GitHub で最もスターを集めたフルスタック JavaScript フレームワークであった Meteor の開発グループでも働いていました。Google Creative Lab で、さまざまな Google プロダクト向けの実験的な UI プロトタイプに、2年間取り組んでいた経験もあります。'
       ],
       sessionType: 'keynote',
       venue: null,
       sessionTitle: 'Vue 3.0 Updates',
-      sessionOverview: [
-      ],
+      sessionOverview: [],
       youtubeVideoId: 'zBOlIvrYWHY',
-      slideUrl: 'https://docs.google.com/presentation/d/1pbNnBhkc-CwfzSw4sW9Ai7A7uAxLuNwOd4Gd5PMjrSQ/edit#slide=id.p',
-    },
+      slideUrl:
+        'https://docs.google.com/presentation/d/1pbNnBhkc-CwfzSw4sW9Ai7A7uAxLuNwOd4Gd5PMjrSQ/edit#slide=id.p'
+    }
   ],
   sessionSpeakers: [
     {
@@ -57,17 +57,17 @@ export const state = () => ({
       twitter: 'https://twitter.com/sarah_edo',
       github: 'https://github.com/sdras',
       description: [
-        'Sarah Drasner は受賞歴を持つスピーカー、Microsoft のシニアデベロッパーアドボケイト、CSS-Tricks のスタッフライターです。Val Head と共に Web Animation Workshops を設立しました。SVG Animations（O\'Reilly）の著者で、Vue.js の Frontend Masters workshops を行っています。',
-        '以前は Trulia (Zillow) で UX デザインとエンジニアリングのマネージャーをしていました。',
+        "Sarah Drasner は受賞歴を持つスピーカー、Microsoft のシニアデベロッパーアドボケイト、CSS-Tricks のスタッフライターです。Val Head と共に Web Animation Workshops を設立しました。SVG Animations（O'Reilly）の著者で、Vue.js の Frontend Masters workshops を行っています。",
+        '以前は Trulia (Zillow) で UX デザインとエンジニアリングのマネージャーをしていました。'
       ],
       sessionType: 'session',
       venue: '会場A',
       sessionTitle: 'Next-level Vue Animations',
       sessionOverview: [
-        'As superfluous as something like animation may initially seem, you can tell a lot about framework by the way that it handles the concept of time. Idiosyncrasies and race conditions in rendering reveal themselves, pauses in DOM and virtual DOM diffing can be exposed. This is one of the ways Vue shows itself to be uniquely capable and elegant. In this session, we\'ll cover the basics of working with Vue, how to use the <transition> component and some of its offerings to create fluid effects in the browser. We\'ll move on to watchers, the reactivity system, and transitioning state. Finally, we\'ll talk about lifecycle methods, SVG, and pushing our animations to the next level.',
+        "As superfluous as something like animation may initially seem, you can tell a lot about framework by the way that it handles the concept of time. Idiosyncrasies and race conditions in rendering reveal themselves, pauses in DOM and virtual DOM diffing can be exposed. This is one of the ways Vue shows itself to be uniquely capable and elegant. In this session, we'll cover the basics of working with Vue, how to use the <transition> component and some of its offerings to create fluid effects in the browser. We'll move on to watchers, the reactivity system, and transitioning state. Finally, we'll talk about lifecycle methods, SVG, and pushing our animations to the next level."
       ],
       youtubeVideoId: 'd83Pyi_J1b0',
-      slideUrl: 'https://slides.com/sdrasner/vuefes-japan#/',
+      slideUrl: 'https://slides.com/sdrasner/vuefes-japan#/'
     },
     {
       id: 'Atinux',
@@ -80,16 +80,16 @@ export const state = () => ({
       github: 'https://github.com/Atinux',
       description: [
         'Sébastien は、猛烈な速さで Vue.js アプリケーションを作成するための JavaScript フレームワーク、Nuxt.js の共同クリエーターです。',
-        '現在 Orion.sh に勤務しており、CMTY によるオープンソースコミュニティ、そして新しいオープンソースプロジェクトを築いています。',
+        '現在 Orion.sh に勤務しており、CMTY によるオープンソースコミュニティ、そして新しいオープンソースプロジェクトを築いています。'
       ],
       sessionType: 'session',
       venue: '会場B',
       sessionTitle: 'Nuxt.js 2.0',
       sessionOverview: [
-        'Webpack 4, hooks, modules, ESM, we will look at how Nuxt.js has improved and see how fast we can create Vue.js application (Universal, SPA, PWA...). We will also look at server-side rendering caveats and the best practice to keep in mind.',
+        'Webpack 4, hooks, modules, ESM, we will look at how Nuxt.js has improved and see how fast we can create Vue.js application (Universal, SPA, PWA...). We will also look at server-side rendering caveats and the best practice to keep in mind.'
       ],
       youtubeVideoId: '3dFFy8waxcg',
-      slideUrl: '',
+      slideUrl: ''
     },
     {
       id: 'eddyerburgh',
@@ -101,16 +101,16 @@ export const state = () => ({
       twitter: 'https://twitter.com/EddYerburgh',
       github: 'https://github.com/eddyerburgh',
       description: [
-        'Edd Yerburgh は Vue Test Utils のメインの作者で、Vue コアチームメンバー、BBC のソフトウェアエンジニアです。',
+        'Edd Yerburgh は Vue Test Utils のメインの作者で、Vue コアチームメンバー、BBC のソフトウェアエンジニアです。'
       ],
       sessionType: 'session',
       venue: '会場B',
       sessionTitle: 'Unit testing a Vuex store',
       sessionOverview: [
-        'How to unit test a Vuex store. Two different approaches',
+        'How to unit test a Vuex store. Two different approaches'
       ],
       youtubeVideoId: 'kUFZBNiK_Zc',
-      slideUrl: 'http://slides.com/eddyerburgh/testing-a-vuex-store#/',
+      slideUrl: 'http://slides.com/eddyerburgh/testing-a-vuex-store#/'
     },
     {
       id: 'znck',
@@ -123,16 +123,17 @@ export const state = () => ({
       github: 'https://github.com/znck',
       description: [
         'Rahul は開発者でオープンソース・エンスージアストです。彼は Vue エコシステム向けにツール上で動作するコンパイラユーティリティを作っています。',
-        '彼は、Myntra (Flipkart Group) でシニアエンジニアとして働いています。',
+        '彼は、Myntra (Flipkart Group) でシニアエンジニアとして働いています。'
       ],
       sessionType: 'session',
       venue: '会場A',
       sessionTitle: 'A deep dive in SFC compilation',
       sessionOverview: [
-        'Vue single file components empowers developers with ability to write declarative render functions using plain HTML-like syntax. The so called SFCs also provide features like collocation and scoped styles. We tend to use these SFCs effortlessly as any other JavaScript file but to reach that level of ease, Vue does the heavy lifting of transpilation. This talk takes a deep dive in the compilation process of Vue components and explains how to write a custom block processor. It also discovers some less known facts about SFCs.',
+        'Vue single file components empowers developers with ability to write declarative render functions using plain HTML-like syntax. The so called SFCs also provide features like collocation and scoped styles. We tend to use these SFCs effortlessly as any other JavaScript file but to reach that level of ease, Vue does the heavy lifting of transpilation. This talk takes a deep dive in the compilation process of Vue components and explains how to write a custom block processor. It also discovers some less known facts about SFCs.'
       ],
       youtubeVideoId: 'nFFZBVb5vbA',
-      slideUrl: 'https://github.com/znck/talks/tree/master/2018-11-03-deep-dive-into-sfc-compilation',
+      slideUrl:
+        'https://github.com/znck/talks/tree/master/2018-11-03-deep-dive-into-sfc-compilation'
     },
     {
       id: 'Akryum',
@@ -145,16 +146,16 @@ export const state = () => ({
       github: 'https://github.com/Akryum',
       description: [
         'Guillaume は、Vue CLI、Vue DevTools、そして Vue Curated を担当する Vue.js コアチームメンバーです。',
-        '彼はまた、Apollo GraphQL (vue-apollo) と Meteor (vue-meteor)のインテグレーションを作成し、開発者が、高度なインタラクティブで、リアルタイムな Vue アプリケーションを作成でき、vue-virtual-scroller や v-tooltip のようなツールによってエコシステムに貢献しています。',
+        '彼はまた、Apollo GraphQL (vue-apollo) と Meteor (vue-meteor)のインテグレーションを作成し、開発者が、高度なインタラクティブで、リアルタイムな Vue アプリケーションを作成でき、vue-virtual-scroller や v-tooltip のようなツールによってエコシステムに貢献しています。'
       ],
       sessionType: 'session',
       venue: '会場A',
       sessionTitle: 'Vue CLI 3 and its Graphical User Interface',
       sessionOverview: [
-        'The Vue community has a new official and standard build tool to create Vue apps with ease! It much more powerful and also feature an entire Graphical User Interface to create or manage projects!',
+        'The Vue community has a new official and standard build tool to create Vue apps with ease! It much more powerful and also feature an entire Graphical User Interface to create or manage projects!'
       ],
       youtubeVideoId: 'GMdCf-2kmQE',
-      slideUrl: 'https://slides.com/akryum/vue-cli-18-3-jp#/',
+      slideUrl: 'https://slides.com/akryum/vue-cli-18-3-jp#/'
     },
     {
       id: 'ktsn',
@@ -166,7 +167,7 @@ export const state = () => ({
       twitter: 'https://twitter.com/ktsn',
       github: 'https://github.com/ktsn',
       description: [
-        'katashin は Vue.js コアチームメンバー、フロントエンドテックリードです。静的型付き言語を好み、Vue.js 本体と周辺ライブラリの TypeScript サポートに貢献しています。最近は開発体験（DX）の向上に興味を持っており、Vue Designer を始めとした各種 OSS ツールを作成、メンテナンスしています。フロントエンドの開発をリードした経験を持ち、大小様々に存在するプロジェクトの HTML や CSS を含むフロントエンド全般の技術選定、設計を行い、破綻しない土台作りに取り組んでいました。',
+        'katashin は Vue.js コアチームメンバー、フロントエンドテックリードです。静的型付き言語を好み、Vue.js 本体と周辺ライブラリの TypeScript サポートに貢献しています。最近は開発体験（DX）の向上に興味を持っており、Vue Designer を始めとした各種 OSS ツールを作成、メンテナンスしています。フロントエンドの開発をリードした経験を持ち、大小様々に存在するプロジェクトの HTML や CSS を含むフロントエンド全般の技術選定、設計を行い、破綻しない土台作りに取り組んでいました。'
       ],
       sessionType: 'session',
       venue: '会場A',
@@ -174,10 +175,10 @@ export const state = () => ({
       sessionOverview: [
         '従来の Web サイト制作ではデザイナーがデザインから HTML、CSS の実装までを行っていました。しかし、現在 Web の UI は複雑になり、ロジックを持つアプリケーションも作られるようになっています。デザイナーがすべてを制作するのは難しくなり、デザイナーと開発者の分業が一般的になっています。',
         'デザイナーと開発者のコミュニケーションが課題です。デザインは静的なモックアップで作られ、それをコードで再現することは二度手間です。デザインが静的なので、ウィンドウ幅や入力データの変化などの動的な要因をデザイン段階で十分に考慮することが困難です。運用を続けているうちにデザインデータと実装との乖離が発生することもあります。',
-        '本セッションではこの課題を解決するため開発中の Vue Designer をご紹介します。Vue Designer はコンポーネントのコードからグラフィカルなプレビューを表示し、デザイナーはそれを直接編集できます。デザインは即座に実装に反映され、実装の変更もデザインに反映されます。ビューポートのサイズやコンポーネントの入力などの動的な値を変更してプレビューもできます。',
+        '本セッションではこの課題を解決するため開発中の Vue Designer をご紹介します。Vue Designer はコンポーネントのコードからグラフィカルなプレビューを表示し、デザイナーはそれを直接編集できます。デザインは即座に実装に反映され、実装の変更もデザインに反映されます。ビューポートのサイズやコンポーネントの入力などの動的な値を変更してプレビューもできます。'
       ],
       youtubeVideoId: 'A9NgtJpCyh4',
-      slideUrl: 'https://slides.com/ktsn/vue-fes-vue-designer#/',
+      slideUrl: 'https://slides.com/ktsn/vue-fes-vue-designer#/'
     },
     {
       id: 'fukuiretu',
@@ -193,7 +194,7 @@ export const state = () => ({
         '2015年3月より株式会社ピースオブケイクに在籍。2015年6月より神奈川県から青森県に住まいを移し、リモートワーカーとして自社サービスである cakes と note の開発・運用に携わり主に Rails や AWS 周りを見ている。',
         'これまで主に Web サービスの開発・運用、モバイルネイティヴゲームアプリの API の開発・運用の他、データ分析基盤の構築、インフラ・デプロイの自動化等を経験。',
         '最近は PWA や WebAssembly に高い関心をもっている。',
-        'また、業務の傍ら、妻が開業したアイシングクッキー専門店 en の Web/経理を担当している。',
+        'また、業務の傍ら、妻が開業したアイシングクッキー専門店 en の Web/経理を担当している。'
       ],
       sessionType: 'session',
       venue: '会場B',
@@ -204,14 +205,15 @@ export const state = () => ({
         '現在は一部のページを Nuxt.js ベースのシステムとして一般向けに公開（<a href="https://bit.ly/2LP8wP0" target="_blank" rel="noopener">https://bit.ly/2LP8wP0</a>）しており、以降優先度の高いページから順々に段階的リリースをしていきます。',
         'セッションでは、',
         '・なぜ Nuxt.js（Vue.js）を採用したのか<br>' +
-        '・既存システムとの共存と移行プロセスについて<br>' +
-        '・Atomic Design を採用したコンポーネント設計へのシフト<br>' +
-        '・デザイナーチームとの協業<br>' +
-        '・今後の課題',
-        'を中心にお話したいと思っています。',
+          '・既存システムとの共存と移行プロセスについて<br>' +
+          '・Atomic Design を採用したコンポーネント設計へのシフト<br>' +
+          '・デザイナーチームとの協業<br>' +
+          '・今後の課題',
+        'を中心にお話したいと思っています。'
       ],
       youtubeVideoId: 'yDaZFK5jbo8',
-      slideUrl: 'https://speakerdeck.com/fukuiretu/notewonuxt-dot-jsdezai-gou-zhu-sitahua',
+      slideUrl:
+        'https://speakerdeck.com/fukuiretu/notewonuxt-dot-jsdezai-gou-zhu-sitahua'
     },
     {
       id: 'takanorip',
@@ -223,7 +225,7 @@ export const state = () => ({
       twitter: 'https://twitter.com/takanoripe',
       github: 'https://github.com/takanorip',
       description: [
-        'フロントエンドエンジニア。Vue.js、Polymer、React などを用いたウェブアプリケーション・ウェブサイト開発に従事している。ウェブフォントが好き。Polymer Japan Translation チーム所属。「誰でもわかるウェブフォント実践マニュアル」著。',
+        'フロントエンドエンジニア。Vue.js、Polymer、React などを用いたウェブアプリケーション・ウェブサイト開発に従事している。ウェブフォントが好き。Polymer Japan Translation チーム所属。「誰でもわかるウェブフォント実践マニュアル」著。'
       ],
       sessionType: 'session',
       venue: '会場B',
@@ -232,10 +234,10 @@ export const state = () => ({
         'この発表のテーマは、Vue.js と Web Components の関係を整理し、両者がこれからどのように関わっていくべきなのかを考えることです。',
         'Web Components はブラウザ実装や議論が進み、これから一気に普及してくるでしょう。',
         'そうなったとき、Vue.js の役割は何か、どうやって責任を分担していくのか、などについて考えることがより重要になってくると考えます。',
-        'Polymer Japan の運営メンバーとして日本での Web Components 普及活動に携わりながら Vue.js と Web Components の両方でアプリケーションの開発に取り組んだ経験から、Web Components との共存方法や今後の展開などについて話します。',
+        'Polymer Japan の運営メンバーとして日本での Web Components 普及活動に携わりながら Vue.js と Web Components の両方でアプリケーションの開発に取り組んだ経験から、Web Components との共存方法や今後の展開などについて話します。'
       ],
       youtubeVideoId: 'WttpESl58L4',
-      slideUrl: 'https://speakerdeck.com/takanorip/vue-fes-japan',
+      slideUrl: 'https://speakerdeck.com/takanorip/vue-fes-japan'
     },
     {
       id: 'ts020',
@@ -250,7 +252,7 @@ export const state = () => ({
         '農業 IT の会社で UI デザインと実装を担当していて、現在は Web サービスとアプリのデザインと実装とデザインシステム（デザインガイドライン・パターンライブラリ・コンポーネント実装等）を開発しています。',
         '19歳でフリーランスで flash を始めてから 17年デザインとエンジニアリングを行ったり来たりしています。',
         'Vue.js は0系から使ってます。',
-        'https://oligin020.studio.design/',
+        'https://oligin020.studio.design/'
       ],
       sessionType: 'session',
       venue: '会場A',
@@ -260,10 +262,10 @@ export const state = () => ({
         '僕が知っている現場では、AtomicDesign の定義がふんわりしているが故に様々な解釈が飛び交っていて大いに議論が進んでいるようです。',
         'デザイナーが考える粒度設計とエンジニアが考える粒度設計を比較しながら',
         'それぞれが、なぜこのような設計をするのかと言うのを整理してみたいなと思います。',
-        '結論は特に用意するつもりはありません、みなさんと議論を深めていければ良いなと思っています。',
+        '結論は特に用意するつもりはありません、みなさんと議論を深めていければ良いなと思っています。'
       ],
       youtubeVideoId: 'YPGZ70SsfLk',
-      slideUrl: 'https://speakerdeck.com/ts020/vuefes',
+      slideUrl: 'https://speakerdeck.com/ts020/vuefes'
     },
     {
       id: 'tsuchikazu',
@@ -276,44 +278,45 @@ export const state = () => ({
       github: 'https://github.com/tsuchikazu',
       description: [
         'SIer でのプログラマーを経て、2012年から GMOペパボに入社。サーバサイド開発を経て、フロントエンドへ注力。',
-        '昨年リリースした「カラーミーリピート」という新サービスの立ち上げに携わり、フロントエンドエンジニアとしてサービスを支えています。「カラーミーリピート」には Vue.js を採用し、Vue Test Utils を beta の頃から使い始め、毎日テストも書いています。',
+        '昨年リリースした「カラーミーリピート」という新サービスの立ち上げに携わり、フロントエンドエンジニアとしてサービスを支えています。「カラーミーリピート」には Vue.js を採用し、Vue Test Utils を beta の頃から使い始め、毎日テストも書いています。'
       ],
       sessionType: 'session',
       venue: '会場B',
-      sessionTitle: '1年間単体テストを書き続けた現場から送る Vue Component のテスト',
+      sessionTitle:
+        '1年間単体テストを書き続けた現場から送る Vue Component のテスト',
       sessionOverview: [
         'Vue Test Utils により Vue Component の単体テスト導入の敷居は非常に低くなりました。しかし、それを活用したテスト方針は自分たちで選定しなければいけません。',
         '本発表では、まずは前提知識として Vue Component の様々なテスト方法を整理し、実プロジェクトで採用していたテスト方針、その中で良かった点や失敗した点、それを経て行き着いた最終的なテスト方針を紹介をします。',
         'テストをまだ書いていない方へは第一歩目への、テストを書いている方へは見直しの手助けになるはずです。',
         '予定している発表内容は以下のとおりです。',
         '- どこをテストするか<br>' +
-        '&nbsp;&nbsp;&nbsp;&nbsp;- 表示のテスト<br>' +
-        '&nbsp;&nbsp;&nbsp;&nbsp;- Form binding/validation<br>' +
-        '&nbsp;&nbsp;&nbsp;&nbsp;- Componentから Vuex の commit/dispatch<br>' +
-        '- どのように表示をテストするか<br>' +
-        '&nbsp;&nbsp;&nbsp;&nbsp;- 単純な assertion<br>' +
-        '&nbsp;&nbsp;&nbsp;&nbsp;- Snapshot Testing<br>' +
-        '&nbsp;&nbsp;&nbsp;&nbsp;- Visual Testing<br>' +
-        '- テストを書いてみた結果、どのテストがメンテナンスのコストが低く、効果が高かったか考察<br>' +
-        '- テスト方針の見直し結果とその効果',
+          '&nbsp;&nbsp;&nbsp;&nbsp;- 表示のテスト<br>' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;- Form binding/validation<br>' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;- Componentから Vuex の commit/dispatch<br>' +
+          '- どのように表示をテストするか<br>' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;- 単純な assertion<br>' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;- Snapshot Testing<br>' +
+          '&nbsp;&nbsp;&nbsp;&nbsp;- Visual Testing<br>' +
+          '- テストを書いてみた結果、どのテストがメンテナンスのコストが低く、効果が高かったか考察<br>' +
+          '- テスト方針の見直し結果とその効果'
       ],
       youtubeVideoId: 'oE8z3otI-Hg',
-      slideUrl: 'https://speakerdeck.com/tsuchikazu/vue-component-test',
-    },
-  ],
+      slideUrl: 'https://speakerdeck.com/tsuchikazu/vue-component-test'
+    }
+  ]
 })
 
 export const getters = {
-  keynoteSpeakers: (state) => state.keynoteSpeakers || [],
-  sessionSpeakers: (state) => state.sessionSpeakers || [],
-  keynoteSpeakerById: (state) => (id) => {
+  keynoteSpeakers: state => state.keynoteSpeakers || [],
+  sessionSpeakers: state => state.sessionSpeakers || [],
+  keynoteSpeakerById: state => id => {
     return state.keynoteSpeakers.find(speaker => speaker.id === id)
   },
-  sessionSpeakerById: (state) => (id) => {
+  sessionSpeakerById: state => id => {
     return state.sessionSpeakers.find(speaker => speaker.id === id)
   },
-  speakerIds: (state) => {
+  speakerIds: state => {
     const ids = state.keynoteSpeakers.map(speaker => speaker.id)
     return ids.concat(state.sessionSpeakers.map(speaker => speaker.id))
-  },
+  }
 }

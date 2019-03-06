@@ -143,7 +143,8 @@
 
     <div class="description">
       <p class="readable">
-        スポンサーの募集は 9/12 に締め切りました。たくさんのご応募、ありがとうございました。
+        スポンサーの募集は 9/12
+        に締め切りました。たくさんのご応募、ありがとうございました。
       </p>
     </div>
   </BaseSection>
@@ -160,27 +161,25 @@ export default {
   components: {
     BaseSection,
     LinkButton,
-    SponsorBanner,
+    SponsorBanner
   },
   computed: {
-    ...mapGetters(
-      [
-        'platinumSponsors',
-        'goldSponsors',
-        'specialSponsors',
-        'silverSponsors',
-        'bronzeSponsors',
-        'networkSponsors',
-        'lunchSponsors',
-        'beerSponsors',
-        'drinkSponsors',
-        'toolSponsors',
-        'videoSponsors',
-        'mediaSponsors',
-        'stickerSponsors',
-      ]
-    ),
-  },
+    ...mapGetters([
+      'platinumSponsors',
+      'goldSponsors',
+      'specialSponsors',
+      'silverSponsors',
+      'bronzeSponsors',
+      'networkSponsors',
+      'lunchSponsors',
+      'beerSponsors',
+      'drinkSponsors',
+      'toolSponsors',
+      'videoSponsors',
+      'mediaSponsors',
+      'stickerSponsors'
+    ])
+  }
 }
 </script>
 

@@ -5,11 +5,9 @@ describe('TheFooter', () => {
   test('レンダリングできる', () => {
     const wrapper = mount(TheFooter, {
       stubs: {
-        NuxtLink: RouterLinkStub,
-      },
+        NuxtLink: RouterLinkStub
+      }
     })
-    expect(
-      wrapper.find('.link-list').text()
-    ).toContain('Vue.js')
+    expect(wrapper.find('.link-list').text()).toContain('Vue.js')
   })
 })

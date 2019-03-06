@@ -13,15 +13,15 @@ describe('SpeakerSession', () => {
         avatar: AVATAR_EVAN,
         avatar2x: AVATAR_EVAN_2X,
         sessionTitle: 'キーノート',
-        theme: 'blue',
+        theme: 'blue'
       },
       stubs: {
-        NuxtLink: RouterLinkStub,
-      },
+        NuxtLink: RouterLinkStub
+      }
     })
 
-    expect(
-      wrapper.find('.avatar img').attributes()['srcset']
-    ).toEqual(`${AVATAR_EVAN}, ${AVATAR_EVAN_2X} 2x`)
+    expect(wrapper.find('.avatar img').attributes().srcset).toEqual(
+      `${AVATAR_EVAN}, ${AVATAR_EVAN_2X} 2x`
+    )
   })
 })

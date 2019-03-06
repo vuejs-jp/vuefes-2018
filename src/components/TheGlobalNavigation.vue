@@ -1,7 +1,7 @@
 <template>
   <div class="the-global-navigation">
     <nuxt-link to="/">
-      <img src="~/assets/images/vue-fes-japan-logo-white.svg">
+      <img src="~/assets/images/vue-fes-japan-logo-white.svg" />
     </nuxt-link>
 
     <GlobalNavigationContent />
@@ -14,8 +14,8 @@ import GlobalNavigationContent from '~/components/GlobalNavigationContent'
 export default {
   name: 'TheGlobalNavigation',
   components: {
-    GlobalNavigationContent,
-  },
+    GlobalNavigationContent
+  }
 }
 </script>
 

@@ -2,16 +2,23 @@
   <header class="the-header">
     <div class="header-content">
       <div class="global-navigation-trigger-container">
-        <a class="global-navigation-trigger" href="#" @click.stop.prevent="toggleGlobalNavigation">
-          <span></span>
-          <span></span>
-          <span></span>
+        <a
+          class="global-navigation-trigger"
+          href="#"
+          @click.stop.prevent="toggleGlobalNavigation"
+        >
+          <span />
+          <span />
+          <span />
         </a>
       </div>
 
       <div class="logo-wrapper">
         <nuxt-link to="/">
-          <img class="logo" src="~/assets/images/vue-fes-japan-logo-white.svg">
+          <img
+            class="logo"
+            src="~/assets/images/vue-fes-japan-logo-white.svg"
+          />
         </nuxt-link>
       </div>
     </div>
@@ -31,21 +38,21 @@ import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'TheHeader',
   components: {
-    GlobalNavigationContent,
+    GlobalNavigationContent
+  },
+  computed: {
+    ...mapGetters(['isGlobalNavigationShown'])
   },
   methods: {
-    toggleGlobalNavigation (event) {
+    toggleGlobalNavigation(event) {
       if (this.isGlobalNavigationShown) {
         this.hideGlobalNavigation()
       } else {
         this.showGlobalNavigation()
       }
     },
-    ...mapActions(['hideGlobalNavigation', 'showGlobalNavigation']),
-  },
-  computed: {
-    ...mapGetters(['isGlobalNavigationShown']),
-  },
+    ...mapActions(['hideGlobalNavigation', 'showGlobalNavigation'])
+  }
 }
 </script>
 
@@ -110,7 +117,7 @@ export default {
   }
 
   &:hover {
-    opacity: 1.0;
+    opacity: 1;
   }
 }
 
@@ -139,7 +146,7 @@ export default {
 .global-navigation-content {
   position: fixed;
   top: $header-height;
-  bottom : 0;
+  bottom: 0;
   z-index: 100;
   width: $side-area-width--is-small-up;
   min-width: $side-area-width--is-small-up;
@@ -147,12 +154,14 @@ export default {
   transition: all 0.4s;
 }
 
-.slide-enter-active, .slide-leave-active {
+.slide-enter-active,
+.slide-leave-active {
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
-.slide-enter, .slide-leave-to {
+.slide-enter,
+.slide-leave-to {
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
 }

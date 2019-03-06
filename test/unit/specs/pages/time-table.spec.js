@@ -14,8 +14,8 @@ describe('TimeTablePage', () => {
       localVue,
       store,
       stubs: {
-        NuxtLink: RouterLinkStub,
-      },
+        NuxtLink: RouterLinkStub
+      }
     })
 
     expect(wrapper.text()).toContain('開場・受付')

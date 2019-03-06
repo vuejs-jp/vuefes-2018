@@ -17,20 +17,18 @@ describe('SpeakerWithLink', () => {
         github: 'https://github.com/yyx990803',
         description: [
           'Evan は開発者、デザイナー、そしてクリエイティブコーダーです。彼は、リアクティブなコンポーネントでモダンな Web インターフェイスを構築するための JavaScript フレームワーク、Vue.js の作者です。',
-          'かつて、GitHub で最もスターを集めたフルスタック JavaScript フレームワークであった Meteor の開発グループでも働いていました。Google Creative Lab で、さまざまな Google プロダクト向けの実験的な UI プロトタイプに、2年間取り組んでいた経験もあります。',
+          'かつて、GitHub で最もスターを集めたフルスタック JavaScript フレームワークであった Meteor の開発グループでも働いていました。Google Creative Lab で、さまざまな Google プロダクト向けの実験的な UI プロトタイプに、2年間取り組んでいた経験もあります。'
         ],
         sessionTitle: 'TBD',
-        sessionOverview: [
-          'TBD',
-        ],
+        sessionOverview: ['TBD']
       },
       stubs: {
-        NuxtLink: RouterLinkStub,
-      },
+        NuxtLink: RouterLinkStub
+      }
     })
 
-    expect(
-      wrapper.find('.avatar img').attributes()['srcset']
-    ).toEqual(`${AVATAR_EVAN}, ${AVATAR_EVAN_2X} 2x`)
+    expect(wrapper.find('.avatar img').attributes().srcset).toEqual(
+      `${AVATAR_EVAN}, ${AVATAR_EVAN_2X} 2x`
+    )
   })
 })

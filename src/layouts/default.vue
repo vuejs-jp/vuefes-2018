@@ -5,7 +5,7 @@
         <TheHeader class="hide-on-medium-and-up" />
         <TheGlobalNavigation class="the-global-navigation hide-on-small" />
 
-        <nuxt/>
+        <nuxt />
       </div>
 
       <TheFooter />
@@ -23,8 +23,8 @@ export default {
   components: {
     TheFooter,
     TheGlobalNavigation,
-    TheHeader,
-  },
+    TheHeader
+  }
 }
 </script>
 

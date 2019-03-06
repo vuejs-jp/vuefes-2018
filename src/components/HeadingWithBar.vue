@@ -1,23 +1,25 @@
 <template>
   <div class="heading-with-bar" :class="theme">
-    <div class="bar"></div>
+    <div class="bar" />
     <h3 class="heading">
       <slot />
     </h3>
   </div>
 </template>
 
+<!-- eslint-disable vue/require-default-prop -->
 <script>
 export default {
   name: 'HeadingWithBar',
   props: {
     theme: {
       type: String,
-      required: false,
-    },
-  },
+      required: false
+    }
+  }
 }
 </script>
+<!-- eslint-enable vue/require-default-prop -->
 
 <style lang="scss" scoped>
 .heading-with-bar {

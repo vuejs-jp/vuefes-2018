@@ -16,10 +16,12 @@ describe('AboutPage', () => {
       localVue,
       store,
       stubs: {
-        NuxtLink: RouterLinkStub,
-      },
+        NuxtLink: RouterLinkStub
+      }
     })
 
-    expect(wrapper.text()).toContain('日本で初めて開催する Vue.js カンファレンス')
+    expect(wrapper.text()).toContain(
+      '日本で初めて開催する Vue.js カンファレンス'
+    )
   })
 })

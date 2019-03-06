@@ -5,27 +5,39 @@
         ACCESS
       </template>
 
-      <div id="map"></div>
+      <div id="map" />
 
+      <!-- eslint-disable vue/html-indent -->
       <script>
-      function initMap () {
-        const latlng = new google.maps.LatLng(35.700204, 139.772542);
-        const map = new google.maps.Map(document.getElementById('map'), {
-          center: latlng,
-          zoom: 17,
-        });
-        const infowindow = new google.maps.InfoWindow({
-          content: '秋葉原 UDX 4F / UDX ギャラリー',
-          position: latlng
-        });
-        infowindow.open(map);
-      }
+        function initMap() {
+          const latlng = new google.maps.LatLng(35.700204, 139.772542)
+          const map = new google.maps.Map(document.getElementById('map'), {
+            center: latlng,
+            zoom: 17
+          })
+          const infowindow = new google.maps.InfoWindow({
+            content: '秋葉原 UDX 4F / UDX ギャラリー',
+            position: latlng
+          })
+          infowindow.open(map)
+        }
       </script>
+      <!-- eslint-enable vue/html-indent -->
 
-      <script :src="`https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&callback=initMap`" async defer></script>
+      <script
+        :src="
+          `https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&callback=initMap`
+        "
+        async
+        defer
+      />
 
       <p class="notice">
-        <a href="http://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E5%A4%96%E7%A5%9E%E7%94%B04-14-1" target="_blank" rel="noopener">
+        <a
+          href="http://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%8D%83%E4%BB%A3%E7%94%B0%E5%8C%BA%E5%A4%96%E7%A5%9E%E7%94%B04-14-1"
+          target="_blank"
+          rel="noopener"
+        >
           Google マップを開く
         </a>
       </p>
@@ -83,9 +95,9 @@ export default {
   name: 'AccessPage',
   components: {
     LinkButton,
-    TheMain,
+    TheMain
   },
-  head () {
+  head() {
     const url = `https://vuefes.jp${this.path}`
     const title = 'アクセス - Vue Fes Japan 2018'
     const description = 'Vue Fes Japan 2018 の会場へのアクセスマップです。'
@@ -98,20 +110,24 @@ export default {
         { hid: 'og:title', name: 'og:title', content: title },
         { hid: 'og:description', name: 'og:description', content: description },
         { hid: 'twitter:title', name: 'twitter:title', content: title },
-        { hid: 'twitter:description', name: 'twitter:description', content: description },
-      ],
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        }
+      ]
     }
   },
-  asyncData ({ route }) {
+  data() {
     return {
-      path: route.path,
+      googleMapsApiKey: process.env.googleMapsApiKey
     }
   },
-  data () {
+  asyncData({ route }) {
     return {
-      googleMapsApiKey: process.env.googleMapsApiKey,
+      path: route.path
     }
-  },
+  }
 }
 </script>
 

@@ -4,12 +4,14 @@
       ACCESS
     </template>
 
-    <div class="akihabara-udx-image" v-lazy-container="{ selector: 'img' }">
+    <div v-lazy-container="{ selector: 'img' }" class="akihabara-udx-image">
       <img
-        :data-srcset="`${require('~/assets/images/akihabara-udx.jpg')}, ${require('~/assets/images/akihabara-udx@2x.jpg')} 2x`"
+        :data-srcset="
+          `${require('~/assets/images/akihabara-udx.jpg')}, ${require('~/assets/images/akihabara-udx@2x.jpg')} 2x`
+        "
         :data-src="require('~/assets/images/akihabara-udx@2x.jpg')"
         :data-loading="require('~/assets/images/akihabara-udx-placeholder.png')"
-      >
+      />
     </div>
 
     <div class="description">
@@ -37,13 +39,12 @@ export default {
   name: 'TheAccessSection',
   components: {
     BaseSection,
-    LinkButton,
-  },
+    LinkButton
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-
 .akihabara-udx-image {
   text-align: left;
 

@@ -6,7 +6,8 @@
       </template>
 
       <p class="readable">
-        Vue Fes Japan 2018（以下、 カンファレンス）では、カンファレンスへの参加者およびスポンサー（以下、ユーザー）の個人情報保護の重要性について認識しています。
+        Vue Fes Japan 2018（以下、
+        カンファレンス）では、カンファレンスへの参加者およびスポンサー（以下、ユーザー）の個人情報保護の重要性について認識しています。
       </p>
 
       <p class="readable">
@@ -56,9 +57,15 @@
       <ol>
         <li>当カンファレンスの更新情報をご提供する場合</li>
         <li>当カンファレンスに関するご案内、お問い合わせ等へ対応する場合</li>
-        <li>ユーザーに対して当カンファレンスに対する意見、感想のご提供を求める場合</li>
-        <li>当カンファレンス各規約等に違反する行為又はその恐れのある行為を行ったユーザーに対して注意又は警告を行う場合</li>
-        <li>当カンファレンスに対する債務を有するユーザーに同債務の履行を要求する場合</li>
+        <li>
+          ユーザーに対して当カンファレンスに対する意見、感想のご提供を求める場合
+        </li>
+        <li>
+          当カンファレンス各規約等に違反する行為又はその恐れのある行為を行ったユーザーに対して注意又は警告を行う場合
+        </li>
+        <li>
+          当カンファレンスに対する債務を有するユーザーに同債務の履行を要求する場合
+        </li>
         <li>当カンファレンスに関する規約等の変更などを通知する場合</li>
       </ol>
 
@@ -97,7 +104,9 @@
       <ul>
         <li>法令により開示が認められている場合</li>
         <li>法令により開示を求められた場合</li>
-        <li>人の生命、身体又は財産の保護のために必要がある場合であって、本人の同意を得ることが困難である場合</li>
+        <li>
+          人の生命、身体又は財産の保護のために必要がある場合であって、本人の同意を得ることが困難である場合
+        </li>
         <li>警察、検察、裁判所等公的機関等によって開示を求められた場合</li>
       </ul>
 
@@ -122,7 +131,9 @@
       </h2>
 
       <p class="readable">
-      当カンファレンスのウェブサイトは、Cookie 及び類似技術を利用します。これらの技術で、本ウェブサイトの利便性の向上および利用状況を分析するために、Cookie を利用して情報を収集しています。
+        当カンファレンスのウェブサイトは、Cookie
+        及び類似技術を利用します。これらの技術で、本ウェブサイトの利便性の向上および利用状況を分析するために、Cookie
+        を利用して情報を収集しています。
       </p>
 
       <h2 class="heading">
@@ -130,7 +141,10 @@
       </h2>
 
       <p class="readable">
-        当カンファレンスでは、本ウェブサイトの利用状況や利便性を向上させるために、Third Party が提供するサービスを利用しており、そのThird Party によって Cookie が設定されることがあります。当カンファレンスで利用している Third Party のサービスは以下のとおりです。
+        当カンファレンスでは、本ウェブサイトの利用状況や利便性を向上させるために、Third
+        Party が提供するサービスを利用しており、そのThird Party によって Cookie
+        が設定されることがあります。当カンファレンスで利用している Third Party
+        のサービスは以下のとおりです。
       </p>
 
       <ul>
@@ -139,15 +153,26 @@
       </ul>
 
       <p class="readable">
-        Third Party それぞれの Cookie の利用により取得されたデータは、各サービスの運営会社が定めるプライバシーポリシーに従って取得、管理されます。
+        Third Party それぞれの Cookie
+        の利用により取得されたデータは、各サービスの運営会社が定めるプライバシーポリシーに従って取得、管理されます。
       </p>
 
       <p class="readable">
-        当該運営会社のプライバシーポリシーや Cookie に関する説明は、以下をご参照ください。
+        当該運営会社のプライバシーポリシーや Cookie
+        に関する説明は、以下をご参照ください。
       </p>
 
       <ul>
-        <li>Google 社の<a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+        <li>
+          Google 社の
+          <a
+            href="https://policies.google.com/privacy?hl=ja"
+            target="_blank"
+            rel="noopener"
+          >
+            プライバシーポリシー
+          </a>
+        </li>
       </ul>
 
       <h2 class="heading">
@@ -155,15 +180,22 @@
       </h2>
 
       <p class="readable">
-        ほとんどのウェブブラウザでは自動的に Cookie を受信するよう初期設定されていますが、ユーザー自身で Cookie を拒否したり、Cookie が送信された際に警告が表示されたりするように設定変更できます。Cookie の管理にはいくつもの方法があります。
+        ほとんどのウェブブラウザでは自動的に Cookie
+        を受信するよう初期設定されていますが、ユーザー自身で Cookie
+        を拒否したり、Cookie
+        が送信された際に警告が表示されたりするように設定変更できます。Cookie
+        の管理にはいくつもの方法があります。
       </p>
 
       <p class="readable">
-        ウェブブラウザ設定の調整、変更に関する詳細は、お使いのウェブブラウザのヘルプ画面等をご覧ください。なお、ユーザーが当カンファレンスのウェブサイトで使用する Cookie を無効化すると、本ウェブサイトの特定箇所にアクセスできなかったり、本ウェブサイトの全部又は一部が利用できなくなったりする等、本ウェブサイトご利用中の動作に影響を及ぼす可能性があります。予めご了承ください。
+        ウェブブラウザ設定の調整、変更に関する詳細は、お使いのウェブブラウザのヘルプ画面等をご覧ください。なお、ユーザーが当カンファレンスのウェブサイトで使用する
+        Cookie
+        を無効化すると、本ウェブサイトの特定箇所にアクセスできなかったり、本ウェブサイトの全部又は一部が利用できなくなったりする等、本ウェブサイトご利用中の動作に影響を及ぼす可能性があります。予めご了承ください。
       </p>
 
       <p class="readable">
-        本ウェブサイト上におけるクッキーの保存期間は、ユーザーが本ウェブサイトに最後に訪問した日から最長で 2 年間です。
+        本ウェブサイト上におけるクッキーの保存期間は、ユーザーが本ウェブサイトに最後に訪問した日から最長で
+        2 年間です。
       </p>
 
       <h2 class="heading">
@@ -179,7 +211,9 @@
       </h2>
 
       <p class="readable">
-        開示等のお申出、ご意見、ご質問、苦情のお申出その他個人情報の取扱いに関するお問い合わせは、メールにて <a href="mailto:privacy@vuefes.jp">privacy@vuefes.jp</a> にお問い合わせください。
+        開示等のお申出、ご意見、ご質問、苦情のお申出その他個人情報の取扱いに関するお問い合わせは、メールにて
+        <a href="mailto:privacy@vuefes.jp">privacy@vuefes.jp</a>
+        にお問い合わせください。
       </p>
 
       <h2 class="heading">
@@ -209,9 +243,9 @@ export default {
   name: 'PrivacyPage',
   components: {
     LinkButton,
-    TheMain,
+    TheMain
   },
-  head () {
+  head() {
     const url = `https://vuefes.jp${this.path}`
     const title = 'プライバシーポリシー - Vue Fes Japan 2018'
     const description = 'Vue Fes Japan 2018 のプライバシーポリシー情報です。'
@@ -224,15 +258,19 @@ export default {
         { hid: 'og:title', name: 'og:title', content: title },
         { hid: 'og:description', name: 'og:description', content: description },
         { hid: 'twitter:title', name: 'twitter:title', content: title },
-        { hid: 'twitter:description', name: 'twitter:description', content: description },
-      ],
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        }
+      ]
     }
   },
-  asyncData ({ route }) {
+  asyncData({ route }) {
     return {
-      path: route.path,
+      path: route.path
     }
-  },
+  }
 }
 </script>
 
@@ -247,11 +285,13 @@ ol {
   padding-left: 40px;
 }
 
-ul ul, ol ul {
+ul ul,
+ol ul {
   list-style-type: circle;
 }
 
-ol ol, ul ol {
+ol ol,
+ul ol {
   list-style-type: lower-latin;
 }
 

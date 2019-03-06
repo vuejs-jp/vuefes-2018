@@ -17,8 +17,8 @@ describe('index', () => {
       store,
       stubs: {
         NuxtLink: RouterLinkStub,
-        'no-ssr': '<div></div>',
-      },
+        'no-ssr': '<div></div>'
+      }
     })
 
     expect(wrapper.text()).toContain('SPEAKERS')

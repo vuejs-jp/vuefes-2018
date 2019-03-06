@@ -12,17 +12,19 @@
   </main>
 </template>
 
+<!-- eslint-disable vue/require-default-prop -->
 <script>
 export default {
   name: 'TheMain',
   props: {
     theme: {
       type: String,
-      required: false,
-    },
-  },
+      required: false
+    }
+  }
 }
 </script>
+<!-- eslint-enable vue/require-default-prop -->
 
 <style lang="scss" scoped>
 .the-main {

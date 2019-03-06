@@ -16,11 +16,11 @@ describe('SponsorBanner', () => {
         index: 0,
         type: 'platinum',
         name: '株式会社プレイド',
-        banner: 'plaid.png',
+        banner: 'plaid.png'
       },
       stubs: {
-        NuxtLink: RouterLinkStub,
-      },
+        NuxtLink: RouterLinkStub
+      }
     })
   })
 
@@ -33,6 +33,8 @@ describe('SponsorBanner', () => {
   })
 
   test('スポンサーの ID へのリンクが設置されている', () => {
-    expect(wrapper.find('.link-to-sponsor').props().to).toEqual('/sponsors/#platinum-0')
+    expect(wrapper.find('.link-to-sponsor').props().to).toEqual(
+      '/sponsors/#platinum-0'
+    )
   })
 })

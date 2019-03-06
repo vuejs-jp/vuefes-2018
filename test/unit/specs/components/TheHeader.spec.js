@@ -5,7 +5,7 @@ import createFullStore from '../utils/createFullStore'
 
 const localVue = createLocalVue()
 const store = () => createFullStore(Vuex)
-const delay = (ms) => new Promise((resolve) => setTimeout(() => resolve(), ms))
+const delay = ms => new Promise(resolve => setTimeout(() => resolve(), ms))
 
 localVue.use(Vuex)
 
@@ -15,8 +15,8 @@ describe('TheHeader', () => {
       localVue,
       store,
       stubs: {
-        NuxtLink: RouterLinkStub,
-      },
+        NuxtLink: RouterLinkStub
+      }
     })
     expect(wrapper.vm.isGlobalNavigationShown).toEqual(false)
     wrapper.vm.toggleGlobalNavigation()

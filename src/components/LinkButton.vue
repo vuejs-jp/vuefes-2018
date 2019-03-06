@@ -9,7 +9,7 @@ import BaseButton from '~/components/BaseButton.vue'
 
 export default {
   name: 'LinkButton',
-  extends: BaseButton,
+  extends: BaseButton
 }
 </script>
 

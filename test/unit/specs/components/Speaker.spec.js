@@ -13,15 +13,13 @@ describe('Speaker', () => {
         avatar: AVATAR_EVAN,
         avatar2x: AVATAR_EVAN_2X,
         twitter: 'https://twitter.com/youyuxi',
-        github: 'https://github.com/yyx990803',
+        github: 'https://github.com/yyx990803'
       },
-      stubs: [
-        'no-ssr',
-      ],
+      stubs: ['no-ssr']
     })
 
-    expect(
-      wrapper.find('.avatar img').attributes()['srcset']
-    ).toEqual(`${AVATAR_EVAN}, ${AVATAR_EVAN_2X} 2x`)
+    expect(wrapper.find('.avatar img').attributes().srcset).toEqual(
+      `${AVATAR_EVAN}, ${AVATAR_EVAN_2X} 2x`
+    )
   })
 })

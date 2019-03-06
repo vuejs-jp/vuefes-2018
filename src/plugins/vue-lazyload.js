@@ -8,6 +8,6 @@ Vue.use(VueLazyload, {
   observer: true,
   observerOptions: {
     rootMargin: '2160px',
-    threshold: 0,
-  },
+    threshold: 0
+  }
 })

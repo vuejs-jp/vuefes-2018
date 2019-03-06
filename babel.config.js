@@ -1,22 +1,22 @@
-module.exports = (api) => {
+module.exports = api => {
   api.cache(true)
 
   const presets = [
     [
       '@babel/preset-env',
       {
-        'targets': {
-          'node': 'current',
-        },
-      },
-    ],
+        targets: {
+          node: 'current'
+        }
+      }
+    ]
   ]
 
   return {
-    'env': {
-      'test': {
-        presets,
-      },
-    },
+    env: {
+      test: {
+        presets
+      }
+    }
   }
 }

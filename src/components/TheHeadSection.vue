@@ -2,12 +2,16 @@
   <div class="the-head-section">
     <div class="hide-on-medium-and-up">
       <TheHeader />
-      <img class="head-image" src="~/assets/images/head@2x.jpg" alt="Vue Fes Japan 2018 | 2018.11.3 [Sat.] | 秋葉原 UDX 4F UDX ギャラリー">
+      <img
+        class="head-image"
+        src="~/assets/images/head@2x.jpg"
+        alt="Vue Fes Japan 2018 | 2018.11.3 [Sat.] | 秋葉原 UDX 4F UDX ギャラリー"
+      />
     </div>
 
     <div class="wrapper hide-on-small">
       <TheGlobalNavigation class="the-global-navigation" />
-      <img class="head-image" src="~/assets/images/head.jpg">
+      <img class="head-image" src="~/assets/images/head.jpg" />
     </div>
   </div>
 </template>
@@ -20,8 +24,8 @@ export default {
   name: 'TheHeadSection',
   components: {
     TheGlobalNavigation,
-    TheHeader,
-  },
+    TheHeader
+  }
 }
 </script>
 

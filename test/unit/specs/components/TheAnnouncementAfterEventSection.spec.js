@@ -5,8 +5,8 @@ describe('TheAnnouncementAfterEventSection', () => {
   test('レンダリングできる', () => {
     const wrapper = mount(TheAnnouncementAfterEventSection, {
       stubs: {
-        NuxtLink: RouterLinkStub,
-      },
+        NuxtLink: RouterLinkStub
+      }
     })
     expect(wrapper.text()).toContain('THANK YOU!')
   })

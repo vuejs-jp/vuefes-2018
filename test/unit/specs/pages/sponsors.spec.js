@@ -18,8 +18,8 @@ describe('SponsorsPage', () => {
       router,
       store,
       stubs: {
-        NuxtLink: RouterLinkStub,
-      },
+        NuxtLink: RouterLinkStub
+      }
     })
 
     expect(wrapper.text()).toContain('SPONSORS')
