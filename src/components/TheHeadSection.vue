@@ -31,16 +31,16 @@ export default {
 
 <style lang="scss" scoped>
 @media screen and (max-width: $layout-breakpoint--is-small) {
+  .head-image {
+    display: block;
+    width: 100%;
+  }
+
   // モバイルでナビゲーションが表示されたときに body に class="header-fixed" が設定される
   .header-fixed {
     .head-image {
       padding-top: $header-height;
     }
-  }
-
-  .head-image {
-    display: block;
-    width: 100%;
   }
 }
 

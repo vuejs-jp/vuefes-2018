@@ -47,10 +47,6 @@ export default {
     background-color: $sangosyu;
   }
 
-  &.bg-blue {
-    background: $asagi;
-  }
-
   &.bg-green {
     background-color: $hiwamoegi;
   }

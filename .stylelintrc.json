@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "declaration-colon-newline-after": null,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
+  }
+}

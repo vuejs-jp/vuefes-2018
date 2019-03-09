@@ -12,8 +12,12 @@
     "imagemin": "imagemin --plugin=mozjpeg --plugin=gifsicle --plugin=pngquant --plugin=optipng --plugin=svgo",
     "test": "jest --verbose",
     "test:ci": "jest --ci --coverage --no-cache",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint:fix": "yarn lint --fix",
+    "lint": "yarn eslint && yarn stylelint",
+    "lint:fix": "yarn eslint:fix && yarn stylelint:fix",
+    "eslint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "eslint:fix": "yarn eslint --fix",
+    "stylelint": "stylelint 'src/**/*.vue' 'src/**/*.scss'",
+    "stylelint:fix": "yarn stylelint --fix",
     "precommit": "yarn lint && ./bin/imagemin"
   },
   "dependencies": {
@@ -59,6 +63,10 @@
     "node-sass": "^4.11.0",
     "prettier": "^1.16.4",
     "sass-loader": "^7.1.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.5.4",
+    "stylelint-webpack-plugin": "^0.10.5",
     "vue-jest": "^4.0.0-beta.2"
   }
 }

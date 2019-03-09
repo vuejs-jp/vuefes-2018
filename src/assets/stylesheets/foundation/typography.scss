@@ -11,9 +11,11 @@
 }
 
 $font-family-default: 'din-2014', 'MyYuGothic', 游ゴシック Medium, sans-serif;
+$font-size-default: 16px;
 
 html {
   font-family: $font-family-default;
+  font-size: $font-size-default;
   line-height: 1.5;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -22,13 +24,13 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-$font-size-default: 16px;
-
-html {
-  font-size: $font-size-default;
-}
-
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-size: $font-size-default;
   line-height: 1.5;
 }
@@ -59,6 +61,6 @@ a {
 
 @media screen and (min-width: $layout-breakpoint--is-small-up) {
   .readable {
-    line-height: 2.0;
+    line-height: 2;
   }
 }

@@ -2,6 +2,7 @@
 // import * as speakers from 'src/store/speakers'
 
 import fs from 'fs'
+const StylelintPlugin = require('stylelint-webpack-plugin')
 
 // ERROR  (node:79384) DeprecationWarning: Tapable.plugin is deprecated. Use new API on .hooks instead の詳細を確認するため
 process.traceDeprecation = true
@@ -101,6 +102,11 @@ export default {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+        config.plugins.push(
+          new StylelintPlugin({
+            files: ['**/*.vue', '**/*.scss']
+          })
+        )
       }
       config.module.rules.push({
         test: /\.webp$/,

@@ -286,6 +286,11 @@ export default {
   }
 }
 
+.notice {
+  margin: 0;
+  font-size: 3.75vw; // 幅 320px のウィンドウで 12px になるように指定
+}
+
 .event-ab {
   position: relative;
   display: block;
@@ -315,11 +320,6 @@ export default {
     border-color: $sangosyu;
     color: $sangosyu;
   }
-}
-
-.notice {
-  margin: 0;
-  font-size: 3.75vw; // 幅 320px のウィンドウで 12px になるように指定
 }
 
 .button-wrapper {
