@@ -168,7 +168,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters([
+    ...mapGetters('sponsors', [
       'platinumSponsors',
       'goldSponsors',
       'specialSponsors',

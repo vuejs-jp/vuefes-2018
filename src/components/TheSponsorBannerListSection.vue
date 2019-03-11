@@ -164,7 +164,7 @@ export default {
     SponsorBanner
   },
   computed: {
-    ...mapGetters([
+    ...mapGetters('sponsors', [
       'platinumSponsors',
       'goldSponsors',
       'specialSponsors',
