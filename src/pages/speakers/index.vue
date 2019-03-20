@@ -60,7 +60,7 @@ export default {
     TheMain
   },
   head() {
-    const url = `https://vuefes.jp${this.path}`
+    const url = `https://vuefes.jp/2018${this.path}`
     const title = 'スピーカー一覧 - Vue Fes Japan 2018'
     const description = 'Vue Fes Japan 2018 についてのスピーカー情報です。'
 

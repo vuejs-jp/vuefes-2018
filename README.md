@@ -1,8 +1,8 @@
-# Vue Fes Japan
+# Vue Fes Japan 2018
 
 [![CircleCI](https://circleci.com/gh/kazupon/vuefes.svg?style=svg&circle-token=b8870106eee9ce82c717583cf27116263b7831f6)](https://circleci.com/gh/kazupon/vuefes)
 
-このリポジトリは [Vue Fes Japan](https://vuefes.jp/) の Web サイトのソースコードです。ナレッジ共有のために公開しています。
+このリポジトリは [Vue Fes Japan 2018](https://vuefes.jp/2018/) の Web サイトのソースコードです。ナレッジ共有のために公開しています。
 
 このリポジトリ https://github.com/vuejs-jp/vuefes では、プルリクエストを受けて付けておりません。 
 
@@ -22,7 +22,7 @@ copy .env.example .env
 
 `.env` 内のパラメーターを埋めてください。
 
-下記コマンドを実行すると Web サーバーがホットリロードで起動して `http://localhost:3000` で確認できます。
+下記コマンドを実行すると Web サーバーがホットリロードで起動して `http://localhost:3000/2018/` で確認できます。
 
 ```shell
 yarn dev
@@ -46,7 +46,7 @@ yarn test
 
 ## Generate
 
-下記コマンドを実行すると、静的ファイルを `dist/` 配下に生成できます。
+下記コマンドを実行すると、静的ファイルを `dist/2018/` 配下に生成できます。
 
 ```shell
 yarn generate

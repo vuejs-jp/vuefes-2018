@@ -128,14 +128,14 @@ export default {
     LinkButton
   },
   head() {
-    const url = `https://vuefes.jp${this.path}`
+    const url = `https://vuefes.jp/2018${this.path}`
     const title = `${this.speaker.sessionTitle}（${
       this.speaker.name
     }）- Vue Fes Japan 2018`
     const description = `Vue Fes Japan 2018 のセッション情報です。登壇者は ${
       this.speaker.name
     } で、${this.speaker.sessionTitle} というテーマで発表します。`
-    const ogImageUrl = `https://vuefes.jp/speaker-opengraph/${
+    const ogImageUrl = `https://vuefes.jp/2018/speaker-opengraph/${
       this.speaker.card
     }`
 

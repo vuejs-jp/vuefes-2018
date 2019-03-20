@@ -98,7 +98,7 @@ export default {
     TheMain
   },
   head() {
-    const url = `https://vuefes.jp${this.path}`
+    const url = `https://vuefes.jp/2018${this.path}`
     const title = 'アクセス - Vue Fes Japan 2018'
     const description = 'Vue Fes Japan 2018 の会場へのアクセスマップです。'
 

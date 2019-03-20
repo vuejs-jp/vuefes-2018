@@ -98,7 +98,7 @@ export default {
     TheMain
   },
   head() {
-    const url = `https://vuefes.jp${this.path}`
+    const url = `https://vuefes.jp/2018${this.path}`
     const title = '行動規範 - Vue Fes Japan 2018'
     const description =
       'すべての参加者、スピーカー、スポンサーとボランティアは行動規範（ポリシー）に同意していただく必要があります。誰にとっても安全な環境を守るために、ご協力をお願いいたします。'

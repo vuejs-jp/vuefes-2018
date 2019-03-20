@@ -18,11 +18,11 @@ try {
   }
 }
 
-const defaultUrl = 'https://vuefes.jp/'
+const defaultUrl = 'https://vuefes.jp/2018/'
 const defaultTitle = 'Vue Fes Japan 2018 | 2018年11月3日（土）'
 const defaultDescription =
   '日本で初めて開催する大規模 Vue.js カンファレンス。国内外の著名スピーカーによるセッションの他、ユーザー同士が気軽に話し合える場も設ける予定です。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！'
-const defaultOgImageUrl = 'https://vuefes.jp/opengraph.jpg'
+const defaultOgImageUrl = 'https://vuefes.jp/2018/opengraph.jpg'
 
 export default {
   mode: 'universal',
@@ -120,11 +120,13 @@ export default {
   },
   css: [{ src: '~/assets/stylesheets/main.scss', lang: 'scss' }],
   router: {
+    base: '/2018/',
     scrollBehavior: (to, from, savedPosition) => {
       return { x: 0, y: 0 }
     }
   },
   generate: {
+    dir: 'dist/2018',
     // TODO: speakers.getters.speakerIds を使うやり方に書き換えたい
     // routes: speakers.getters.speakerIds(speakers.state()).map(speakerId => `/speakers/${speakerId}`),
     routes: [
