@@ -4,7 +4,7 @@
 
 このリポジトリは [Vue Fes Japan 2018](https://vuefes.jp/2018/) の Web サイトのソースコードです。ナレッジ共有のために公開しています。
 
-このリポジトリ https://github.com/vuejs-jp/vuefes では、プルリクエストを受けて付けておりません。 
+このリポジトリ https://github.com/vuejs-jp/vuefes-2018 では、プルリクエストを受けて付けておりません。 
 
 ## Setup
 
