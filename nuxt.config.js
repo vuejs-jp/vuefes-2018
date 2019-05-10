@@ -84,10 +84,10 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/2018/favicon.ico' },
       {
         rel: 'apple-touch-icon',
-        href: '/apple-touch-icon.png',
+        href: '/2018/apple-touch-icon.png',
         sizes: '180x180'
       }
     ]
