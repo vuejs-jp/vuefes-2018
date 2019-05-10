@@ -23,6 +23,7 @@ const defaultTitle = 'Vue Fes Japan 2018 | 2018年11月3日（土）'
 const defaultDescription =
   '日本で初めて開催する大規模 Vue.js カンファレンス。国内外の著名スピーカーによるセッションの他、ユーザー同士が気軽に話し合える場も設ける予定です。ぜひ、一緒に Vue.js を楽しみ、盛り上げていきましょう！'
 const defaultOgImageUrl = 'https://vuefes.jp/2018/opengraph.jpg'
+const applicationName = 'Vue Fes' // 「ホーム画面に追加」したときのアプリケーション名
 
 export default {
   mode: 'universal',
@@ -72,6 +73,14 @@ export default {
         hid: 'twitter:image',
         name: 'twitter:image',
         content: defaultOgImageUrl
+      },
+      {
+        name: 'application-name',
+        content: applicationName
+      },
+      {
+        name: 'apple-mobile-web-app-title',
+        content: applicationName
       }
     ],
     link: [
@@ -171,5 +180,9 @@ export default {
       '~/assets/stylesheets/foundation/variables.scss',
       '~/assets/stylesheets/foundation/colors.scss'
     ]
+  },
+  manifest: {
+    short_name: 'Vue Fes',
+    name: 'Vue Fes'
   }
 }
