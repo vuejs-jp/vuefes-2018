@@ -21,7 +21,6 @@
     "precommit": "yarn lint && ./bin/imagemin"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.1.1",
     "@nuxtjs/google-analytics": "^2.0.2",
     "@nuxtjs/pwa": "^3.0.0-beta.8",
     "@nuxtjs/style-resources": "^0.1.2",
