@@ -8,7 +8,7 @@
       <div id="map" />
 
       <!-- eslint-disable vue/html-indent -->
-      <script>
+      <script type="application/javascript">
         function initMap() {
           const latlng = new google.maps.LatLng(35.700204, 139.772542)
           const map = new google.maps.Map(document.getElementById('map'), {
@@ -25,6 +25,7 @@
       <!-- eslint-enable vue/html-indent -->
 
       <script
+        type="application/javascript"
         :src="
           `https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&callback=initMap`
         "
