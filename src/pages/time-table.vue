@@ -201,10 +201,10 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import LinkButton from '~/components/LinkButton'
 import SpeakerSession from '~/components/SpeakerSession'
 import TheMain from '~/components/TheMain'
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'TimeTablePage',

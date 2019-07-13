@@ -1,8 +1,8 @@
 import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
-import SponsorsPage from '~/pages/sponsors'
 import createFullStore from '../utils/createFullStore'
+import SponsorsPage from '~/pages/sponsors'
 
 const localVue = createLocalVue()
 const router = new VueRouter()

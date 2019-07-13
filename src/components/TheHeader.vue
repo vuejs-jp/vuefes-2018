@@ -32,8 +32,8 @@
 </template>
 
 <script>
-import GlobalNavigationContent from '~/components/GlobalNavigationContent'
 import { mapGetters, mapActions } from 'vuex'
+import GlobalNavigationContent from '~/components/GlobalNavigationContent'
 
 export default {
   name: 'TheHeader',

@@ -133,10 +133,10 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import LinkButton from '~/components/LinkButton'
 import Sponsor from '~/components/Sponsor'
 import TheMain from '~/components/TheMain'
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'SponsorsPage',

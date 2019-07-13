@@ -151,10 +151,10 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import BaseSection from '~/components/BaseSection'
 import LinkButton from '~/components/LinkButton'
 import SponsorBanner from '~/components/SponsorBanner'
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'TheSponsorBannerListSection',

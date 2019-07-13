@@ -35,11 +35,11 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import shuffle from 'lodash.shuffle'
 import BaseSection from '~/components/BaseSection'
 import LinkButton from '~/components/LinkButton'
 import Speaker from '~/components/Speaker'
-import { mapGetters } from 'vuex'
-import shuffle from 'lodash.shuffle'
 
 export default {
   name: 'TheSpeakerListSection',

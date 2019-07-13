@@ -98,9 +98,7 @@ export default {
      */
     openFacebookForm() {
       window.open(
-        `https://www.facebook.com/sharer/sharer.php?u=${
-          this.encodedUri
-        }&src=sdkpreparse`,
+        `https://www.facebook.com/sharer/sharer.php?u=${this.encodedUri}&src=sdkpreparse`,
         'share',
         'width=670, height=328'
       )

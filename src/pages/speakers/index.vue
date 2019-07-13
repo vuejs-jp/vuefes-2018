@@ -45,11 +45,11 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import HeadingWithBar from '~/components/HeadingWithBar'
 import LinkButton from '~/components/LinkButton'
 import SpeakerWithLink from '~/components/SpeakerWithLink'
 import TheMain from '~/components/TheMain'
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'SpeakersPage',

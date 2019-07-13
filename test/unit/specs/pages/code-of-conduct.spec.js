@@ -1,7 +1,7 @@
 import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
 import Vuex from 'vuex'
-import codeOfConductPage from '~/pages/code-of-conduct'
 import createFullStore from '../utils/createFullStore'
+import codeOfConductPage from '~/pages/code-of-conduct'
 
 const localVue = createLocalVue()
 const store = () => createFullStore(Vuex)

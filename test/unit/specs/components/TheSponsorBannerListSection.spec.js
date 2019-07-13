@@ -1,8 +1,8 @@
 import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
 import VueLazyload from 'vue-lazyload'
 import Vuex from 'vuex'
-import TheSponsorBannerListSection from '~/components/TheSponsorBannerListSection'
 import createFullStore from '../utils/createFullStore'
+import TheSponsorBannerListSection from '~/components/TheSponsorBannerListSection'
 
 const localVue = createLocalVue()
 const store = () => createFullStore(Vuex)

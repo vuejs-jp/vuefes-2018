@@ -116,9 +116,9 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import LinkButton from '~/components/LinkButton'
 import HeadingWithBar from '~/components/HeadingWithBar'
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'SpeakerPage',
@@ -129,15 +129,9 @@ export default {
   },
   head() {
     const url = `https://vuefes.jp/2018${this.path}`
-    const title = `${this.speaker.sessionTitle}（${
-      this.speaker.name
-    }）- Vue Fes Japan 2018`
-    const description = `Vue Fes Japan 2018 のセッション情報です。登壇者は ${
-      this.speaker.name
-    } で、${this.speaker.sessionTitle} というテーマで発表します。`
-    const ogImageUrl = `https://vuefes.jp/2018/speaker-opengraph/${
-      this.speaker.card
-    }`
+    const title = `${this.speaker.sessionTitle}（${this.speaker.name}）- Vue Fes Japan 2018`
+    const description = `Vue Fes Japan 2018 のセッション情報です。登壇者は ${this.speaker.name} で、${this.speaker.sessionTitle} というテーマで発表します。`
+    const ogImageUrl = `https://vuefes.jp/2018/speaker-opengraph/${this.speaker.card}`
 
     return {
       title,

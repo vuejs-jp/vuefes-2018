@@ -1,7 +1,7 @@
 import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
 import Vuex from 'vuex'
-import TimeTablePage from '~/pages/time-table'
 import createFullStore from '../utils/createFullStore'
+import TimeTablePage from '~/pages/time-table'
 
 const localVue = createLocalVue()
 const store = () => createFullStore(Vuex)

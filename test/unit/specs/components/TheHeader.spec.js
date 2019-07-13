@@ -1,7 +1,7 @@
 import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
 import Vuex from 'vuex'
-import TheHeader from '~/components/TheHeader'
 import createFullStore from '../utils/createFullStore'
+import TheHeader from '~/components/TheHeader'
 
 const localVue = createLocalVue()
 const store = () => createFullStore(Vuex)

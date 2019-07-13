@@ -1,8 +1,8 @@
 import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
 import Vuex from 'vuex'
 import VueLazyload from 'vue-lazyload'
-import WelcomePage from '~/pages/index'
 import createFullStore from '../utils/createFullStore'
+import WelcomePage from '~/pages/index'
 
 const localVue = createLocalVue()
 const store = () => createFullStore(Vuex)

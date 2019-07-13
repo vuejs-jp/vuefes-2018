@@ -1,8 +1,8 @@
 import { mount, createLocalVue, RouterLinkStub } from '@vue/test-utils'
 import Vuex from 'vuex'
+import createFullStore from '../utils/createFullStore'
 import TheSpeakerListSection from '~/components/TheSpeakerListSection'
 import { getters as speakersGetters } from '~/store/speakers'
-import createFullStore from '../utils/createFullStore'
 
 const localVue = createLocalVue()
 localVue.use(Vuex)
