@@ -137,9 +137,9 @@ export default {
       title,
       meta: [
         { hid: 'description', name: 'description', content: description },
-        { hid: 'og:url', name: 'og:title', content: url },
+        { hid: 'og:url', name: 'og:url', content: url },
         { hid: 'og:title', name: 'og:title', content: title },
-        { hid: 'og:description', name: 'og:title', content: title },
+        { hid: 'og:description', name: 'og:description', content: description },
         { hid: 'og:image', name: 'og:image', content: ogImageUrl },
         {
           hid: 'og:image:secure_url',
