@@ -62,7 +62,7 @@
     "imagemin-svgo": "^7.0.0",
     "jest": "^24.1.0",
     "js-yaml": "^3.13.1",
-    "node-sass": "^7.0.0",
+    "node-sass": "4.14.1",
     "prettier": "^1.16.4",
     "sass-loader": "^7.1.0",
     "stylelint": "^9.10.1",
